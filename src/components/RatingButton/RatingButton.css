@@ -1,0 +1,10 @@
+.button__rating{
+    height: 6.04vh;
+    width: 5.15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border: none;
+}

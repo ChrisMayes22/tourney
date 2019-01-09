@@ -1,0 +1,40 @@
+.grid{
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 85vh 7vh;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas:    "imageOne imageTwo imageThree"
+                            "footer footer footer";
+    justify-content: center;
+    align-items: center;
+    background-color: #a63939;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../assets/background__rose-pattern.jpg');
+    background-repeat: none;
+    background-size: cover;
+}
+
+.imageOne{
+    grid-area: imageOne;
+    border-radius: 8px;
+    background-color: rgb(44, 9, 9);
+}
+
+.imageTwo{
+    grid-area: imageTwo;
+    border-radius: 8px;
+    background-color: rgb(44, 9, 9);
+}
+
+.imageThree{
+    grid-area: imageThree;
+    border-radius: 8px;
+    background-color: rgb(44, 9, 9);
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+}
