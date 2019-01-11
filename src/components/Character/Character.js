@@ -1,65 +1,29 @@
-import images from '../../assets/images';
-import React, { Component } from 'react';
+import React from 'react';
 import classes from './Character.css';
-import RatingButton from '../RatingButton/RatingButton';
+import RatingRow from '../../containers/RatingRow/RatingRow';
 
-class Character extends Component {
-
-    state = {
-        qualityArray: [ {quality: 'awful', active: false}, 
-                        {quality: 'poor', active: false}, 
-                        {quality: 'average', active: false}, 
-                        {quality: 'good', active: false}, 
-                        {quality: 'excellent', active: false}]
-    }
-
-    ratingChoiceHandler = (id) =>{
-        const qualityArray = JSON.parse(JSON.stringify(this.state.qualityArray));
-
-        console.log(qualityArray[0] === this.state.qualityArray[0]);
-        
-        qualityArray.forEach(el => {
-            const currentIndex = qualityArray.indexOf(el);
-            if(currentIndex <= id){
-                el.active = true;
-            } else {
-                el.active = false;
-            }
-        })
-
-        this.setState({
-            qualityArray: qualityArray
-        })
-    }
-
-    render() {
-        return(
+const Character = (props) => {
+    return(
             <section className={classes.flexContainer__col}>
                 <img 
-                    src={images[this.props.number]} 
+                    src={props.character.imageUrl} 
                     className={classes.characterPortrait}
+                    alt="character card"
                 />
-                <div className={classes.flexContainer__row}>
-                    {this.state.qualityArray.map(el => {
-                        const currentIndex = this.state.qualityArray.indexOf(el);
-                        let isChosen = '';
-                        if(this.state.qualityArray[currentIndex].active){
-                            isChosen = 'active';
-                        }
-                        return(
-                            <RatingButton children={currentIndex + 1}
-                                quality={classes[el.quality]}
-                                chosen={classes[isChosen]}
-                                id={currentIndex}
-                                key={currentIndex}
-                                clicked={() => this.ratingChoiceHandler(currentIndex)}
-                                />
-                        );
-                    })}
-                </div>
-            </section>
-        );
-    }
+                <RatingRow 
+                    character={props.character}
+                    rowId={`${props.character.id}-row-one`}/>
+                <RatingRow 
+                    character={props.character}
+                    rowId={`${props.character.id}-row-two`}/>
+                <RatingRow 
+                    character={props.character}
+                    rowId={`${props.character.id}-row-three`}/>  
+                <RatingRow 
+                    character={props.character}
+                    rowId={`${props.character.id}-row-four`}/>             
+            </section> 
+    );
 }
 
 export default Character;

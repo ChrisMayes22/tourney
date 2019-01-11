@@ -1,72 +1,25 @@
 .flexContainer__col{
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    height: 85vh;
     align-items: center;
+    justify-content: flex-end;
     margin: 10px;
-    background-image: linear-gradient(left, #f9c1ce, #b36174, #f9c1ce)
+    background-image: linear-gradient(to left, #f9c1ce, #cc8293, #f9c1ce);
 }
 
-.flexContainer__row{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 75%;
-    margin: 10px;
-    border: black solid;
-}
-
-img{
-    height: 85%;
+.characterPortrait{
+    height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgb(0, 0, 0);
-    max-height: 600px;
+    max-height: 60vh;
     max-width: 27.6vw;
+    min-width: 20vw;
     background-image: radial-gradient(#b36174, rgb(243, 164, 182));
     margin: 5px;
+    flex-basis: 0;
+    flex-grow: 1;
 }
 
 
-.awful{
-    background-color: rgba(61, 12, 23);
-}
-
-.poor{
-    background-color: rgba(101, 12, 23, 0.3);
-}
-
-.poor:hover,
-.active.poor{
-    background-color: rgba(101, 12, 23);
-}
-
-
-.average{
-    background-color: rgba(151, 12, 23, 0.3);
-}
-
-.average:hover,
-.active.average{
-    background-color: rgba(151, 12, 23);
-}
-
-.good{
-    background-color: rgba(201, 12, 23, 0.3);
-}
-
-.good:hover,
-.active.good{
-    background-color: rgba(201, 12, 23);
-}
-
-.excellent{
-    background: linear-gradient(rgba(243, 164, 182, 0.6), rgba(243, 164, 182, 0.6)), url('../../assets/background__flame-on.jpg');
-    background-size: cover;
-}
-
-.excellent:hover,
-.active.excellent{
-    background-image: url('../../assets/background__flame-on.jpg');
-    background-size: cover;
-}

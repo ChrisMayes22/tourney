@@ -1,5 +1,5 @@
 .button__rating{
-    height: 6.04vh;
+    min-height: 4.04vh;
     width: 5.15vw;
     display: flex;
     align-items: center;
@@ -7,4 +7,9 @@
     font-weight: bold;
     color: white;
     border: none;
+}
+
+.button__rating:hover{
+    background-image: linear-gradient(rgba(199, 131, 194, 0.5), rgba(199, 131, 194, 0.5));
+    cursor: pointer;
 }
