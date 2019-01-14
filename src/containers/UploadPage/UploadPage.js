@@ -42,26 +42,26 @@ class UploadPage extends Component {
                             <SubmitButton 
                                 children={'Add another!'}
                                 clicked={this.modalDisplayHandler}/>
-                            <Link to={'/dummy-page'}>
-                                <SubmitButton children={'Move on to the finals.'}/>
+                            <Link to={'/elimination-page'}>
+                                <SubmitButton clicked={this.props.onEliminate} children={'Move on to the finals.'}/>
                             </Link>
                         </aside>
                     </div> : null}
                 <div className={classes.flexContainer__col}>
                     <section className={classes.inputContent}>
-                        <h3>Upload the images that will be competing, (using a url)...<br/>
+                        <h3>Upload three images that will be competing, (using a url)...<br/>
                         ...Or begin the game.</h3>
                         <input 
                             type="text"
                             onChange={this.imageUrlHandler}
                             default="image-url">
                         </input>
-                        {console.log(this.state.imageUrl)}
                             <SubmitButton 
                                 children={"Upload"}
-                                clicked={() => this.props.onUpload(this.state.imageUrl)}
+                                clicked={() => this.props.onUpload(this.state.imageUrl,
+                                                        `url=${String(this.state.imageUrl)}${Math.floor(Math.random()*1000000)}`)}
                             />
-                        <Link to={this.props.characters.filter(el => !el.hadTurn).length === 3 ? '/voting-page': '/not-enough-characters'}>
+                        <Link to={this.props.characters.filter(el => !el.hadTurn).length == this.props.players ? '/voting-page': '/not-enough-characters'}>
                             <SubmitButton children={"Begin Game"}/>
                         </Link>
                     </section>
@@ -90,18 +90,22 @@ class UploadPage extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onUpload: (imageUrl) => {
-            dispatch({type: actionTypes.INITIALIZE_CHARACTER, image: imageUrl})
+        onUpload: (imageUrl, id) => {
+            dispatch({type: actionTypes.INITIALIZE_CHARACTER, payload: {image: imageUrl, id: id}})
         },
-        onRemove: (id) =>{
+        onRemove: (id) => {
             dispatch({type: actionTypes.REMOVE_CHARACTER, id: id})
+        },
+        onEliminate: () => {
+            dispatch({type: actionTypes.REMOVE_LOWEST_SCORE})
         }
     }
 }
 
 const mapStateToProps = state => {
     return {
-        characters: state.characters
+        characters: state.characters,
+        players: state.players
     }
 };
 

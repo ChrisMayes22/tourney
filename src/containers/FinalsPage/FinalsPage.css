@@ -1,38 +1,29 @@
-.grid__3Players{
+.grid{
     display: grid;
-    grid-template-columns: 30vw 30vw 30vw;
-    grid-template-rows: 90vh;
+    grid-template-columns: 47vw 47vw;
+    grid-template-rows: 90vh 5vh;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    grid-template-areas:    "imageOne imageTwo"
+                            "footer footer";
     justify-content: center;
     align-items: center;
     background-color: #a63939;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     background-image: url('../../assets/background__rose-pattern.jpg');
     background-repeat: none;
     background-size: cover;
 }
 
-
-.grid__4Players{
-    display: grid;
-    grid-template-columns: 24vw 24vw 24vw 24vw;
-    grid-template-rows: 90vh;
-    grid-column-gap: 3px;
-    grid-row-gap: 10px;
-    justify-content: center;
-    align-items: center;
-    background-color: #a63939;
-    height: 90vh;
-    width: 100vw;
-    background-image: url('../../assets/background__rose-pattern.jpg');
-    background-repeat: none;
-    background-size: cover;
+.imageOne{
+    grid-area: imageOne;
+    border-radius: 8px;
+    background-color: rgb(44, 9, 9);
 }
 
-
-.competitorImage{
+.imageTwo{
+    grid-area: imageTwo;
     border-radius: 8px;
     background-color: rgb(44, 9, 9);
 }
@@ -54,10 +45,10 @@ footer{
     display: block;
     justify-content: space-around;
     position: fixed;
-    top: 25vh;
-    left: 14vw;
-    height: 50vh;
-    width: 75vw;
+    top: 12vh;
+    left: 2.5vw;
+    height: 70vh;
+    width: 95vw;
     z-index: 100;
     background-color: #a63939;
     color:  rgb(255, 239, 254);
@@ -65,6 +56,10 @@ footer{
     font-weight: bold;
     text-align: center;
     border-radius: 20px;
+}
+
+h1{
+    margin: 1rem;
 }
 
 .modalFlexContainer{

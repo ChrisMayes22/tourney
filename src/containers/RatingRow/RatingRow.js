@@ -29,14 +29,14 @@ class RatingRow extends Component {
         })
     }
 
-    ratingRowManager = (id, points, rowId) =>{
+    ratingRowManager = (id, points, rowId, character) =>{
         this.ratingChoiceHandler(id);
-        this.props.onRate(points, rowId);
+        this.props.onRate(points, rowId, character);
     }
 
     render(){
         return(
-            <div className={classes.flexContainer__row}>
+            <div className={this.props.players == 3 ? classes.flexContainer__row3Players : classes.flexContainer__row4Players}>
                     {this.state.qualityArray.map(el => {
                         const qualityArray = [...this.state.qualityArray]
                         const currentIndex = qualityArray.indexOf(el);
@@ -49,7 +49,7 @@ class RatingRow extends Component {
                                 quality={classes[el.quality]}
                                 chosen={classes[isChosen]}
                                 key={currentIndex}
-                                clicked={() => this.ratingRowManager(currentIndex, el.points, this.props.rowId)}
+                                clicked={() => this.ratingRowManager(currentIndex, el.points, this.props.rowId, this.props.character)}
                                 />
                         );
                     })}
@@ -58,12 +58,18 @@ class RatingRow extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        players: state.players
+    }
+};
+
 const mapDispatchToProps = dispatch => {
     return {
-        onRate: (points, rowId) => {
-            dispatch({type: actionTypes.RATE_CHARACTER, payload: {points: points, rowId: rowId}})
+        onRate: (points, rowId, character) => {
+            dispatch({type: actionTypes.RATE_CHARACTER, payload: {points: points, rowId: rowId, character: character}})
         }
     }
 }
 
-export default connect(null, mapDispatchToProps)(RatingRow);
+export default connect(mapStateToProps, mapDispatchToProps)(RatingRow);

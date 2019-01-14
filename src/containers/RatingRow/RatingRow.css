@@ -1,9 +1,19 @@
-.flexContainer__row{
+.flexContainer__row3Players{
     display: flex;
     flex-direction: row;
     justify-content: center;
     min-height: 5vh;
-    width: 75%;
+    max-width: 75%;
+    margin: 3px;
+    border: black solid;
+}
+
+.flexContainer__row4Players{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 5vh;
+    max-width: 95%;
     margin: 3px;
     border: black solid;
 }

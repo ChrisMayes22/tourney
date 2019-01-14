@@ -7,7 +7,7 @@ const characterRedirect = () => {
     return(
         <div className={classes.background}>
             <nav className={classes.ui}>
-                <h3>Please upload exactly three characters to begin!</h3>
+                <h3>Each players should upload exactly one character per round.</h3>
                 <Link to="/upload-page">
                     <SubmitButton children={"OK"}/>
                 </Link>

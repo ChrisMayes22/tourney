@@ -8,74 +8,34 @@ import * as actionTypes from '../../reducers/actions';
 
 class VotingPage extends Component {
 
-    state = {
-        modal: true
-    }
+    playersArray= this.props.characters.filter(char => !char.hadTurn)
 
-    players= {
-        one: this.props.characters.filter(el => !el.hadTurn)[0],
-        two: this.props.characters.filter(el => !el.hadTurn)[1],
-        three: this.props.characters.filter(el => !el.hadTurn)[2]
-    }
-
-    removeModalHandler = () =>{
-        const toggleModal = !this.state.modal;
-        this.setState({
-            modal: toggleModal
-        })
-    }
-
-    modalManager = (playerOne, playerTwo, playerThree) => {
-        this.removeModalHandler();
-        this.props.onClearModal(playerOne, playerTwo, playerThree);
-    }
 
     render () {
 
         return(
             <React.Fragment>
-                {this.state.modal ? <div className={classes.modalBackground}>
-                    <aside className={classes.modal}>
-                        <div className={classes.modalFlexContainer}>
-                            <img 
-                                className={classes.modalImage}
-                                src={this.players.one.imageUrl}/>
-                            <img 
-                                className={classes.modalImage}
-                                src={this.players.two.imageUrl}/>
-                            <img 
-                                className={classes.modalImage}
-                                src={this.players.three.imageUrl}/>
-                        </div>
-                        ARE THESE CHARACTERS OK?
-                        <br/>
-                        <SubmitButton 
-                            children={'Yes!'}
-                            clicked={() => this.modalManager(this.players.one, this.players.two, this.players.three)}/>
-                        <Link to={'/upload-page'}>
-                            <SubmitButton children={'No, take me back.'}/>
-                        </Link>
-                    </aside>
-                </div> : null}
-                <main className={classes.grid}>
-                    <section className={classes.imageOne}>
-                        <Character character={this.players.one}/>
-                    </section>
-                    <section className={classes.imageTwo}>
-                        <Character character={this.players.two}/>
-                    </section>
-                    <section className={classes.imageThree}>
-                        <Character character={this.players.three}/>
-                    </section>
-                    <footer>
-                        <Link 
-                            onClick={() => this.props.onSubmitRatings(this.players.one, this.players.two, this.players.three)}
-                            to='/upload-page'>
-                                <SubmitButton children={"Submit"}/>
-                        </Link></footer>
+                {'PLAYERS ARRAY'}
+                {console.log(this.playersArray)}
+                <main className={this.props.players == 3? classes.grid__3Players : classes.grid__4Players}>
+                    {this.props.characters.filter(char => !char.hadTurn).map(char => {
+                        if(this.props.characters.filter(char => !char.hadTurn).findIndex(index => index.id === char.id) < this.props.players){
+                            return (
+                                <section className={classes.competitorImage}>
+                                    <Character players={this.props.players} character={char}/>
+                                </section>
+                            );
+                        }
+                        return null;
+                    })}
                 </main>
-                {console.log('CURRENT POINTS:')}
-                {console.log(this.props.characterRatings)}
+                <footer>
+                    <Link 
+                        onClick={() => this.props.onSubmitRatings(this.playersArray)}
+                        to='/upload-page'>
+                            <SubmitButton children={"Submit"}/>
+                    </Link>
+                </footer>
             </React.Fragment>
         );
     }
@@ -86,23 +46,15 @@ class VotingPage extends Component {
 const mapStateToProps = state => {
     return {
         characters: state.characters,
-        inPlayIndices: state.inPlayIndices,
-        characterRatings: state.characterRatings
+        players: state.players
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        onClearModal: (playerOneId, playerTwoId, playerThreeId) => {
-            dispatch({type: actionTypes.MATCH_CHARACTERS_AND_ROWS, payload: {
-                playerOne: playerOneId, 
-                playerTwo: playerTwoId, 
-                playerThree: playerThreeId
-            }});
-        },
-        onSubmitRatings: (playerOne, playerTwo, playerThree) => {
+        onSubmitRatings: (playersArray) => {
             dispatch({type: actionTypes.SUBMIT_CHARACTER_RATINGS, payload:{
-                playerOne: playerOne, playerTwo: playerTwo, playerThree: playerThree
+                players: playersArray
             }});
         }
     }

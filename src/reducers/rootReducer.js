@@ -2,151 +2,171 @@ import * as actionTypes from './actions';
 
 const initialState = {
     characters: [],
-    inPlayIndices: {first: '', second: '', third: ''},
-    characterRatings: {
-        playerOne: {
-            charId: '',
-            rowOne: {rowId: '', points: 0},
-            rowTwo: {rowId: '', points: 0},
-            rowThree: {rowId: '', points: 0},
-            rowFour: {rowId: '', val: 0}
-        },
-        playerTwo: {
-            charId: '',
-            rowOne: {rowId: '', points: 0},
-            rowTwo: {rowId: '', points: 0},
-            rowThree: {rowId: '', points: 0},
-            rowFour: {rowId: '', points: 0}
-        },
-        playerThree: {
-            charId: '',
-            rowOne: {rowId: '', points: 0},
-            rowTwo: {rowId: '', points: 0},
-            rowThree: {rowId: '', points: 0},
-            rowFour: {rowId: '', points: 0}
-        }
-    }
+    players: NaN
 }
 
 export function rootReducer(state=initialState, action) {
+
+    function subCharAtIndex(arrayCopy, modChar){
+        const index = arrayCopy.findIndex(character => character.id === modChar.id);
+        arrayCopy[index] = modChar
+        return arrayCopy;
+    }
+
+    function createReplacementCharsArray(charArray, payloadArray){
+        const characters = [...state.characters];
+        payloadArray.forEach(payload => {
+            const character = charArray.filter(char => char.id === payload.id)[0];
+            console.log('PAYLOAD')
+            console.log(payload)
+            console.log('CHAR ARRAY')
+            console.log(charArray);
+            console.log('CHAR ARRAY FILTER')
+            console.log(charArray.filter(char => char.id === payload.id))
+            console.log('CHARACTER')
+            console.log(character)
+            const index = [...state.characters].findIndex(char => char.id === payload.id);
+            characters[index] = character;
+            console.log('CHARACTERS')
+            console.log(characters)
+        })
+
+        return characters;
+    }
+
     switch(action.type) {
+        case actionTypes.SET_PLAYERS:
+        return{
+            ...state,
+            players: action.number
+        }
         case actionTypes.INITIALIZE_CHARACTER:
+        //dispatch({type: actionTypes.INITIALIZE_CHARACTER, image: imageUrl})
             return {
                 ...state,
                 characters: [...state.characters, {
-                    imageUrl: action.image,
+                    imageUrl: action.payload.image,
+                    roundRatings: {
+                        rowOne: {rowId: `${action.payload.id}-row-one`, points: 0},
+                        rowTwo: {rowId: `${action.payload.id}-row-two`, points: 0},
+                        rowThree: {rowId: `${action.payload.id}-row-three`, points: 0},
+                        rowFour: {rowId: `${action.payload.id}-row-four`, points: 0}
+                    },
                     points: 0,
                     hadTurn: false,
-                    id: `url=${String(action.image)}${Math.floor(Math.random()*1000)}`
+                    isEliminated: {check: false, whenEliminated: null},
+                    id: action.payload.id
                 }]
             }
+
         case actionTypes.REMOVE_CHARACTER:
-            const copy = [...state.characters];
+        //dispatch({type: actionTypes.REMOVE_CHARACTER, id: id})
+            const copy = [...state.characters].filter(char => char.id !== action.id);
             return{
                 ...state,
-                characters: copy.filter(el => {
-                    return el.id !== action.id 
-                })
+                characters: copy
             };
+
         case actionTypes.RATE_CHARACTER:
-            const characterRatings = {...state.characterRatings};
-            const keys = Object.keys(characterRatings);
-            keys.forEach(el => {
-                const player = {...characterRatings[el]}
-                const playerKeys = Object.keys(player);
-                playerKeys.forEach(play => {
-                    const row = {...player[play]}
-                    if(row.rowId === action.payload.rowId){
-                        characterRatings[el][play].points = action.payload.points;
-                    }
-                })
+        //dispatch({type: actionTypes.RATE_CHARACTER, payload: {points: points, rowId: rowId, character: character}})
+
+            let currentChars = [...state.characters]
+            let targetCharacter = currentChars.filter(char => char.id === action.payload.character.id)[0];
+            const ratings = {...targetCharacter.roundRatings}
+            const ratingsKeys = Object.keys(ratings);
+
+            ratingsKeys.forEach(function(row) {
+                const currentRow = {...ratings[row]};
+                if(ratings[row].rowId === action.payload.rowId){
+                    currentRow.points = action.payload.points;
+                }
+                targetCharacter.roundRatings[row] = currentRow
             })
+
+            currentChars = subCharAtIndex([...currentChars], targetCharacter);
 
             return{
                 ...state,
-                characterRatings: characterRatings
+                characters: currentChars
             }
-        case actionTypes.MATCH_CHARACTERS_AND_ROWS: 
-            return{
-                ...state,
-                characterRatings: {
-                    ...state.characterRatings,
-                    playerOne: {
-                        charId: action.payload.playerOne.id,
-                        rowOne: {rowId: `${action.payload.playerOne.id}-row-one`, points: 0},
-                        rowTwo: {rowId: `${action.payload.playerOne.id}-row-two`, points: 0},
-                        rowThree: {rowId: `${action.payload.playerOne.id}-row-three`, points: 0},
-                        rowFour: {rowId: `${action.payload.playerOne.id}-row-four`, points: 0}
-                    },
-                    playerTwo: {
-                        charId: action.payload.playerTwo.id,
-                        rowOne: {rowId: `${action.payload.playerTwo.id}-row-one`, points: 0},
-                        rowTwo: {rowId: `${action.payload.playerTwo.id}-row-two`, points: 0},
-                        rowThree: {rowId: `${action.payload.playerTwo.id}-row-three`, points: 0},
-                        rowFour: {rowId: `${action.payload.playerTwo.id}-row-four`, points: 0}
-                    },
-                    playerThree: {
-                        charId: action.payload.playerThree.id,
-                        rowOne: {rowId: `${action.payload.playerThree.id}-row-one`, points: 0},
-                        rowTwo: {rowId: `${action.payload.playerThree.id}-row-two`, points: 0},
-                        rowThree: {rowId: `${action.payload.playerThree.id}-row-three`, points: 0},
-                        rowFour: {rowId: `${action.payload.playerThree.id}-row-four`, points: 0}
-                    }
-                }
-            }
+
         case actionTypes.SUBMIT_CHARACTER_RATINGS:
+        // dispatch({type: actionTypes.SUBMIT_CHARACTER_RATINGS, payload:{players: playersArray}});
+            let chars = [...state.characters].filter(char => !char.hadTurn);
 
-        const chars = [...state.characters];
-        const ratings = {...state.characterRatings};
-        const ratingsKeys = Object.keys(ratings);
 
-        function reduceCharacterPoints(character) {
-            const playerPointsArray = [];
-            ratingsKeys.forEach(player => {
-                const currentPlayer = {...ratings[player]}
-                const currentPlayerKey = Object.keys(currentPlayer);
-                if(character.id === currentPlayer.charId){
-                    currentPlayerKey.forEach(row => {
-                        const currentRow = {...currentPlayer[row]};
-                        if(currentRow.rowId){
-                            playerPointsArray.push(currentRow.points);
+            chars.forEach(char => {
+                let pointTotal = [];
+                const ratings = {...char.roundRatings};
+                const ratingsKeys = Object.keys(ratings);
+                ratingsKeys.forEach(function(row) {
+                    const currentRow = {...ratings[row]};
+                    pointTotal = pointTotal.concat(currentRow.points);
+                })
+                const sum = pointTotal.reduce(function(accumulator, currentValue){
+                    return accumulator + currentValue;
+                }, 0);
+                char = {...char,
+                            points: sum,
+                            hadTurn: true
                         }
-                    })
-                }
-            })
-            const pointTotal = playerPointsArray.reduce(function(accumulator, currentValue){
-                return accumulator + currentValue;
+                chars = subCharAtIndex([...chars], char);
             })
 
-            const char = {...character, points: pointTotal, hadTurn: true};
-            return char;
+            const characters = [...createReplacementCharsArray(chars, action.payload.players)];
+
+            console.log('CHARACTERS')
+            console.log(characters)
+
+            return{
+                ...state,
+                characters: characters
+            }
+        
+        case actionTypes.REMOVE_LOWEST_SCORE:
+
+        function reduceToLowestScore(accumulator, currentValue){
+            if(accumulator.points < currentValue.points){
+                return accumulator;
+            } else {
+                return currentValue;
+            }
         }
 
-        function findCharacterIndex(character) {
-            return chars.findIndex(char => {
-                return character.id === char.id
-            })
-        }
+        const lowestScore = [...state.characters].filter(char => !char.isEliminated.check).reduce(reduceToLowestScore);
 
-        const firstCharacter = reduceCharacterPoints(action.payload.playerOne);
-        const firstCharacterIndex = findCharacterIndex(firstCharacter);
-        const secondCharacter = reduceCharacterPoints(action.payload.playerTwo);
-        const secondCharacterIndex = findCharacterIndex(secondCharacter);
-        const thirdCharacter = reduceCharacterPoints(action.payload.playerThree);
-        const thirdCharacterIndex = findCharacterIndex(thirdCharacter);
-        chars[firstCharacterIndex] = firstCharacter;
-        chars[secondCharacterIndex] = secondCharacter;
-        chars[thirdCharacterIndex] = thirdCharacter;
+        lowestScore.isEliminated = {check: true, whenEliminated: [...state.characters].filter(char => char.isEliminated.check).length};
+
+        const charsCopy = subCharAtIndex([...state.characters], lowestScore);
+
+            return {
+                ...state,
+                characters: charsCopy
+            };
+
+        case actionTypes.RESET_FOR_FINALS:
+
+        let charsOfState = [...state.characters];
+
+        charsOfState.forEach(char => {
+            const character = {...char,
+                                hadTurn: false,
+                                roundRatings: {
+                                    rowOne: {rowId: `${char.id}-row-one`, points: 0},
+                                    rowTwo: {rowId: `${char.id}-row-two`, points: 0},
+                                    rowThree: {rowId: `${char.id}-row-three`, points: 0},
+                                    rowFour: {rowId: `${char.id}-row-four`, points: 0}
+                                }
+                            };
+            charsOfState = subCharAtIndex(charsOfState, character)
+        })
 
         return{
             ...state,
-            characters: chars
+            characters: charsOfState
         }
-        
-        case actionTypes.HALVE_CHARACTERS:
-            return state;
+
         default: 
             return state;
     }
 }
-
