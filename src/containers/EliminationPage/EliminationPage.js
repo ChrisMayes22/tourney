@@ -19,7 +19,7 @@ class EliminationPage extends Component{
                             } else {
                                 return accumulator;
                             }
-                        })].map(char => 
+                        }, [])].map(char => 
                             <img src={char.imageUrl} key={char.id} className={classes.mainImg} alt="a losing competitor"/>)}
                     </div>
                     <Link  to={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? '/finals' : '/elimination-page'}

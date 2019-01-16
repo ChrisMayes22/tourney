@@ -2,7 +2,7 @@ import * as actionTypes from './actions';
 
 const initialState = {
     characters: [],
-    players: NaN
+    players: 0
 }
 
 export function rootReducer(state=initialState, action) {
