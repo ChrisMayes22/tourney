@@ -17,8 +17,6 @@
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "5.6.0",
     "eslint-config-react-app": "^3.0.6",
     "eslint-loader": "2.1.1",
@@ -118,5 +116,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "jest-cli": "^23.6.0"
   }
 }

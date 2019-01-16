@@ -8,6 +8,7 @@ import UploadPage from './containers/UploadPage/UploadPage';
 import EliminationPage from './containers/EliminationPage/EliminationPage';
 import FinalsPage from './containers/FinalsPage/FinalsPage';
 import Winner from './containers/Winner/Winner';
+import componentNotFound from './components/ComponentNotFound/ComponentNotFound';
 
 class App extends Component {
   render() {
@@ -21,7 +22,7 @@ class App extends Component {
         <Route path='/upload-page'exact component={UploadPage}/>
         <Route path='/winner'exact component={Winner}/>
         <Route path='/' exact component={Home}/>
-        <Route component={() => <h1>404: Page Not Found</h1>}/>
+        <Route component={componentNotFound}/>
       </Switch>
     );
   }
