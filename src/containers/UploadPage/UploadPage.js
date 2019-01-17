@@ -3,7 +3,8 @@ import classes from './UploadPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../reducers/actions'
+import * as actionTypes from '../../constants/actions'
+import * as urls from '../../constants/urls';
 
 class UploadPage extends Component {
 
@@ -42,7 +43,7 @@ class UploadPage extends Component {
                             <SubmitButton 
                                 children={'Add another!'}
                                 clicked={this.modalDisplayHandler}/>
-                            <Link to={'/elimination-page'}>
+                            <Link to={urls.FINALS_PAGE}>
                                 <SubmitButton clicked={this.props.onEliminate} children={'Move on to the finals.'}/>
                             </Link>
                         </aside>
@@ -61,7 +62,7 @@ class UploadPage extends Component {
                                 clicked={() => this.props.onUpload(this.state.imageUrl,
                                                         `url=${String(this.state.imageUrl)}${Math.floor(Math.random()*1000000)}`)}
                             />
-                        <Link to={this.props.characters.filter(el => !el.hadTurn).length == this.props.players ? '/voting-page': '/not-enough-characters'}>
+                        <Link to={this.props.characters.filter(el => !el.hadTurn).length == this.props.players ? urls.VOTING_PAGE : urls.NOT_ENOUGH_CHARACTERS}>
                             <SubmitButton children={"Begin Game"}/>
                         </Link>
                     </section>

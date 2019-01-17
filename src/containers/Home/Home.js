@@ -3,7 +3,8 @@ import classes from './Home.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
-import * as actionTypes from '../../reducers/actions';
+import * as actionTypes from '../../constants/actions';
+import * as urls from '../../constants/urls';
 
 class Home extends Component {
 
@@ -16,7 +17,7 @@ class Home extends Component {
                         type="number"
                         onChange={(event) => this.props.onSetPlayers(event.target.value)}></input>
                         {(this.props.players == 3 || this.props.players == 4)  ? 
-                            <Link to="/upload-page">
+                            <Link to={urls.UPLOAD_PAGE}>
                                 <SubmitButton children={"Let's begin!"}/>
                             </Link> : 
                             <h3>This game is designed for THREE or FOUR players</h3>}

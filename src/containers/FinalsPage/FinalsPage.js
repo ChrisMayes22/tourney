@@ -4,7 +4,8 @@ import classes from './FinalsPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import * as actionTypes from '../../reducers/actions';
+import * as actionTypes from '../../constants/actions';
+import * as urls from '../../constants/urls';
 
 class FinalsPage extends Component {
 
@@ -64,7 +65,7 @@ class FinalsPage extends Component {
                     </section>
                     <footer>
                         <Link 
-                            to={this.props.characters.filter(el => !el.isEliminated.check).length > 2 ? './finals' : './winner'}
+                            to={this.props.characters.filter(el => !el.isEliminated.check).length > 2 ? urls.FINALS_PAGE : urls.WINNER_PAGE}
                             onClick = {() => this.submitVotesHandler(this.props.characters.filter(el => !el.isEliminated.check)[0], 
                                                                     this.props.characters.filter(el => !el.isEliminated.check)[1])}>
                             <SubmitButton children={"Cast your votes"}/>

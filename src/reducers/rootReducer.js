@@ -1,34 +1,26 @@
-import * as actionTypes from './actions';
+import * as actionTypes from '../Constants/actions';
 
 const initialState = {
     characters: [],
     players: 0
 }
 
+export function subCharAtIndex(arrayCopy, modChar){
+    const index = arrayCopy.findIndex(character => character.id === modChar.id);
+    arrayCopy[index] = modChar
+    return arrayCopy;
+}
+
+
 export function rootReducer(state=initialState, action) {
 
-    function subCharAtIndex(arrayCopy, modChar){
-        const index = arrayCopy.findIndex(character => character.id === modChar.id);
-        arrayCopy[index] = modChar
-        return arrayCopy;
-    }
 
     function createReplacementCharsArray(charArray, payloadArray){
         const characters = [...state.characters];
         payloadArray.forEach(payload => {
             const character = charArray.filter(char => char.id === payload.id)[0];
-            console.log('PAYLOAD')
-            console.log(payload)
-            console.log('CHAR ARRAY')
-            console.log(charArray);
-            console.log('CHAR ARRAY FILTER')
-            console.log(charArray.filter(char => char.id === payload.id))
-            console.log('CHARACTER')
-            console.log(character)
             const index = [...state.characters].findIndex(char => char.id === payload.id);
             characters[index] = character;
-            console.log('CHARACTERS')
-            console.log(characters)
         })
 
         return characters;
@@ -41,16 +33,16 @@ export function rootReducer(state=initialState, action) {
             players: action.number
         }
         case actionTypes.INITIALIZE_CHARACTER:
-        //dispatch({type: actionTypes.INITIALIZE_CHARACTER, image: imageUrl})
+        //dispatch({type: actionTypes.INITIALIZE_CHARACTER, payload: {image: imageUrl, id: id}})
             return {
                 ...state,
                 characters: [...state.characters, {
                     imageUrl: action.payload.image,
                     roundRatings: {
-                        rowOne: {rowId: `${action.payload.id}-row-one`, points: 0},
-                        rowTwo: {rowId: `${action.payload.id}-row-two`, points: 0},
-                        rowThree: {rowId: `${action.payload.id}-row-three`, points: 0},
-                        rowFour: {rowId: `${action.payload.id}-row-four`, points: 0}
+                        rowOne: {rowId: `${action.payload.id}-row-one`, points: 1},
+                        rowTwo: {rowId: `${action.payload.id}-row-two`, points: 1},
+                        rowThree: {rowId: `${action.payload.id}-row-three`, points: 1},
+                        rowFour: {rowId: `${action.payload.id}-row-four`, points: 1}
                     },
                     points: 0,
                     hadTurn: false,
@@ -124,6 +116,7 @@ export function rootReducer(state=initialState, action) {
             }
         
         case actionTypes.REMOVE_LOWEST_SCORE:
+        // dispatch({type: actionTypes.REMOVE_LOWEST_SCORE})
 
         function reduceToLowestScore(accumulator, currentValue){
             if(accumulator.points < currentValue.points){
@@ -135,9 +128,9 @@ export function rootReducer(state=initialState, action) {
 
         const lowestScore = [...state.characters].filter(char => !char.isEliminated.check).reduce(reduceToLowestScore);
 
-        lowestScore.isEliminated = {check: true, whenEliminated: [...state.characters].filter(char => char.isEliminated.check).length};
+        const lowestScoreCopy = {...lowestScore, isEliminated: {check: true, whenEliminated: [...state.characters].filter(char => char.isEliminated.check).length}}
 
-        const charsCopy = subCharAtIndex([...state.characters], lowestScore);
+        const charsCopy = subCharAtIndex([...state.characters], lowestScoreCopy);
 
             return {
                 ...state,
@@ -145,21 +138,21 @@ export function rootReducer(state=initialState, action) {
             };
 
         case actionTypes.RESET_FOR_FINALS:
+        //dispatch({type: actionTypes.RESET_FOR_FINALS})
 
-        let charsOfState = [...state.characters];
-
-        charsOfState.forEach(char => {
+        const charsOfState = [...state.characters].map(char => {
             const character = {...char,
-                                hadTurn: false,
-                                roundRatings: {
-                                    rowOne: {rowId: `${char.id}-row-one`, points: 0},
-                                    rowTwo: {rowId: `${char.id}-row-two`, points: 0},
-                                    rowThree: {rowId: `${char.id}-row-three`, points: 0},
-                                    rowFour: {rowId: `${char.id}-row-four`, points: 0}
-                                }
-                            };
-            charsOfState = subCharAtIndex(charsOfState, character)
-        })
+                roundRatings: {
+                    rowOne: {rowId: `${char.id}-row-one`, points: 1},
+                    rowTwo: {rowId: `${char.id}-row-two`, points: 1},
+                    rowThree: {rowId: `${char.id}-row-three`, points: 1},
+                    rowFour: {rowId: `${char.id}-row-four`, points: 1}
+                },
+                points: 0,
+                hadTurn: false
+            };
+            return character;
+        });
 
         return{
             ...state,

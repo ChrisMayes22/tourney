@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import classes from './EliminationPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
-import * as actionTypes from '../../reducers/actions';
+import * as actionTypes from '../../constants/actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import * as urls from '../../constants/urls';
 
 class EliminationPage extends Component{
 
@@ -22,7 +23,7 @@ class EliminationPage extends Component{
                         }, [])].map(char => 
                             <img src={char.imageUrl} key={char.id} className={classes.mainImg} alt="a losing competitor"/>)}
                     </div>
-                    <Link  to={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? '/finals' : '/elimination-page'}
+                    <Link  to={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? urls.FINALS_PAGE : urls.ELIMINATION_PAGE}
                         onClick={this.props.characters.filter(char => !char.isEliminated.check).length > 5 ? this.props.onEliminate : null}>
                         <SubmitButton 
                             children={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? 

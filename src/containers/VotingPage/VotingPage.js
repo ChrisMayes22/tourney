@@ -4,7 +4,9 @@ import classes from './VotingPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import * as actionTypes from '../../reducers/actions';
+import * as actionTypes from '../../constants/actions';
+import * as urls from '../../constants/urls';
+import { url } from 'inspector';
 
 class VotingPage extends Component {
 
@@ -32,7 +34,7 @@ class VotingPage extends Component {
                 <footer>
                     <Link 
                         onClick={() => this.props.onSubmitRatings(this.playersArray)}
-                        to='/upload-page'>
+                        to={urls.UPLOAD_PAGE}>
                             <SubmitButton children={"Submit"}/>
                     </Link>
                 </footer>

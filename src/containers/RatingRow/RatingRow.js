@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import RatingButton from '../../components/RatingButton/RatingButton';
 import classes from './RatingRow.css';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../reducers/actions';
+import * as actionTypes from '../../constants/actions';
 
 class RatingRow extends Component {
     state = {
