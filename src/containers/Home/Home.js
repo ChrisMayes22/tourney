@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import * as actionTypes from '../../constants/actions';
 import * as urls from '../../constants/urls';
 
-class Home extends Component {
+export class Home extends Component {
 
     render(){
         return(
@@ -15,10 +15,10 @@ class Home extends Component {
                     <h3>How many judges are joining us...?</h3>
                     <input 
                         type="number"
-                        onChange={(event) => this.props.onSetPlayers(event.target.value)}></input>
-                        {(this.props.players == 3 || this.props.players == 4)  ? 
-                            <Link to={urls.UPLOAD_PAGE}>
-                                <SubmitButton children={"Let's begin!"}/>
+                        onChange={(event) => this.props.onSetPlayers(Number(event.target.value))}></input>
+                        {(this.props.players === 3 || this.props.players === 4)  ? 
+                            <Link to={urls.UPLOAD_PAGE} id='uploadLink'>
+                                <SubmitButton children={"Let's begin!"} id="beginButton"/>
                             </Link> : 
                             <h3>This game is designed for THREE or FOUR players</h3>}
                 </nav>

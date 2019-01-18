@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import * as actionTypes from '../../constants/actions'
 import * as urls from '../../constants/urls';
 
-class UploadPage extends Component {
+export class UploadPage extends Component {
 
     state = {
         imageUrl: '',
@@ -33,8 +33,8 @@ class UploadPage extends Component {
 
         return(
             <React.Fragment>
-                {(this.modalDisplay * this.state.modalDisplayToggle)? <div className={classes.modalBackground}>
-                        <aside className={classes.modal}>
+                {(this.modalDisplay * this.state.modalDisplayToggle)? <div className={classes.modalBackground} id='modal'>
+                        <aside className={classes.modal} >
                         <h5 className= {classes.modalHeader}>
                             DO YOU WANT TO ADD ANOTHER ROUND OF CHARACTERS... <br/>
                             ...OR MOVE ON TO THE SORTING?
@@ -43,7 +43,7 @@ class UploadPage extends Component {
                             <SubmitButton 
                                 children={'Add another!'}
                                 clicked={this.modalDisplayHandler}/>
-                            <Link to={urls.FINALS_PAGE}>
+                            <Link to={urls.ELIMINATION_PAGE}>
                                 <SubmitButton clicked={this.props.onEliminate} children={'Move on to the finals.'}/>
                             </Link>
                         </aside>
@@ -59,14 +59,17 @@ class UploadPage extends Component {
                         </input>
                             <SubmitButton 
                                 children={"Upload"}
+                                id={"uploadButton"}
                                 clicked={() => this.props.onUpload(this.state.imageUrl,
                                                         `url=${String(this.state.imageUrl)}${Math.floor(Math.random()*1000000)}`)}
                             />
-                        <Link to={this.props.characters.filter(el => !el.hadTurn).length == this.props.players ? urls.VOTING_PAGE : urls.NOT_ENOUGH_CHARACTERS}>
-                            <SubmitButton children={"Begin Game"}/>
+                        <Link 
+                            to={this.props.characters.filter(el => !el.hadTurn).length === this.props.players ? urls.VOTING_PAGE : urls.NOT_ENOUGH_CHARACTERS} 
+                            id="beginGameButton">
+                                <SubmitButton children={"Begin Game"}/>
                         </Link>
                     </section>
-                    <section className={classes.grid}>
+                    <section className={classes.grid} id='grid'>
                         <header className={classes.imageHeader}>
                             <h1>Uploaded Images</h1>
                             <h5>Click Image to Remove</h5>

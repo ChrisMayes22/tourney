@@ -1,4 +1,4 @@
-import * as actionTypes from '../Constants/actions';
+import * as actionTypes from '../constants/actions';
 
 const initialState = {
     characters: [],

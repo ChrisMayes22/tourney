@@ -5,7 +5,8 @@ const submitButton = (props) => {
     return(
         <button 
             className={classes.submit}
-            onClick={props.clicked}>
+            onClick={props.clicked}
+            id={props.id}>
             {props.children}
         </button>
     );

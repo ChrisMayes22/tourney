@@ -28,6 +28,7 @@ class FinalsPage extends Component {
     submitVotesHandler = (playerOne, playerTwo) => {
         this.props.onSubmitRatings(playerOne, playerTwo);
         this.props.onEliminate();
+        this.props.onClearModal();
         this.toggleModalHandler();
     }
 
@@ -58,10 +59,10 @@ class FinalsPage extends Component {
                 </div> : null}
                 <main className={classes.grid}>
                     <section className={classes.imageOne}>
-                        <Character players ={this.props.players} character={this.props.characters.filter(el => !el.isEliminated.check)[0]}/>
+                        <Character players ={this.props.players} character={[...this.props.characters].filter(el => !el.isEliminated.check).reverse()[0]}/>
                     </section>
                     <section className={classes.imageTwo}>
-                        <Character players={this.props.players} character={this.props.characters.filter(el => !el.isEliminated.check)[1]}/>
+                        <Character players={this.props.players} character={[...this.props.characters].filter(el => !el.isEliminated.check).reverse()[1]}/>
                     </section>
                     <footer>
                         <Link 

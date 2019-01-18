@@ -16,14 +16,14 @@ import * as urls from './constants/urls';
 //Figure out how to test routes without invoking the entire tree of the component associated w/ the tested route.
 
 
-describe('Basic render tests for component', function(){
+describe('Basic render tests', function(){
   test('App renders as expected', () => {
     const wrapper = shallow(<App/>)
   
     expect(wrapper).toMatchSnapshot();
   })
 })
-describe('Routing tests for react-router', function(){
+describe('When rendering routes', function(){
   test('Invalid path should redirect to 404', () => {
 
     const initialState = {

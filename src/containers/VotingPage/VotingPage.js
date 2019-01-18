@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as actionTypes from '../../constants/actions';
 import * as urls from '../../constants/urls';
-import { url } from 'inspector';
 
 class VotingPage extends Component {
 

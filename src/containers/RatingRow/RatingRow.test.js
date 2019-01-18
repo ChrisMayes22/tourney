@@ -7,10 +7,11 @@ import { shallow } from 'enzyme';
 
 import RatingRow from './RatingRow';
 
+const wrapper = shallow(<RatingRow/>)
+
 describe('Basic render tests for component', function(){
     test('App renders as expected', () => {
-      const wrapper = shallow(<RatingRow/>)
-    
+      
       expect(wrapper).toMatchSnapshot();
     })
-  })
+})

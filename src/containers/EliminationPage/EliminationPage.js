@@ -14,17 +14,18 @@ class EliminationPage extends Component{
                 <main className={classes.flexContainer__col}>
                     <h1 className={classes.eliminationHeader}>ELIMINATED!!</h1>
                     <div className={classes.mainImageContainer}>
+                        {console.log(this.props.characters.filter(char => char.isEliminated.check))}
                         {[this.props.characters.filter(char => char.isEliminated.check).reduce(function(accumulator, currentValue){
                             if(accumulator.isEliminated.whenEliminated < currentValue.isEliminated.whenEliminated) {
                                 return currentValue;
                             } else {
                                 return accumulator;
                             }
-                        }, [])].map(char => 
+                        }, this.props.characters.filter(char => char.isEliminated.check)[0])].map(char => 
                             <img src={char.imageUrl} key={char.id} className={classes.mainImg} alt="a losing competitor"/>)}
                     </div>
                     <Link  to={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? urls.FINALS_PAGE : urls.ELIMINATION_PAGE}
-                        onClick={this.props.characters.filter(char => !char.isEliminated.check).length > 5 ? this.props.onEliminate : null}>
+                        onClick={this.props.characters.filter(char => !char.isEliminated.check).length > 6 ? this.props.onEliminate : null}>
                         <SubmitButton 
                             children={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? 
                                 'On to the finals!' : 'Eliminate another!'}/>
