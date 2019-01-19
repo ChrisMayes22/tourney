@@ -143,6 +143,7 @@ ShallowWrapper {
           <div>
             <img
               alt="The most recent losing competitor"
+              id="foo$id4"
               src="foo$Image"
             />
           </div>
@@ -151,7 +152,9 @@ ShallowWrapper {
             replace={false}
             to="/finals"
           >
-            <submitButton>
+            <submitButton
+              id="EliminationPage__continueButton"
+            >
               On to the finals!
             </submitButton>
           </Link>
@@ -185,6 +188,7 @@ ShallowWrapper {
             <div>
               <img
                 alt="The most recent losing competitor"
+                id="foo$id4"
                 src="foo$Image"
               />
             </div>,
@@ -193,7 +197,9 @@ ShallowWrapper {
               replace={false}
               to="/finals"
             >
-              <submitButton>
+              <submitButton
+                id="EliminationPage__continueButton"
+              >
                 On to the finals!
               </submitButton>
             </Link>,
@@ -222,6 +228,7 @@ ShallowWrapper {
               "children": Array [
                 <img
                   alt="The most recent losing competitor"
+                  id="foo$id4"
                   src="foo$Image"
                 />,
               ],
@@ -231,11 +238,11 @@ ShallowWrapper {
             "rendered": Array [
               Object {
                 "instance": null,
-                "key": "foo$id4",
+                "key": "foo$id4-key",
                 "nodeType": "host",
                 "props": Object {
                   "alt": "The most recent losing competitor",
-                  "className": undefined,
+                  "id": "foo$id4",
                   "src": "foo$Image",
                 },
                 "ref": null,
@@ -250,7 +257,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <submitButton>
+              "children": <submitButton
+                id="EliminationPage__continueButton"
+              >
                 On to the finals!
               </submitButton>,
               "onClick": null,
@@ -264,6 +273,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": "On to the finals!",
+                "id": "EliminationPage__continueButton",
               },
               "ref": null,
               "rendered": "On to the finals!",
@@ -356,6 +366,7 @@ ShallowWrapper {
             <div>
               <img
                 alt="The most recent losing competitor"
+                id="foo$id4"
                 src="foo$Image"
               />
             </div>
@@ -364,7 +375,9 @@ ShallowWrapper {
               replace={false}
               to="/finals"
             >
-              <submitButton>
+              <submitButton
+                id="EliminationPage__continueButton"
+              >
                 On to the finals!
               </submitButton>
             </Link>
@@ -398,6 +411,7 @@ ShallowWrapper {
               <div>
                 <img
                   alt="The most recent losing competitor"
+                  id="foo$id4"
                   src="foo$Image"
                 />
               </div>,
@@ -406,7 +420,9 @@ ShallowWrapper {
                 replace={false}
                 to="/finals"
               >
-                <submitButton>
+                <submitButton
+                  id="EliminationPage__continueButton"
+                >
                   On to the finals!
                 </submitButton>
               </Link>,
@@ -435,6 +451,7 @@ ShallowWrapper {
                 "children": Array [
                   <img
                     alt="The most recent losing competitor"
+                    id="foo$id4"
                     src="foo$Image"
                   />,
                 ],
@@ -444,11 +461,11 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "foo$id4",
+                  "key": "foo$id4-key",
                   "nodeType": "host",
                   "props": Object {
                     "alt": "The most recent losing competitor",
-                    "className": undefined,
+                    "id": "foo$id4",
                     "src": "foo$Image",
                   },
                   "ref": null,
@@ -463,7 +480,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": <submitButton>
+                "children": <submitButton
+                  id="EliminationPage__continueButton"
+                >
                   On to the finals!
                 </submitButton>,
                 "onClick": null,
@@ -477,6 +496,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": "On to the finals!",
+                  "id": "EliminationPage__continueButton",
                 },
                 "ref": null,
                 "rendered": "On to the finals!",

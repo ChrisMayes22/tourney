@@ -6,6 +6,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { EliminationPage } from './EliminationPage';
+import * as urls from '../../constants/urls';
 
 describe('When unconnected EliminationPage first renders', function(){
   let props = {characters: [{
@@ -69,10 +70,79 @@ describe('When unconnected EliminationPage first renders', function(){
     })
 
     describe('Character maps render correctly', function(){
-      const wrapper = shallow(<EliminationPage {...props}/>)
+      let wrapper = shallow(<EliminationPage {...props}/>)
       test('Exactly one character renders inside the Main Image container', function(){
+        expect( wrapper.find('[alt="The most recent losing competitor"]')).toHaveLength(1);
+      })
+      test('The character with the highest isEliminated.whenEliminated value renders in the Main Image container', function(){
+        const mostRecentElim = wrapper.find('[alt="The most recent losing competitor"]');
+        const id = mostRecentElim.prop('id');
+        expect(id).toBe('foo$id4');
+      })
+      test('The number of characters in the `other losers` map === the number of eliminated characters -1', function(){
+        expect(wrapper.find('[alt="a losing competitor"]')).toHaveLength(2);
+      })
+      test('Given that there is only one eliminated character, the `other losers map` should not render, but main container should', function(){
+        props = {characters: [{
+          imageUrl: `foo$Image`,
+          roundRatings: {
+              rowOne: {rowId: `foo$id1-row-one`, points: 1},
+              rowTwo: {rowId: `foo$id1-row-two`, points: 1},
+              rowThree: {rowId: `foo$id1-row-three`, points: 1},
+              rowFour: {rowId: `foo$id1-row-four`, points: 1}
+          },
+          points: 4,
+          hadTurn: false,
+          isEliminated: {check: true, whenEliminated: 0},
+          id: 'foo$id1'
+        }]}
+
+        wrapper = shallow(<EliminationPage {...props}/>)
+
+        expect(wrapper.find('[alt="a losing competitor"]')).toHaveLength(0);
         expect(wrapper.find('[alt="The most recent losing competitor"]')).toHaveLength(1);
-        expect(wrapper.find('[alt="The most recent losing competitor"]')).toEqual(props.characters[3])
       })
     })
+    describe('Link urls render as expected', function(){
+      test('Given there are 7 or more non-eliminated characters, only link to urls.ELIMINATION_PAGE should exist', function(){
+        props = {characters: [{isEliminated:{check: true}},{isEliminated:{check: false}},{isEliminated:{check: false}},
+                  {isEliminated:{check: false}},{isEliminated:{check: false}},{isEliminated:{check: false}},
+                  {isEliminated:{check: false}},{isEliminated:{check: false}}]};
+
+        const wrapper = shallow(<EliminationPage {...props}/>)
+
+        expect(wrapper.exists(`[to="${urls.ELIMINATION_PAGE}"]`)).toBe(true);
+        expect(wrapper.exists(`[to="${urls.FINALS_PAGE}"]`)).toBe(false);
+      })      
+      test('Given there are 6 or fewer non-eliminated characters, only link to urls.FINALS_PAGE should exist', function(){
+        props = {characters: [{isEliminated:{check: true}},{isEliminated:{check: false}},{isEliminated:{check: false}},
+                  {isEliminated:{check: false}},{isEliminated:{check: false}},{isEliminated:{check: false}},
+                  {isEliminated:{check: false}}]};
+
+        const wrapper = shallow(<EliminationPage {...props}/>)
+
+        expect(wrapper.exists(`[to="${urls.ELIMINATION_PAGE}"]`)).toBe(false);
+        expect(wrapper.exists(`[to="${urls.FINALS_PAGE}"]`)).toBe(true);
+      })  
+    })
+    describe('Conditionally rendered text renders as expected', function(){
+      test('Given there are 6 or fewer non-eliminated characters, Continue Button should have text `On to the finals!`', function(){
+        const wrapper = shallow(<EliminationPage {...props}/>);
+
+        const text = wrapper.find('#EliminationPage__continueButton').prop('children');
+
+        expect(text).toEqual('On to the finals!')
+      })
+      test('Given there are 7 or more non-eliminated characters, Continue Button should have text `Eliminate another!On to the finals!`', function(){
+        props = {characters: [{isEliminated:{check: true}},{isEliminated:{check: false}},{isEliminated:{check: false}},
+          {isEliminated:{check: false}},{isEliminated:{check: false}},{isEliminated:{check: false}},
+          {isEliminated:{check: false}},{isEliminated:{check: false}}]};
+        const wrapper = shallow(<EliminationPage {...props}/>);
+
+        const text = wrapper.find('#EliminationPage__continueButton').prop('children');
+
+        expect(text).toEqual('Eliminate another!')
+      })
+    })
+
   })
