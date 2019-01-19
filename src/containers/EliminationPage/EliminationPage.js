@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as urls from '../../constants/urls';
 
-class EliminationPage extends Component{
+export class EliminationPage extends Component{
 
     render(){
         return(
@@ -14,15 +14,15 @@ class EliminationPage extends Component{
                 <main className={classes.flexContainer__col}>
                     <h1 className={classes.eliminationHeader}>ELIMINATED!!</h1>
                     <div className={classes.mainImageContainer}>
-                        {console.log(this.props.characters.filter(char => char.isEliminated.check))}
                         {[this.props.characters.filter(char => char.isEliminated.check).reduce(function(accumulator, currentValue){
                             if(accumulator.isEliminated.whenEliminated < currentValue.isEliminated.whenEliminated) {
                                 return currentValue;
                             } else {
                                 return accumulator;
                             }
-                        }, this.props.characters.filter(char => char.isEliminated.check)[0])].map(char => 
-                            <img src={char.imageUrl} key={char.id} className={classes.mainImg} alt="a losing competitor"/>)}
+                        }, this.props.characters.filter(char => char.isEliminated.check)[0])].map(function(char){ 
+                            return(<img src={char.imageUrl} key={char.id} className={classes.mainImg} alt="The most recent losing competitor"/>);
+                        })}
                     </div>
                     <Link  to={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? urls.FINALS_PAGE : urls.ELIMINATION_PAGE}
                         onClick={this.props.characters.filter(char => !char.isEliminated.check).length > 6 ? this.props.onEliminate : null}>
@@ -40,8 +40,9 @@ class EliminationPage extends Component{
                             } else {
                                 return accumulator;
                             }
-                        }).id)).map(char => 
-                        <img src={char.imageUrl} key={char.id} className={classes.refImg} alt="a losing competitor"/>)}
+                        }).id)).map(function(char){
+                            return (<img src={char.imageUrl} key={char.id} className={classes.refImg} alt="a losing competitor"/>)
+                        })}
                 </section>
             </React.Fragment>
         );

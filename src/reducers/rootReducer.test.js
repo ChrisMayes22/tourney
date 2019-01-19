@@ -7,8 +7,8 @@ import { subCharAtIndex} from './rootReducer';
 import * as actionTypes from '../constants/actions';
 // import { createReplacementArray } from './rootReducer';
 
-describe('Tests helper functions in root reducer', function(){
-    test('subCharAtIndex substitutes one character for a another w/ matching id in an array.', function(){
+describe('When helper functions are called', function(){
+    test('When subCharAtIndex is called, character issubstituted for character w/ matching id in passed array.', function(){
         const charArray = [{
             imageUrl: 'foo$imageUrl',
             points: 0,
@@ -38,7 +38,7 @@ describe('Tests helper functions in root reducer', function(){
         expect(newArray[0]).not.toBe(substituteChar);
         expect(newArray.length).toBe(2);
     });
-    test('createReplacementCharsArray uses a payload to identify ids, then updates characters in state w/ the corresponding ids.', function(){
+    test('When createReplacementCharsArray is invoked, characters from first argument are put in state at ids matching characters in second argument.', function(){
         
         const state = {
             characters: [{

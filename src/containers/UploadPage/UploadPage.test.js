@@ -15,7 +15,7 @@ describe('When unconnected component first renders', function(){
     wrapper = shallow(<UploadPage {...props}/>)
     let component = wrapper.instance();
 
-    test('renders as expected', () => {
+    test('UploadPagerenders as expected', () => {
         expect(wrapper).toMatchSnapshot();
     })
     describe('state initializes as expected', function(){
@@ -92,27 +92,19 @@ describe('When unconnected component first renders', function(){
         })
     })
 })
-describe('When component props or state update', function(){
+describe('When unconnected component props or state update', function(){
     describe('When state.modalDisplayToggle toggles', function(){
-        test('Given modal is rendered, then when modalDisplayToggle is toggled, modal no longer renders.', function(){
+        test('When UploadPage.modalDisplayHandler is invoked, modal render toggles.', function(){
             let props = {characters: [{hadTurn: true, id: 'foo$id'}], players: 4}
             let wrapper = shallow(<UploadPage {...props}/>)
+            const component = wrapper.instance();
     
             expect(wrapper.exists('#modal')).toBe(true);
-    
-            wrapper.setState({imageUrl: '', modalDisplayToggle: false});
-    
+
+            component.modalDisplayHandler()
             expect(wrapper.exists('#modal')).toBe(false);
-        })
-        test('Given modal is NOT rendered, then when modalDisplayToggle is toggled, modal DOES render.', function(){
-            let props = {characters: [{hadTurn: true, id: 'foo$id'}], players: 4}
-            let wrapper = shallow(<UploadPage {...props}/>)
-            wrapper.setState({imageUrl: '', modalDisplayToggle: false});
-    
-            expect(wrapper.exists('#modal')).toBe(false);
-    
-            wrapper.setState({imageUrl: '', modalDisplayToggle: true});
             
+            component.modalDisplayHandler()
             expect(wrapper.exists('#modal')).toBe(true);
         })
     })

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classes from './Winner.css';
 import { connect } from 'react-redux';
 
-class Winner extends Component{
+export class Winner extends Component{
 
     render(){
         return(
@@ -10,14 +10,9 @@ class Winner extends Component{
                 <main className={classes.flexContainer__col}>
                     <h1 className={classes.eliminationHeader}>WINNER!!</h1>
                     <div className={classes.mainImageContainer}>
-                        {[this.props.characters.filter(char => char.isEliminated.check).reduce(function(accumulator, currentValue){
-                            if(accumulator.isEliminated.whenEliminated < currentValue.isEliminated.whenEliminated) {
-                                return currentValue;
-                            } else {
-                                return accumulator;
-                            }
-                        })].map(char => 
-                            <img src={char.imageUrl} key={char.id} className={classes.mainImg} alt="a losing competitor"/>)}
+                        {this.props.characters.filter(char => !char.isEliminated.check).map(function(char){
+                            return(<img src={char.imageUrl} key={char.id} className={classes.mainImg} alt="the winner!"/>)
+                        })}
                     </div>
                 </main>
                 <section className={classes.grid}>

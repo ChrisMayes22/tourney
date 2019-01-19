@@ -4,7 +4,7 @@ import classes from './RatingRow.css';
 import { connect } from 'react-redux';
 import * as actionTypes from '../../constants/actions';
 
-class RatingRow extends Component {
+export class RatingRow extends Component {
     state = {
         qualityArray: [ {quality: 'awful', active: false, points: 1}, 
                         {quality: 'poor', active: false, points: 2}, 

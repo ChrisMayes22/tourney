@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import * as actionTypes from '../../constants/actions';
 import * as urls from '../../constants/urls';
 
-class VotingPage extends Component {
+export class VotingPage extends Component {
 
     playersArray= this.props.characters.filter(char => !char.hadTurn)
 
@@ -16,18 +16,13 @@ class VotingPage extends Component {
 
         return(
             <React.Fragment>
-                {'PLAYERS ARRAY'}
-                {console.log(this.playersArray)}
-                <main className={this.props.players == 3? classes.grid__3Players : classes.grid__4Players}>
+                <main className={this.props.players == 3 ? classes.grid__3Players : classes.grid__4Players}>
                     {this.props.characters.filter(char => !char.hadTurn).map(char => {
-                        if(this.props.characters.filter(char => !char.hadTurn).findIndex(index => index.id === char.id) < this.props.players){
                             return (
-                                <section className={classes.competitorImage}>
+                                <section className={classes.competitorImage} key={`${char.id}-section`}>
                                     <Character players={this.props.players} character={char}/>
                                 </section>
                             );
-                        }
-                        return null;
                     })}
                 </main>
                 <footer>

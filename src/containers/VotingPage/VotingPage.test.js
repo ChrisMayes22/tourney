@@ -5,12 +5,29 @@ configure({ adapter: new Adapter(), disableLifecycleMethods: true });
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import VotingPage from './VotingPage';
+import { VotingPage } from './VotingPage';
 
-describe('Basic render tests for component', function(){
-    test('App renders as expected', () => {
-      const wrapper = shallow(<VotingPage/>)
+describe('When unconnected component first renders', function(){
+    test('VotingPage renders as expected', () => {
+      const props = {characters:[], players:4}
+      const wrapper = shallow(<VotingPage {...props}/>)
     
       expect(wrapper).toMatchSnapshot();
     })
-  })
+    describe('Characters map renders properly', function(){
+      test('when characters map renders, only characters for which hadTurn:true render', function(){
+          let props = {characters: [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'},
+                                    {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image'},
+                                    {hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'},
+                                    {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image'},
+                                    {hadTurn: true, id: 'foo$id', imageUrl: 'foo$image'},
+                                    {hadTurn: true, id: 'foo$id1', imageUrl: 'foo$image'},
+                                    {hadTurn: true, id: 'foo$id', imageUrl: 'foo$image'},
+                                    {hadTurn: true, id: 'foo$id1', imageUrl: 'foo$image'}], 
+                        players: 4}
+          const wrapper = shallow(<VotingPage {...props}/>);
+
+          expect(wrapper.find('[character]')).toHaveLength(4);
+      })
+    })
+})
