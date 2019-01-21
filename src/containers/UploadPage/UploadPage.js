@@ -3,7 +3,7 @@ import classes from './UploadPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../constants/actions'
+import {initializeCharacter, removeCharacter, removeLowestScore} from '../../constants/actions'
 import * as urls from '../../constants/urls';
 
 export class UploadPage extends Component {
@@ -94,15 +94,9 @@ export class UploadPage extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onUpload: (imageUrl, id) => {
-            dispatch({type: actionTypes.INITIALIZE_CHARACTER, payload: {image: imageUrl, id: id}})
-        },
-        onRemove: (id) => {
-            dispatch({type: actionTypes.REMOVE_CHARACTER, id: id})
-        },
-        onEliminate: () => {
-            dispatch({type: actionTypes.REMOVE_LOWEST_SCORE})
-        }
+        onUpload: (imageUrl, id) => dispatch(initializeCharacter(imageUrl, id)),
+        onRemove: (id) => removeCharacter(id),
+        onEliminate: () => removeLowestScore()
     }
 }
 

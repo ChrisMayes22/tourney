@@ -7,6 +7,10 @@ import { shallow } from 'enzyme';
 
 import { VotingPage } from './VotingPage';
 
+import configureStore from 'redux-mock-store';
+const middleware = [];
+const mockStore = configureStore(middleware);
+
 describe('When unconnected component first renders', function(){
     test('VotingPage renders as expected', () => {
       const props = {characters:[], players:4}
@@ -31,3 +35,4 @@ describe('When unconnected component first renders', function(){
       })
     })
 })
+

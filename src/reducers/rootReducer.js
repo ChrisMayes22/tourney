@@ -28,6 +28,7 @@ export function rootReducer(state=initialState, action) {
 
     switch(action.type) {
         case actionTypes.SET_PLAYERS:
+        console.log(`dispatch called in reducer: ${action}`)
         return{
             ...state,
             players: action.number

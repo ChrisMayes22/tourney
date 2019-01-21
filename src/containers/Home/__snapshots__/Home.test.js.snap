@@ -17,88 +17,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <nav>
-        <h3>
-          How many judges are joining us...?
-        </h3>
-        <input
-          onChange={[Function]}
-          type="number"
-        />
-        <h3>
-          This game is designed for THREE or FOUR players
-        </h3>
-      </nav>,
-      "className": undefined,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <h3>
-            How many judges are joining us...?
-          </h3>,
-          <input
-            onChange={[Function]}
-            type="number"
-          />,
-          <h3>
-            This game is designed for THREE or FOUR players
-          </h3>,
-        ],
-        "className": undefined,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "How many judges are joining us...?",
-          },
-          "ref": null,
-          "rendered": "How many judges are joining us...?",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "onChange": [Function],
-            "type": "number",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "This game is designed for THREE or FOUR players",
-          },
-          "ref": null,
-          "rendered": "This game is designed for THREE or FOUR players",
-          "type": "h3",
-        },
-      ],
-      "type": "nav",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <nav>
+      "children": Array [
+        <nav>
           <h3>
             How many judges are joining us...?
           </h3>
@@ -110,10 +30,13 @@ ShallowWrapper {
             This game is designed for THREE or FOUR players
           </h3>
         </nav>,
-        "className": undefined,
-      },
-      "ref": null,
-      "rendered": Object {
+        undefined,
+      ],
+      "className": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -171,6 +94,95 @@ ShallowWrapper {
         ],
         "type": "nav",
       },
+      undefined,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <nav>
+            <h3>
+              How many judges are joining us...?
+            </h3>
+            <input
+              onChange={[Function]}
+              type="number"
+            />
+            <h3>
+              This game is designed for THREE or FOUR players
+            </h3>
+          </nav>,
+          undefined,
+        ],
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                How many judges are joining us...?
+              </h3>,
+              <input
+                onChange={[Function]}
+                type="number"
+              />,
+              <h3>
+                This game is designed for THREE or FOUR players
+              </h3>,
+            ],
+            "className": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "How many judges are joining us...?",
+              },
+              "ref": null,
+              "rendered": "How many judges are joining us...?",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "onChange": [Function],
+                "type": "number",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "This game is designed for THREE or FOUR players",
+              },
+              "ref": null,
+              "rendered": "This game is designed for THREE or FOUR players",
+              "type": "h3",
+            },
+          ],
+          "type": "nav",
+        },
+        undefined,
+      ],
       "type": "div",
     },
   ],

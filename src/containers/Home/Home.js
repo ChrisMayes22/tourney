@@ -3,7 +3,7 @@ import classes from './Home.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
-import * as actionTypes from '../../constants/actions';
+import { setPlayers } from '../../constants/actions';
 import * as urls from '../../constants/urls';
 
 export class Home extends Component {
@@ -22,6 +22,7 @@ export class Home extends Component {
                             </Link> : 
                             <h3>This game is designed for THREE or FOUR players</h3>}
                 </nav>
+                {console.log(this.props.players)}
             </div>
         )
     }
@@ -35,11 +36,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onSetPlayers: (num) => {
-            console.log('Set Players Called')
-            dispatch({type: actionTypes.SET_PLAYERS, number: num})
-        }
+        onSetPlayers: (num) => dispatch(setPlayers(num))
     }
-}
+ }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

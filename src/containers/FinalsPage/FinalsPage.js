@@ -4,7 +4,7 @@ import classes from './FinalsPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import * as actionTypes from '../../constants/actions';
+import { resetForFinals, submitCharacterRatings, removeLowestScore } from '../../constants/actions';
 import * as urls from '../../constants/urls';
 
 export class FinalsPage extends Component {
@@ -95,17 +95,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onClearModal: () => {
-            dispatch({type: actionTypes.RESET_FOR_FINALS})
-        },
-        onSubmitRatings: (playerOne, playerTwo) => {
-            dispatch({type: actionTypes.SUBMIT_CHARACTER_RATINGS, payload:{
-                players: [playerOne, playerTwo]
-            }});
-        },
-        onEliminate: () => {
-            dispatch({type: actionTypes.REMOVE_LOWEST_SCORE})
-        }
+        onClearModal: () => dispatch(resetForFinals()),
+        onSubmitRatings: (playerOne, playerTwo) => dispatch(submitCharacterRatings([playerOne, playerTwo])),
+        onEliminate: () => dispatch(removeLowestScore())
     }
 }
 

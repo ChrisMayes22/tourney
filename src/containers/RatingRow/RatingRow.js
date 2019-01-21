@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import RatingButton from '../../components/RatingButton/RatingButton';
 import classes from './RatingRow.css';
 import { connect } from 'react-redux';
-import * as actionTypes from '../../constants/actions';
+import { rateCharacter } from '../../constants/actions';
 
 export class RatingRow extends Component {
     state = {
@@ -36,7 +36,7 @@ export class RatingRow extends Component {
 
     render(){
         return(
-            <div className={this.props.players == 3 ? classes.flexContainer__row3Players : classes.flexContainer__row4Players}>
+            <div className={this.props.players === 3 ? classes.flexContainer__row3Players : classes.flexContainer__row4Players}>
                     {this.state.qualityArray.map(el => {
                         const qualityArray = [...this.state.qualityArray]
                         const currentIndex = qualityArray.indexOf(el);
@@ -66,9 +66,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onRate: (points, rowId, character) => {
-            dispatch({type: actionTypes.RATE_CHARACTER, payload: {points: points, rowId: rowId, character: character}})
-        }
+        onRate: (points, rowId, character) => dispatch(rateCharacter(points, rowId, character))
     }
 }
 

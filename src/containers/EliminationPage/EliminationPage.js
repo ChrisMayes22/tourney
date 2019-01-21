@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from './EliminationPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
-import * as actionTypes from '../../constants/actions';
+import {removeLowestScore } from '../../constants/actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as urls from '../../constants/urls';
@@ -45,7 +45,7 @@ export class EliminationPage extends Component{
                         }).id)).map(function(char){
                             if(char !== null){
                                 return (<img src={char.imageUrl} key={char.id} className={classes.refImg} alt="a losing competitor"/>)
-                            }
+                            } else { return null }
                         })}
                 </section>
             </React.Fragment>
@@ -55,9 +55,7 @@ export class EliminationPage extends Component{
 
 const mapDispatchToProps = dispatch => {
     return {
-        onEliminate: () => {
-            dispatch({type: actionTypes.REMOVE_LOWEST_SCORE})
-        }
+        onEliminate: () => dispatch(removeLowestScore())
     }
 }
 
