@@ -72,7 +72,7 @@ export function rootReducer(state=initialState, action) {
                 if(ratings[row].rowId === action.payload.rowId){
                     currentRow.points = action.payload.points;
                 }
-                targetCharacter.roundRatings[row] = currentRow
+                targetCharacter.roundRatings[row] = currentRow;
             })
 
             currentChars = subCharAtIndex([...currentChars], targetCharacter);
@@ -107,9 +107,6 @@ export function rootReducer(state=initialState, action) {
 
             const characters = [...createReplacementCharsArray(chars, action.payload.players)];
 
-            console.log('CHARACTERS')
-            console.log(characters)
-
             return{
                 ...state,
                 characters: characters
@@ -128,7 +125,8 @@ export function rootReducer(state=initialState, action) {
 
         const lowestScore = [...state.characters].filter(char => !char.isEliminated.check).reduce(reduceToLowestScore);
 
-        const lowestScoreCopy = {...lowestScore, isEliminated: {check: true, whenEliminated: [...state.characters].filter(char => char.isEliminated.check).length}}
+        const lowestScoreCopy = {...lowestScore, isEliminated: {check: true, whenEliminated: 
+                                                                    [...state.characters].filter(char => char.isEliminated.check).length}};
 
         const charsCopy = subCharAtIndex([...state.characters], lowestScoreCopy);
 

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import * as actionTypes from '../../constants/actions';
 import * as urls from '../../constants/urls';
 
-class FinalsPage extends Component {
+export class FinalsPage extends Component {
 
     state = {
         modal: true,
@@ -53,20 +53,26 @@ class FinalsPage extends Component {
                         <br/>
                         <SubmitButton 
                             children={'Yes!'}
-                            clicked={() => this.startVotingHandler(this.props.characters.filter(el => !el.isEliminated.check)[0], 
-                                                                this.props.characters.filter(el => !el.isEliminated.check)[1])}/>
+                            clicked={() => this.startVotingHandler([...this.props.characters].filter(el => !el.isEliminated.check).reverse()[0], 
+                                                                        [...this.props.characters].filter(el => !el.isEliminated.check).reverse()[1])}/>      
                     </aside>
                 </div> : null}
                 <main className={classes.grid}>
                     <section className={classes.imageOne}>
-                        <Character players ={this.props.players} character={[...this.props.characters].filter(el => !el.isEliminated.check).reverse()[0]}/>
+                        <Character 
+                            players ={this.props.players} 
+                            character={[...this.props.characters].filter(el => !el.isEliminated.check).reverse()[0]} 
+                            id={'first-char'}/>
                     </section>
                     <section className={classes.imageTwo}>
-                        <Character players={this.props.players} character={[...this.props.characters].filter(el => !el.isEliminated.check).reverse()[1]}/>
+                        <Character 
+                        players={this.props.players} 
+                        character={[...this.props.characters].filter(el => !el.isEliminated.check).reverse()[1]} 
+                        id={'second-char'}/>
                     </section>
                     <footer>
                         <Link 
-                            to={this.props.characters.filter(el => !el.isEliminated.check).length > 2 ? urls.FINALS_PAGE : urls.WINNER_PAGE}
+                            to={this.props.characters.filter(el => !el.isEliminated.check).length === 2 ? urls.WINNER_PAGE : urls.FINALS_PAGE}
                             onClick = {() => this.submitVotesHandler(this.props.characters.filter(el => !el.isEliminated.check)[0], 
                                                                     this.props.characters.filter(el => !el.isEliminated.check)[1])}>
                             <SubmitButton children={"Cast your votes"}/>

@@ -133,12 +133,12 @@ describe('When unconnected EliminationPage first renders', function(){
 
         expect(text).toEqual('On to the finals!')
       })
-      test('Given there are 7 or more non-eliminated characters, Continue Button should have text `Eliminate another!On to the finals!`', function(){
+      test('Given there are 7 or more non-eliminated characters, Continue Button should have text `Eliminate another!`', function(){
         props = {characters: [{isEliminated:{check: true}},{isEliminated:{check: false}},{isEliminated:{check: false}},
           {isEliminated:{check: false}},{isEliminated:{check: false}},{isEliminated:{check: false}},
           {isEliminated:{check: false}},{isEliminated:{check: false}}]};
+        
         const wrapper = shallow(<EliminationPage {...props}/>);
-
         const text = wrapper.find('#EliminationPage__continueButton').prop('children');
 
         expect(text).toEqual('Eliminate another!')
