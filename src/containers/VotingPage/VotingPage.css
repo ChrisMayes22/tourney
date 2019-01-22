@@ -6,10 +6,8 @@
     grid-row-gap: 10px;
     justify-content: center;
     align-items: center;
-    background-color: #a63939;
     height: 90vh;
     width: 100vw;
-    background-image: url('../../assets/background__rose-pattern.jpg');
     background-repeat: none;
     background-size: cover;
 }
@@ -26,7 +24,6 @@
     background-color: #a63939;
     height: 90vh;
     width: 100vw;
-    background-image: url('../../assets/background__rose-pattern.jpg');
     background-repeat: none;
     background-size: cover;
 }

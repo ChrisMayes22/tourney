@@ -2,7 +2,7 @@ import * as actionTypes from '../constants/actions';
 
 const initialState = {
     characters: [],
-    players: 0
+    players: 3
 }
 
 export function subCharAtIndex(arrayCopy, modChar){
@@ -13,9 +13,6 @@ export function subCharAtIndex(arrayCopy, modChar){
 
 
 export function rootReducer(state=initialState, action) {
-
-    console.log(action)
-
     function createReplacementCharsArray(charArray, payloadArray){
         const characters = [...state.characters];
         payloadArray.forEach(payload => {
@@ -29,7 +26,6 @@ export function rootReducer(state=initialState, action) {
 
     switch(action.type) {
         case actionTypes.SET_PLAYERS:
-        console.log(`dispatch called in reducer: ${action}`)
         return{
             ...state,
             players: action.number

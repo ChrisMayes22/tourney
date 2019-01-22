@@ -15,6 +15,7 @@ export class Home extends Component {
                     <h3>How many judges are joining us...?</h3>
                     <input 
                         type="number"
+                        value={this.props.players}
                         onChange={(event) => this.props.onSetPlayers(Number(event.target.value))}></input>
                         {(this.props.players === 3 || this.props.players === 4)  ? 
                             <Link to={urls.UPLOAD_PAGE} id='uploadLink'>

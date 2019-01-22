@@ -71,6 +71,7 @@ ShallowWrapper {
           "props": Object {
             "onChange": [Function],
             "type": "number",
+            "value": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -152,6 +153,7 @@ ShallowWrapper {
             "props": Object {
               "onChange": [Function],
               "type": "number",
+              "value": undefined,
             },
             "ref": null,
             "rendered": null,

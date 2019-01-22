@@ -35,18 +35,16 @@ export class EliminationPage extends Component{
                 </main>
                 <section className={classes.grid}>
                     <h5 className={classes.otherLosersHeader}>~ The Other Losers ~</h5>
-                    {this.props.characters.filter(char => char.isEliminated.check).filter(
+                    {this.props.characters.filter(char => char.isEliminated.check).length > 1? this.props.characters.filter(char => char.isEliminated.check).filter(
                         char => char.id !== (this.props.characters.reduce(function(accumulator, currentValue){
                             if(accumulator.isEliminated.whenEliminated < currentValue.isEliminated.whenEliminated) {
                                 return currentValue;
                             } else {
                                 return accumulator;
                             }
-                        }).id)).map(function(char){
-                            if(char !== null){
+                        })).id).map(function(char){
                                 return (<img src={char.imageUrl} key={char.id} className={classes.refImg} alt="a losing competitor"/>)
-                            } else { return null }
-                        })}
+                        }) : null}
                 </section>
             </React.Fragment>
         );
