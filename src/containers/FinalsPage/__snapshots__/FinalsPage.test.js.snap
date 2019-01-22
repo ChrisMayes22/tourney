@@ -18,19 +18,19 @@ ShallowWrapper {
           "roundRatings": Object {
             "rowFour": Object {
               "points": 5,
-              "rowId": "foo$id1-row-four",
+              "rowId": "foo$id1-row-4",
             },
             "rowOne": Object {
               "points": 5,
-              "rowId": "foo$id1-row-one",
+              "rowId": "foo$id1-row-1",
             },
             "rowThree": Object {
               "points": 5,
-              "rowId": "foo$id1-row-three",
+              "rowId": "foo$id1-row-3",
             },
             "rowTwo": Object {
               "points": 5,
-              "rowId": "foo$id1-row-two",
+              "rowId": "foo$id1-row-2",
             },
           },
         },
@@ -46,19 +46,19 @@ ShallowWrapper {
           "roundRatings": Object {
             "rowFour": Object {
               "points": 1,
-              "rowId": "foo$id2-row-four",
+              "rowId": "foo$id2-row-4",
             },
             "rowOne": Object {
               "points": 1,
-              "rowId": "foo$id2-row-one",
+              "rowId": "foo$id2-row-1",
             },
             "rowThree": Object {
               "points": 1,
-              "rowId": "foo$id2-row-three",
+              "rowId": "foo$id2-row-3",
             },
             "rowTwo": Object {
               "points": 1,
-              "rowId": "foo$id2-row-two",
+              "rowId": "foo$id2-row-2",
             },
           },
         },
@@ -74,19 +74,19 @@ ShallowWrapper {
           "roundRatings": Object {
             "rowFour": Object {
               "points": 2,
-              "rowId": "foo$id3-row-four",
+              "rowId": "foo$id3-row-4",
             },
             "rowOne": Object {
               "points": 2,
-              "rowId": "foo$id3-row-one",
+              "rowId": "foo$id3-row-1",
             },
             "rowThree": Object {
               "points": 2,
-              "rowId": "foo$id3-row-three",
+              "rowId": "foo$id3-row-3",
             },
             "rowTwo": Object {
               "points": 2,
-              "rowId": "foo$id3-row-two",
+              "rowId": "foo$id3-row-2",
             },
           },
         },
@@ -157,19 +157,19 @@ ShallowWrapper {
                   "roundRatings": Object {
                     "rowFour": Object {
                       "points": 5,
-                      "rowId": "foo$id1-row-four",
+                      "rowId": "foo$id1-row-4",
                     },
                     "rowOne": Object {
                       "points": 5,
-                      "rowId": "foo$id1-row-one",
+                      "rowId": "foo$id1-row-1",
                     },
                     "rowThree": Object {
                       "points": 5,
-                      "rowId": "foo$id1-row-three",
+                      "rowId": "foo$id1-row-3",
                     },
                     "rowTwo": Object {
                       "points": 5,
-                      "rowId": "foo$id1-row-two",
+                      "rowId": "foo$id1-row-2",
                     },
                   },
                 }
@@ -188,19 +188,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-four",
+                        "rowId": "foo$id1-row-4",
                       },
                       "rowOne": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-one",
+                        "rowId": "foo$id1-row-1",
                       },
                       "rowThree": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-three",
+                        "rowId": "foo$id1-row-3",
                       },
                       "rowTwo": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-two",
+                        "rowId": "foo$id1-row-2",
                       },
                     },
                   },
@@ -216,19 +216,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-four",
+                        "rowId": "foo$id2-row-4",
                       },
                       "rowOne": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-one",
+                        "rowId": "foo$id2-row-1",
                       },
                       "rowThree": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-three",
+                        "rowId": "foo$id2-row-3",
                       },
                       "rowTwo": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-two",
+                        "rowId": "foo$id2-row-2",
                       },
                     },
                   },
@@ -244,19 +244,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-four",
+                        "rowId": "foo$id3-row-4",
                       },
                       "rowOne": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-one",
+                        "rowId": "foo$id3-row-1",
                       },
                       "rowThree": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-three",
+                        "rowId": "foo$id3-row-3",
                       },
                       "rowTwo": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-two",
+                        "rowId": "foo$id3-row-2",
                       },
                     },
                   },
@@ -283,19 +283,19 @@ ShallowWrapper {
                   "roundRatings": Object {
                     "rowFour": Object {
                       "points": 1,
-                      "rowId": "foo$id2-row-four",
+                      "rowId": "foo$id2-row-4",
                     },
                     "rowOne": Object {
                       "points": 1,
-                      "rowId": "foo$id2-row-one",
+                      "rowId": "foo$id2-row-1",
                     },
                     "rowThree": Object {
                       "points": 1,
-                      "rowId": "foo$id2-row-three",
+                      "rowId": "foo$id2-row-3",
                     },
                     "rowTwo": Object {
                       "points": 1,
-                      "rowId": "foo$id2-row-two",
+                      "rowId": "foo$id2-row-2",
                     },
                   },
                 }
@@ -314,19 +314,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-four",
+                        "rowId": "foo$id1-row-4",
                       },
                       "rowOne": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-one",
+                        "rowId": "foo$id1-row-1",
                       },
                       "rowThree": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-three",
+                        "rowId": "foo$id1-row-3",
                       },
                       "rowTwo": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-two",
+                        "rowId": "foo$id1-row-2",
                       },
                     },
                   },
@@ -342,19 +342,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-four",
+                        "rowId": "foo$id2-row-4",
                       },
                       "rowOne": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-one",
+                        "rowId": "foo$id2-row-1",
                       },
                       "rowThree": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-three",
+                        "rowId": "foo$id2-row-3",
                       },
                       "rowTwo": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-two",
+                        "rowId": "foo$id2-row-2",
                       },
                     },
                   },
@@ -370,19 +370,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-four",
+                        "rowId": "foo$id3-row-4",
                       },
                       "rowOne": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-one",
+                        "rowId": "foo$id3-row-1",
                       },
                       "rowThree": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-three",
+                        "rowId": "foo$id3-row-3",
                       },
                       "rowTwo": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-two",
+                        "rowId": "foo$id3-row-2",
                       },
                     },
                   },
@@ -623,19 +623,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-four",
+                        "rowId": "foo$id1-row-4",
                       },
                       "rowOne": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-one",
+                        "rowId": "foo$id1-row-1",
                       },
                       "rowThree": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-three",
+                        "rowId": "foo$id1-row-3",
                       },
                       "rowTwo": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-two",
+                        "rowId": "foo$id1-row-2",
                       },
                     },
                   }
@@ -654,19 +654,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     },
@@ -682,19 +682,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     },
@@ -710,19 +710,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-four",
+                          "rowId": "foo$id3-row-4",
                         },
                         "rowOne": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-one",
+                          "rowId": "foo$id3-row-1",
                         },
                         "rowThree": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-three",
+                          "rowId": "foo$id3-row-3",
                         },
                         "rowTwo": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-two",
+                          "rowId": "foo$id3-row-2",
                         },
                       },
                     },
@@ -749,19 +749,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-four",
+                        "rowId": "foo$id2-row-4",
                       },
                       "rowOne": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-one",
+                        "rowId": "foo$id2-row-1",
                       },
                       "rowThree": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-three",
+                        "rowId": "foo$id2-row-3",
                       },
                       "rowTwo": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-two",
+                        "rowId": "foo$id2-row-2",
                       },
                     },
                   }
@@ -780,19 +780,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     },
@@ -808,19 +808,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     },
@@ -836,19 +836,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-four",
+                          "rowId": "foo$id3-row-4",
                         },
                         "rowOne": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-one",
+                          "rowId": "foo$id3-row-1",
                         },
                         "rowThree": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-three",
+                          "rowId": "foo$id3-row-3",
                         },
                         "rowTwo": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-two",
+                          "rowId": "foo$id3-row-2",
                         },
                       },
                     },
@@ -884,19 +884,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-four",
+                        "rowId": "foo$id1-row-4",
                       },
                       "rowOne": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-one",
+                        "rowId": "foo$id1-row-1",
                       },
                       "rowThree": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-three",
+                        "rowId": "foo$id1-row-3",
                       },
                       "rowTwo": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-two",
+                        "rowId": "foo$id1-row-2",
                       },
                     },
                   }
@@ -915,19 +915,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     },
@@ -943,19 +943,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     },
@@ -971,19 +971,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-four",
+                          "rowId": "foo$id3-row-4",
                         },
                         "rowOne": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-one",
+                          "rowId": "foo$id3-row-1",
                         },
                         "rowThree": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-three",
+                          "rowId": "foo$id3-row-3",
                         },
                         "rowTwo": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-two",
+                          "rowId": "foo$id3-row-2",
                         },
                       },
                     },
@@ -1014,19 +1014,19 @@ ShallowWrapper {
                   "roundRatings": Object {
                     "rowFour": Object {
                       "points": 5,
-                      "rowId": "foo$id1-row-four",
+                      "rowId": "foo$id1-row-4",
                     },
                     "rowOne": Object {
                       "points": 5,
-                      "rowId": "foo$id1-row-one",
+                      "rowId": "foo$id1-row-1",
                     },
                     "rowThree": Object {
                       "points": 5,
-                      "rowId": "foo$id1-row-three",
+                      "rowId": "foo$id1-row-3",
                     },
                     "rowTwo": Object {
                       "points": 5,
-                      "rowId": "foo$id1-row-two",
+                      "rowId": "foo$id1-row-2",
                     },
                   },
                 },
@@ -1043,19 +1043,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-four",
+                        "rowId": "foo$id1-row-4",
                       },
                       "rowOne": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-one",
+                        "rowId": "foo$id1-row-1",
                       },
                       "rowThree": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-three",
+                        "rowId": "foo$id1-row-3",
                       },
                       "rowTwo": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-two",
+                        "rowId": "foo$id1-row-2",
                       },
                     },
                   },
@@ -1071,19 +1071,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-four",
+                        "rowId": "foo$id2-row-4",
                       },
                       "rowOne": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-one",
+                        "rowId": "foo$id2-row-1",
                       },
                       "rowThree": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-three",
+                        "rowId": "foo$id2-row-3",
                       },
                       "rowTwo": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-two",
+                        "rowId": "foo$id2-row-2",
                       },
                     },
                   },
@@ -1099,19 +1099,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-four",
+                        "rowId": "foo$id3-row-4",
                       },
                       "rowOne": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-one",
+                        "rowId": "foo$id3-row-1",
                       },
                       "rowThree": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-three",
+                        "rowId": "foo$id3-row-3",
                       },
                       "rowTwo": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-two",
+                        "rowId": "foo$id3-row-2",
                       },
                     },
                   },
@@ -1146,19 +1146,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-four",
+                        "rowId": "foo$id2-row-4",
                       },
                       "rowOne": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-one",
+                        "rowId": "foo$id2-row-1",
                       },
                       "rowThree": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-three",
+                        "rowId": "foo$id2-row-3",
                       },
                       "rowTwo": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-two",
+                        "rowId": "foo$id2-row-2",
                       },
                     },
                   }
@@ -1177,19 +1177,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     },
@@ -1205,19 +1205,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     },
@@ -1233,19 +1233,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-four",
+                          "rowId": "foo$id3-row-4",
                         },
                         "rowOne": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-one",
+                          "rowId": "foo$id3-row-1",
                         },
                         "rowThree": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-three",
+                          "rowId": "foo$id3-row-3",
                         },
                         "rowTwo": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-two",
+                          "rowId": "foo$id3-row-2",
                         },
                       },
                     },
@@ -1276,19 +1276,19 @@ ShallowWrapper {
                   "roundRatings": Object {
                     "rowFour": Object {
                       "points": 1,
-                      "rowId": "foo$id2-row-four",
+                      "rowId": "foo$id2-row-4",
                     },
                     "rowOne": Object {
                       "points": 1,
-                      "rowId": "foo$id2-row-one",
+                      "rowId": "foo$id2-row-1",
                     },
                     "rowThree": Object {
                       "points": 1,
-                      "rowId": "foo$id2-row-three",
+                      "rowId": "foo$id2-row-3",
                     },
                     "rowTwo": Object {
                       "points": 1,
-                      "rowId": "foo$id2-row-two",
+                      "rowId": "foo$id2-row-2",
                     },
                   },
                 },
@@ -1305,19 +1305,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-four",
+                        "rowId": "foo$id1-row-4",
                       },
                       "rowOne": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-one",
+                        "rowId": "foo$id1-row-1",
                       },
                       "rowThree": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-three",
+                        "rowId": "foo$id1-row-3",
                       },
                       "rowTwo": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-two",
+                        "rowId": "foo$id1-row-2",
                       },
                     },
                   },
@@ -1333,19 +1333,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-four",
+                        "rowId": "foo$id2-row-4",
                       },
                       "rowOne": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-one",
+                        "rowId": "foo$id2-row-1",
                       },
                       "rowThree": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-three",
+                        "rowId": "foo$id2-row-3",
                       },
                       "rowTwo": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-two",
+                        "rowId": "foo$id2-row-2",
                       },
                     },
                   },
@@ -1361,19 +1361,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-four",
+                        "rowId": "foo$id3-row-4",
                       },
                       "rowOne": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-one",
+                        "rowId": "foo$id3-row-1",
                       },
                       "rowThree": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-three",
+                        "rowId": "foo$id3-row-3",
                       },
                       "rowTwo": Object {
                         "points": 2,
-                        "rowId": "foo$id3-row-two",
+                        "rowId": "foo$id3-row-2",
                       },
                     },
                   },
@@ -1451,19 +1451,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-four",
+                        "rowId": "foo$id1-row-4",
                       },
                       "rowOne": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-one",
+                        "rowId": "foo$id1-row-1",
                       },
                       "rowThree": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-three",
+                        "rowId": "foo$id1-row-3",
                       },
                       "rowTwo": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-two",
+                        "rowId": "foo$id1-row-2",
                       },
                     },
                   }
@@ -1482,19 +1482,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     },
@@ -1510,19 +1510,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     },
@@ -1538,19 +1538,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-four",
+                          "rowId": "foo$id3-row-4",
                         },
                         "rowOne": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-one",
+                          "rowId": "foo$id3-row-1",
                         },
                         "rowThree": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-three",
+                          "rowId": "foo$id3-row-3",
                         },
                         "rowTwo": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-two",
+                          "rowId": "foo$id3-row-2",
                         },
                       },
                     },
@@ -1577,19 +1577,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-four",
+                        "rowId": "foo$id2-row-4",
                       },
                       "rowOne": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-one",
+                        "rowId": "foo$id2-row-1",
                       },
                       "rowThree": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-three",
+                        "rowId": "foo$id2-row-3",
                       },
                       "rowTwo": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-two",
+                        "rowId": "foo$id2-row-2",
                       },
                     },
                   }
@@ -1608,19 +1608,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     },
@@ -1636,19 +1636,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     },
@@ -1664,19 +1664,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-four",
+                          "rowId": "foo$id3-row-4",
                         },
                         "rowOne": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-one",
+                          "rowId": "foo$id3-row-1",
                         },
                         "rowThree": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-three",
+                          "rowId": "foo$id3-row-3",
                         },
                         "rowTwo": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-two",
+                          "rowId": "foo$id3-row-2",
                         },
                       },
                     },
@@ -1917,19 +1917,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     }
@@ -1948,19 +1948,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-four",
+                            "rowId": "foo$id1-row-4",
                           },
                           "rowOne": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-one",
+                            "rowId": "foo$id1-row-1",
                           },
                           "rowThree": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-three",
+                            "rowId": "foo$id1-row-3",
                           },
                           "rowTwo": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-two",
+                            "rowId": "foo$id1-row-2",
                           },
                         },
                       },
@@ -1976,19 +1976,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-four",
+                            "rowId": "foo$id2-row-4",
                           },
                           "rowOne": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-one",
+                            "rowId": "foo$id2-row-1",
                           },
                           "rowThree": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-three",
+                            "rowId": "foo$id2-row-3",
                           },
                           "rowTwo": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-two",
+                            "rowId": "foo$id2-row-2",
                           },
                         },
                       },
@@ -2004,19 +2004,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-four",
+                            "rowId": "foo$id3-row-4",
                           },
                           "rowOne": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-one",
+                            "rowId": "foo$id3-row-1",
                           },
                           "rowThree": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-three",
+                            "rowId": "foo$id3-row-3",
                           },
                           "rowTwo": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-two",
+                            "rowId": "foo$id3-row-2",
                           },
                         },
                       },
@@ -2043,19 +2043,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     }
@@ -2074,19 +2074,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-four",
+                            "rowId": "foo$id1-row-4",
                           },
                           "rowOne": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-one",
+                            "rowId": "foo$id1-row-1",
                           },
                           "rowThree": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-three",
+                            "rowId": "foo$id1-row-3",
                           },
                           "rowTwo": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-two",
+                            "rowId": "foo$id1-row-2",
                           },
                         },
                       },
@@ -2102,19 +2102,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-four",
+                            "rowId": "foo$id2-row-4",
                           },
                           "rowOne": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-one",
+                            "rowId": "foo$id2-row-1",
                           },
                           "rowThree": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-three",
+                            "rowId": "foo$id2-row-3",
                           },
                           "rowTwo": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-two",
+                            "rowId": "foo$id2-row-2",
                           },
                         },
                       },
@@ -2130,19 +2130,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-four",
+                            "rowId": "foo$id3-row-4",
                           },
                           "rowOne": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-one",
+                            "rowId": "foo$id3-row-1",
                           },
                           "rowThree": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-three",
+                            "rowId": "foo$id3-row-3",
                           },
                           "rowTwo": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-two",
+                            "rowId": "foo$id3-row-2",
                           },
                         },
                       },
@@ -2178,19 +2178,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     }
@@ -2209,19 +2209,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-four",
+                            "rowId": "foo$id1-row-4",
                           },
                           "rowOne": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-one",
+                            "rowId": "foo$id1-row-1",
                           },
                           "rowThree": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-three",
+                            "rowId": "foo$id1-row-3",
                           },
                           "rowTwo": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-two",
+                            "rowId": "foo$id1-row-2",
                           },
                         },
                       },
@@ -2237,19 +2237,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-four",
+                            "rowId": "foo$id2-row-4",
                           },
                           "rowOne": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-one",
+                            "rowId": "foo$id2-row-1",
                           },
                           "rowThree": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-three",
+                            "rowId": "foo$id2-row-3",
                           },
                           "rowTwo": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-two",
+                            "rowId": "foo$id2-row-2",
                           },
                         },
                       },
@@ -2265,19 +2265,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-four",
+                            "rowId": "foo$id3-row-4",
                           },
                           "rowOne": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-one",
+                            "rowId": "foo$id3-row-1",
                           },
                           "rowThree": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-three",
+                            "rowId": "foo$id3-row-3",
                           },
                           "rowTwo": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-two",
+                            "rowId": "foo$id3-row-2",
                           },
                         },
                       },
@@ -2308,19 +2308,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-four",
+                        "rowId": "foo$id1-row-4",
                       },
                       "rowOne": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-one",
+                        "rowId": "foo$id1-row-1",
                       },
                       "rowThree": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-three",
+                        "rowId": "foo$id1-row-3",
                       },
                       "rowTwo": Object {
                         "points": 5,
-                        "rowId": "foo$id1-row-two",
+                        "rowId": "foo$id1-row-2",
                       },
                     },
                   },
@@ -2337,19 +2337,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     },
@@ -2365,19 +2365,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     },
@@ -2393,19 +2393,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-four",
+                          "rowId": "foo$id3-row-4",
                         },
                         "rowOne": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-one",
+                          "rowId": "foo$id3-row-1",
                         },
                         "rowThree": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-three",
+                          "rowId": "foo$id3-row-3",
                         },
                         "rowTwo": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-two",
+                          "rowId": "foo$id3-row-2",
                         },
                       },
                     },
@@ -2440,19 +2440,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     }
@@ -2471,19 +2471,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-four",
+                            "rowId": "foo$id1-row-4",
                           },
                           "rowOne": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-one",
+                            "rowId": "foo$id1-row-1",
                           },
                           "rowThree": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-three",
+                            "rowId": "foo$id1-row-3",
                           },
                           "rowTwo": Object {
                             "points": 5,
-                            "rowId": "foo$id1-row-two",
+                            "rowId": "foo$id1-row-2",
                           },
                         },
                       },
@@ -2499,19 +2499,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-four",
+                            "rowId": "foo$id2-row-4",
                           },
                           "rowOne": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-one",
+                            "rowId": "foo$id2-row-1",
                           },
                           "rowThree": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-three",
+                            "rowId": "foo$id2-row-3",
                           },
                           "rowTwo": Object {
                             "points": 1,
-                            "rowId": "foo$id2-row-two",
+                            "rowId": "foo$id2-row-2",
                           },
                         },
                       },
@@ -2527,19 +2527,19 @@ ShallowWrapper {
                         "roundRatings": Object {
                           "rowFour": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-four",
+                            "rowId": "foo$id3-row-4",
                           },
                           "rowOne": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-one",
+                            "rowId": "foo$id3-row-1",
                           },
                           "rowThree": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-three",
+                            "rowId": "foo$id3-row-3",
                           },
                           "rowTwo": Object {
                             "points": 2,
-                            "rowId": "foo$id3-row-two",
+                            "rowId": "foo$id3-row-2",
                           },
                         },
                       },
@@ -2570,19 +2570,19 @@ ShallowWrapper {
                     "roundRatings": Object {
                       "rowFour": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-four",
+                        "rowId": "foo$id2-row-4",
                       },
                       "rowOne": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-one",
+                        "rowId": "foo$id2-row-1",
                       },
                       "rowThree": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-three",
+                        "rowId": "foo$id2-row-3",
                       },
                       "rowTwo": Object {
                         "points": 1,
-                        "rowId": "foo$id2-row-two",
+                        "rowId": "foo$id2-row-2",
                       },
                     },
                   },
@@ -2599,19 +2599,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-four",
+                          "rowId": "foo$id1-row-4",
                         },
                         "rowOne": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-one",
+                          "rowId": "foo$id1-row-1",
                         },
                         "rowThree": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-three",
+                          "rowId": "foo$id1-row-3",
                         },
                         "rowTwo": Object {
                           "points": 5,
-                          "rowId": "foo$id1-row-two",
+                          "rowId": "foo$id1-row-2",
                         },
                       },
                     },
@@ -2627,19 +2627,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-four",
+                          "rowId": "foo$id2-row-4",
                         },
                         "rowOne": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-one",
+                          "rowId": "foo$id2-row-1",
                         },
                         "rowThree": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-three",
+                          "rowId": "foo$id2-row-3",
                         },
                         "rowTwo": Object {
                           "points": 1,
-                          "rowId": "foo$id2-row-two",
+                          "rowId": "foo$id2-row-2",
                         },
                       },
                     },
@@ -2655,19 +2655,19 @@ ShallowWrapper {
                       "roundRatings": Object {
                         "rowFour": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-four",
+                          "rowId": "foo$id3-row-4",
                         },
                         "rowOne": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-one",
+                          "rowId": "foo$id3-row-1",
                         },
                         "rowThree": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-three",
+                          "rowId": "foo$id3-row-3",
                         },
                         "rowTwo": Object {
                           "points": 2,
-                          "rowId": "foo$id3-row-two",
+                          "rowId": "foo$id3-row-2",
                         },
                       },
                     },
