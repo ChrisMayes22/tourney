@@ -6,7 +6,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { FinalsPage } from './FinalsPage';
-import * as urls from '../../constants/urls';
 
 let props = null;
 let wrapper = null;
@@ -17,10 +16,10 @@ describe('When unconnected FinalsPage first renders', function(){
         props = {characters: [{
             imageUrl: `foo$Image1`,
             roundRatings: {
-                rowOne: {rowId: `foo$id1-row-one`, points: 5},
-                rowTwo: {rowId: `foo$id1-row-two`, points: 5},
-                rowThree: {rowId: `foo$id1-row-three`, points: 5},
-                rowFour: {rowId: `foo$id1-row-four`, points: 5}
+                rowOne: {rowId: `foo$id1-row-1`, points: 5},
+                rowTwo: {rowId: `foo$id1-row-2`, points: 5},
+                rowThree: {rowId: `foo$id1-row-3`, points: 5},
+                rowFour: {rowId: `foo$id1-row-4`, points: 5}
             },
             points: 20,
             hadTurn: false,
@@ -30,10 +29,10 @@ describe('When unconnected FinalsPage first renders', function(){
           {
             imageUrl: `foo$Image2`,
             roundRatings: {
-                rowOne: {rowId: `foo$id2-row-one`, points: 1},
-                rowTwo: {rowId: `foo$id2-row-two`, points: 1},
-                rowThree: {rowId: `foo$id2-row-three`, points: 1},
-                rowFour: {rowId: `foo$id2-row-four`, points: 1}
+                rowOne: {rowId: `foo$id2-row-1`, points: 1},
+                rowTwo: {rowId: `foo$id2-row-2`, points: 1},
+                rowThree: {rowId: `foo$id2-row-3`, points: 1},
+                rowFour: {rowId: `foo$id2-row-4`, points: 1}
             },
             points: 4,
             hadTurn: false,
@@ -43,10 +42,10 @@ describe('When unconnected FinalsPage first renders', function(){
           {
             imageUrl: `foo$Image3`,
             roundRatings: {
-                rowOne: {rowId: `foo$id3-row-one`, points: 2},
-                rowTwo: {rowId: `foo$id3-row-two`, points: 2},
-                rowThree: {rowId: `foo$id3-row-three`, points: 2},
-                rowFour: {rowId: `foo$id3-row-four`, points: 2}
+                rowOne: {rowId: `foo$id3-row-1`, points: 2},
+                rowTwo: {rowId: `foo$id3-row-2`, points: 2},
+                rowThree: {rowId: `foo$id3-row-3`, points: 2},
+                rowFour: {rowId: `foo$id3-row-4`, points: 2}
             },
             points: 8,
             hadTurn: false,
@@ -75,10 +74,10 @@ describe('When unconnected FinalsPage first renders', function(){
             props = {characters: [{
                     imageUrl: `foo$Image1`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id1-row-one`, points: 5},
-                        rowTwo: {rowId: `foo$id1-row-two`, points: 5},
-                        rowThree: {rowId: `foo$id1-row-three`, points: 5},
-                        rowFour: {rowId: `foo$id1-row-four`, points: 5}
+                        rowOne: {rowId: `foo$id1-row-1`, points: 5},
+                        rowTwo: {rowId: `foo$id1-row-2`, points: 5},
+                        rowThree: {rowId: `foo$id1-row-3`, points: 5},
+                        rowFour: {rowId: `foo$id1-row-4`, points: 5}
                     },
                     points: 20,
                     hadTurn: false,
@@ -88,10 +87,10 @@ describe('When unconnected FinalsPage first renders', function(){
                 {
                     imageUrl: `foo$Image2`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id2-row-one`, points: 1},
-                        rowTwo: {rowId: `foo$id2-row-two`, points: 1},
-                        rowThree: {rowId: `foo$id2-row-three`, points: 1},
-                        rowFour: {rowId: `foo$id2-row-four`, points: 1}
+                        rowOne: {rowId: `foo$id2-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id2-row-2`, points: 1},
+                        rowThree: {rowId: `foo$id2-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id2-row-4`, points: 1}
                     },
                     points: 4,
                     hadTurn: false,
@@ -123,10 +122,10 @@ describe('When unconnected component methods are invoked', function(){
         props = {characters: [{
             imageUrl: `foo$Image`,
             roundRatings: {
-                rowOne: {rowId: `foo$id1-row-one`, points: 5},
-                rowTwo: {rowId: `foo$id1-row-two`, points: 5},
-                rowThree: {rowId: `foo$id1-row-three`, points: 5},
-                rowFour: {rowId: `foo$id1-row-four`, points: 5}
+                rowOne: {rowId: `foo$id1-row-1`, points: 5},
+                rowTwo: {rowId: `foo$id1-row-2`, points: 5},
+                rowThree: {rowId: `foo$id1-row-3`, points: 5},
+                rowFour: {rowId: `foo$id1-row-4`, points: 5}
             },
             points: 20,
             hadTurn: false,
@@ -136,10 +135,10 @@ describe('When unconnected component methods are invoked', function(){
           {
             imageUrl: `foo$Image`,
             roundRatings: {
-                rowOne: {rowId: `foo$id2-row-one`, points: 1},
-                rowTwo: {rowId: `foo$id2-row-two`, points: 1},
-                rowThree: {rowId: `foo$id2-row-three`, points: 1},
-                rowFour: {rowId: `foo$id2-row-four`, points: 1}
+                rowOne: {rowId: `foo$id2-row-1`, points: 1},
+                rowTwo: {rowId: `foo$id2-row-2`, points: 1},
+                rowThree: {rowId: `foo$id2-row-3`, points: 1},
+                rowFour: {rowId: `foo$id2-row-4`, points: 1}
             },
             points: 4,
             hadTurn: false,
@@ -149,10 +148,10 @@ describe('When unconnected component methods are invoked', function(){
           {
             imageUrl: `foo$Image`,
             roundRatings: {
-                rowOne: {rowId: `foo$id3-row-one`, points: 2},
-                rowTwo: {rowId: `foo$id3-row-two`, points: 2},
-                rowThree: {rowId: `foo$id3-row-three`, points: 2},
-                rowFour: {rowId: `foo$id3-row-four`, points: 2}
+                rowOne: {rowId: `foo$id3-row-1`, points: 2},
+                rowTwo: {rowId: `foo$id3-row-2`, points: 2},
+                rowThree: {rowId: `foo$id3-row-3`, points: 2},
+                rowFour: {rowId: `foo$id3-row-4`, points: 2}
             },
             points: 8,
             hadTurn: false,

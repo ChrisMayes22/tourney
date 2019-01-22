@@ -174,7 +174,96 @@ ShallowWrapper {
                   },
                 }
               }
+              characters={
+                Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image1",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image2",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image3",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
+                ]
+              }
               clicked={[Function]}
+              finals={true}
               id="first-char"
               players={3}
             />
@@ -211,22 +300,100 @@ ShallowWrapper {
                   },
                 }
               }
+              characters={
+                Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image1",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image2",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image3",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
+                ]
+              }
               clicked={[Function]}
+              finals={true}
               id="second-char"
               players={3}
             />
           </section>
-          <footer>
-            <Link
-              onClick={[Function]}
-              replace={false}
-              to="/finals"
-            >
-              <submitButton>
-                Cast your votes
-              </submitButton>
-            </Link>
-          </footer>
         </main>,
       ],
     },
@@ -473,7 +640,96 @@ ShallowWrapper {
                     },
                   }
                 }
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image1",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image2",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image3",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ]
+                }
                 clicked={[Function]}
+                finals={true}
                 id="first-char"
                 players={3}
               />
@@ -510,22 +766,100 @@ ShallowWrapper {
                     },
                   }
                 }
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image1",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image2",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image3",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ]
+                }
                 clicked={[Function]}
+                finals={true}
                 id="second-char"
                 players={3}
               />
             </section>,
-            <footer>
-              <Link
-                onClick={[Function]}
-                replace={false}
-                to="/finals"
-              >
-                <submitButton>
-                  Cast your votes
-                </submitButton>
-              </Link>
-            </footer>,
           ],
           "className": undefined,
         },
@@ -567,7 +901,96 @@ ShallowWrapper {
                     },
                   }
                 }
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image1",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image2",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image3",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ]
+                }
                 clicked={[Function]}
+                finals={true}
                 id="first-char"
                 players={3}
               />,
@@ -607,7 +1030,94 @@ ShallowWrapper {
                     },
                   },
                 },
+                "characters": Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image1",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image2",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image3",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
+                ],
                 "clicked": [Function],
+                "finals": true,
                 "id": "first-char",
                 "players": 3,
               },
@@ -653,7 +1163,96 @@ ShallowWrapper {
                     },
                   }
                 }
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image1",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image2",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image3",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ]
+                }
                 clicked={[Function]}
+                finals={true}
                 id="second-char"
                 players={3}
               />,
@@ -693,7 +1292,94 @@ ShallowWrapper {
                     },
                   },
                 },
+                "characters": Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image1",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image2",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image3",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
+                ],
                 "clicked": [Function],
+                "finals": true,
                 "id": "second-char",
                 "players": 3,
               },
@@ -702,50 +1388,6 @@ ShallowWrapper {
               "type": [Function],
             },
             "type": "section",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <Link
-                onClick={[Function]}
-                replace={false}
-                to="/finals"
-              >
-                <submitButton>
-                  Cast your votes
-                </submitButton>
-              </Link>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": <submitButton>
-                  Cast your votes
-                </submitButton>,
-                "onClick": [Function],
-                "replace": false,
-                "to": "/finals",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": "Cast your votes",
-                },
-                "ref": null,
-                "rendered": "Cast your votes",
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-            "type": "footer",
           },
         ],
         "type": "main",
@@ -826,7 +1468,96 @@ ShallowWrapper {
                     },
                   }
                 }
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image1",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image2",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image3",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ]
+                }
                 clicked={[Function]}
+                finals={true}
                 id="first-char"
                 players={3}
               />
@@ -863,22 +1594,100 @@ ShallowWrapper {
                     },
                   }
                 }
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image1",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image2",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image3",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ]
+                }
                 clicked={[Function]}
+                finals={true}
                 id="second-char"
                 players={3}
               />
             </section>
-            <footer>
-              <Link
-                onClick={[Function]}
-                replace={false}
-                to="/finals"
-              >
-                <submitButton>
-                  Cast your votes
-                </submitButton>
-              </Link>
-            </footer>
           </main>,
         ],
       },
@@ -1125,7 +1934,96 @@ ShallowWrapper {
                       },
                     }
                   }
+                  characters={
+                    Array [
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id1",
+                        "imageUrl": "foo$Image1",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 20,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-two",
+                          },
+                        },
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id2",
+                        "imageUrl": "foo$Image2",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 4,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-two",
+                          },
+                        },
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id3",
+                        "imageUrl": "foo$Image3",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 8,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-two",
+                          },
+                        },
+                      },
+                    ]
+                  }
                   clicked={[Function]}
+                  finals={true}
                   id="first-char"
                   players={3}
                 />
@@ -1162,22 +2060,100 @@ ShallowWrapper {
                       },
                     }
                   }
+                  characters={
+                    Array [
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id1",
+                        "imageUrl": "foo$Image1",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 20,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-two",
+                          },
+                        },
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id2",
+                        "imageUrl": "foo$Image2",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 4,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-two",
+                          },
+                        },
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id3",
+                        "imageUrl": "foo$Image3",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 8,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-two",
+                          },
+                        },
+                      },
+                    ]
+                  }
                   clicked={[Function]}
+                  finals={true}
                   id="second-char"
                   players={3}
                 />
               </section>,
-              <footer>
-                <Link
-                  onClick={[Function]}
-                  replace={false}
-                  to="/finals"
-                >
-                  <submitButton>
-                    Cast your votes
-                  </submitButton>
-                </Link>
-              </footer>,
             ],
             "className": undefined,
           },
@@ -1219,7 +2195,96 @@ ShallowWrapper {
                       },
                     }
                   }
+                  characters={
+                    Array [
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id1",
+                        "imageUrl": "foo$Image1",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 20,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-two",
+                          },
+                        },
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id2",
+                        "imageUrl": "foo$Image2",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 4,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-two",
+                          },
+                        },
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id3",
+                        "imageUrl": "foo$Image3",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 8,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-two",
+                          },
+                        },
+                      },
+                    ]
+                  }
                   clicked={[Function]}
+                  finals={true}
                   id="first-char"
                   players={3}
                 />,
@@ -1259,7 +2324,94 @@ ShallowWrapper {
                       },
                     },
                   },
+                  "characters": Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image1",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image2",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image3",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ],
                   "clicked": [Function],
+                  "finals": true,
                   "id": "first-char",
                   "players": 3,
                 },
@@ -1305,7 +2457,96 @@ ShallowWrapper {
                       },
                     }
                   }
+                  characters={
+                    Array [
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id1",
+                        "imageUrl": "foo$Image1",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 20,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 5,
+                            "rowId": "foo$id1-row-two",
+                          },
+                        },
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id2",
+                        "imageUrl": "foo$Image2",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 4,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 1,
+                            "rowId": "foo$id2-row-two",
+                          },
+                        },
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id3",
+                        "imageUrl": "foo$Image3",
+                        "isEliminated": Object {
+                          "check": false,
+                          "whenEliminated": null,
+                        },
+                        "points": 8,
+                        "roundRatings": Object {
+                          "rowFour": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-four",
+                          },
+                          "rowOne": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-one",
+                          },
+                          "rowThree": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-three",
+                          },
+                          "rowTwo": Object {
+                            "points": 2,
+                            "rowId": "foo$id3-row-two",
+                          },
+                        },
+                      },
+                    ]
+                  }
                   clicked={[Function]}
+                  finals={true}
                   id="second-char"
                   players={3}
                 />,
@@ -1345,7 +2586,94 @@ ShallowWrapper {
                       },
                     },
                   },
+                  "characters": Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image1",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image2",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image3",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ],
                   "clicked": [Function],
+                  "finals": true,
                   "id": "second-char",
                   "players": 3,
                 },
@@ -1354,50 +2682,6 @@ ShallowWrapper {
                 "type": [Function],
               },
               "type": "section",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": <Link
-                  onClick={[Function]}
-                  replace={false}
-                  to="/finals"
-                >
-                  <submitButton>
-                    Cast your votes
-                  </submitButton>
-                </Link>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": <submitButton>
-                    Cast your votes
-                  </submitButton>,
-                  "onClick": [Function],
-                  "replace": false,
-                  "to": "/finals",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": "Cast your votes",
-                  },
-                  "ref": null,
-                  "rendered": "Cast your votes",
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
-              "type": "footer",
             },
           ],
           "type": "main",

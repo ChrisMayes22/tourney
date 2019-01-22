@@ -48,6 +48,7 @@ export class UploadPage extends Component {
                             </Link>
                         </aside>
                     </div> : null}
+                    
                 <div className={classes.flexContainer__col}>
                     <section className={classes.inputContent}>
                         <h3>Upload three images that will be competing, (using a url)...<br/>

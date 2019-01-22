@@ -5,14 +5,12 @@ import SubmitButton from '../SubmitButton/SubmitButton';
 import * as urls from '../../constants/urls';
 import { Link } from 'react-router-dom';
 
-const Character = (props) => {
+export const Character = (props) => {
 
     const arr = new Array(props.players).fill(null).map((_, index) => index);
 
     return(
             <section className={classes.flexContainer__col}>
-            {console.log('CHARACTERS IN CHARACTER')}
-            {console.log(props.characters)}
                 <img 
                     src={props.character.imageUrl} 
                     className={classes.characterPortrait}
@@ -24,10 +22,12 @@ const Character = (props) => {
                                     <SubmitButton>
                                         Winner!
                                     </SubmitButton>
-                                </Link> : arr.map(number=> {
+                                </Link> : arr.map((number) => {
                     return<RatingRow 
                             character={props.character}
-                            rowId={`${props.character.id}-row-${number+1}`}/>
+                            rowId={`${props.character.id}-row-${number+1}`}
+                            key={`key:${props.character.id}-row-${number+1}`}
+                            id={`id:${props.character.id}-row-${number+1}`}/>
                 })}           
             </section> 
     );

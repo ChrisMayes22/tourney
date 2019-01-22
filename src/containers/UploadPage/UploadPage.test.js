@@ -110,25 +110,31 @@ describe('When unconnected component props or state update', function(){
     })
     describe('When props.characters recieves changes.', function(){
         describe('When a new character is added', function(){
-            test('The characters map length updates to === characters.length', function(){
-                let props = {characters: [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'}], players: 4}
+            test('The new character image is rendered', function(){
+                let props = {characters: [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image1'}], players: 4}
                 wrapper = shallow(<UploadPage {...props}/>);
+
+                expect(wrapper.exists('[src="foo$image1"]')).toBe(true);
+                expect(wrapper.exists('[src="foo$image2"]')).toBe(false);
     
-                wrapper.setProps({characters:   [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'}, 
-                                                {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image'}], 
+                wrapper.setProps({characters:   [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image1'}, 
+                                                {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image2'}], 
                                 players: 4});
                                 
-                expect(wrapper.find('[alt="One of the competing items"]')).toHaveLength(2);
+                expect(wrapper.exists('[src="foo$image1"]')).toBe(true);
+                expect(wrapper.exists('[src="foo$image2"]')).toBe(true);
             })
         })
-        describe('When a character is removed', function(){
-            test('The characters map length updates to === characters.length', function(){
+        describe('When a character is removed from props', function(){
+            test('The removed character is not longer rendered', function(){
                 let props = {characters: [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'}], players: 4}
                 wrapper = shallow(<UploadPage {...props}/>);
-    
+
+                expect(wrapper.exists('[src="foo$image"]')).toBe(true);
+                
                 wrapper.setProps({characters: [], players: 4});
-                                
-                expect(wrapper.find('[alt="One of the competing items"]')).toHaveLength(0);
+                
+                expect(wrapper.exists('[src="foo$image"]')).toBe(false);
             })
         })
         

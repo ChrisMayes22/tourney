@@ -52,6 +52,7 @@ ShallowWrapper {
         </ratingButton>,
       ],
       "className": undefined,
+      "id": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -162,6 +163,7 @@ ShallowWrapper {
           </ratingButton>,
         ],
         "className": undefined,
+        "id": undefined,
       },
       "ref": null,
       "rendered": Array [

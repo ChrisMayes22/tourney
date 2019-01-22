@@ -17,8 +17,8 @@ export class RatingRow extends Component {
         const qualityArray = JSON.parse(JSON.stringify(this.state.qualityArray));
         
         qualityArray.forEach(el => {
-            const currentIndex = qualityArray.indexOf(el);
-            if(currentIndex <= id){
+            const i = qualityArray.indexOf(el);
+            if(i <= id){
                 el.active = true;
             } else {
                 el.active = false;
@@ -36,20 +36,20 @@ export class RatingRow extends Component {
 
     render(){
         return(
-            <div className={this.props.players === 3 ? classes.flexContainer__row3Players : classes.flexContainer__row4Players}>
-                    {this.state.qualityArray.map(el => {
+            <div id={this.props.id}
+                className={this.props.players === 3 ? classes.flexContainer__row3Players : classes.flexContainer__row4Players}>
+                    {this.state.qualityArray.map((el, i) => {
                         const qualityArray = [...this.state.qualityArray]
-                        const currentIndex = qualityArray.indexOf(el);
                         let isChosen = '';
-                        if(qualityArray[currentIndex].active){
+                        if(qualityArray[i].active){
                             isChosen = 'active';
                         }
                         return(
-                            <RatingButton children={currentIndex + 1}
+                            <RatingButton children={i + 1}
                                 quality={classes[el.quality]}
                                 chosen={classes[isChosen]}
-                                key={currentIndex}
-                                clicked={() => this.ratingRowManager(currentIndex, el.points, this.props.rowId, this.props.character)}
+                                key={i}
+                                clicked={() => this.ratingRowManager(i, el.points, this.props.rowId, this.props.character)}
                                 />
                         );
                     })}

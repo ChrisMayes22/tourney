@@ -7,21 +7,27 @@ import { shallow } from 'enzyme';
 
 import { RatingRow } from './RatingRow';
 
-describe('When unconnected component first renders', function(){
-  const props = {
-    players: 4,
-    character: {
-      id: 'foo$id3'
-    }
-  }
+let props = null;
+let defaultState = null;
 
-  const state = {
-    qualityArray: [ {quality: 'awful', active: false, points: 1}, 
-                    {quality: 'poor', active: false, points: 2}, 
-                    {quality: 'average', active: false, points: 3}, 
-                    {quality: 'good', active: false, points: 4}, 
-                    {quality: 'excellent', active: false, points: 5}]
-  } 
+describe('When unconnected component first renders', function(){
+  beforeEach(function(){
+    props = {
+      players: 4,
+      character: {
+        id: 'foo$id3'
+      }
+    }
+  
+    defaultState = {
+      qualityArray: [ {quality: 'awful', active: false, points: 1}, 
+                      {quality: 'poor', active: false, points: 2}, 
+                      {quality: 'average', active: false, points: 3}, 
+                      {quality: 'good', active: false, points: 4}, 
+                      {quality: 'excellent', active: false, points: 5}]
+    } 
+  })
+  
 
     test('RatingRow renders as expected', () => {
       const wrapper = shallow(<RatingRow {...props}/>);
@@ -31,13 +37,13 @@ describe('When unconnected component first renders', function(){
       test('initializes state w/ expected qualityArray', function(){
           const wrapper = shallow(<RatingRow {...props}/>);
           const component = wrapper.instance()
-          expect(component.state).toEqual(state);
+          expect(component.state).toEqual(defaultState);
       })
     })
 })
 
 describe('Unconnected component methods behave as expected', function(){
-  const props = {
+  props = {
     players: 4,
     character: {
       id: 'foo$id3'
@@ -70,12 +76,11 @@ describe('Unconnected component methods behave as expected', function(){
     const wrapper = shallow(<RatingRow {...props}/>);
     const component = wrapper.instance();
 
+    component.ratingChoiceHandler(0);
+    expect(component.state.qualityArray).toEqual(initialState.qualityArray);
     
     component.ratingChoiceHandler(2);
     expect(component.state.qualityArray).toEqual(secondState.qualityArray);
-    
-    component.ratingChoiceHandler(0);
-    expect(component.state.qualityArray).toEqual(initialState.qualityArray);
     
     component.ratingChoiceHandler(4);
     expect(component.state.qualityArray).toEqual(thirdState.qualityArray);
