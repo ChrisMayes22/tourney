@@ -7,8 +7,8 @@ import { subCharAtIndex} from './rootReducer';
 import * as actionTypes from '../constants/actions';
 // import { createReplacementArray } from './rootReducer';
 
-describe('When helper functions are called', function(){
-    test('When subCharAtIndex is called, character issubstituted for character w/ matching id in passed array.', function(){
+describe('Helper functions', function(){
+    test('When subCharAtIndex is called, character is substituted for character w/ matching id in passed array.', function(){
         const charArray = [{
             imageUrl: 'foo$imageUrl',
             points: 0,
@@ -120,9 +120,9 @@ describe('When helper functions are called', function(){
     })
 })
 
-describe('Tests the actions in the Root Reducer', function(){
-    describe('Tests actions related to app setup & character initialization', function(){
-        test('The `SET_PLAYERS` action updates redux state to match payload.', function(){
+describe('Reducer Actions', function(){
+    describe('Setup & character initialization', function(){
+        test('When the SET_PLAYERS action is dispatched, state.players is set to match payload.', function(){
 
             const initialState = {
                 characters: [],
@@ -135,7 +135,7 @@ describe('Tests the actions in the Root Reducer', function(){
 
             expect(setPlayers).toBe(4);
         })
-        test('The `INITIALIZE_CHARACTER` action adds a new character to state', function(){
+        test('When INITIALIZE_CHARACTER is dispatched, an image url and id from payload are used to generate a new character', function(){
 
             const initialState = {
                 characters: [],
@@ -145,10 +145,10 @@ describe('Tests the actions in the Root Reducer', function(){
             const character = {
                 imageUrl: `foo$Image`,
                 roundRatings: {
-                    rowOne: {rowId: `foo$id-row-one`, points: 1},
-                    rowTwo: {rowId: `foo$id-row-two`, points: 1},
-                    rowThree: {rowId: `foo$id-row-three`, points: 1},
-                    rowFour: {rowId: `foo$id-row-four`, points: 1}
+                    rowOne: {rowId: `foo$id-row-1`, points: 1},
+                    rowTwo: {rowId: `foo$id-row-2`, points: 1},
+                    rowThree: {rowId: `foo$id-row-3`, points: 1},
+                    rowFour: {rowId: `foo$id-row-4`, points: 1}
                 },
                 points: 0,
                 hadTurn: false,
@@ -162,7 +162,7 @@ describe('Tests the actions in the Root Reducer', function(){
 
             expect(initCharacter).toEqual(character);
         });
-        test('The `REMOVE_CHARACTER` action takes an id & removes a character w/ matching id from state.', function(){
+        test('When REMOVE_CHARACTER is dispatched, action.id is matched to a character.id in state.characters, and that character is removed from state.', function(){
             const initialState = {
                 characters: [{id: 'foo$id1'},{id: 'foo$id2'},{id: 'foo$id3'},{id: 'foo$id4'},{id: 'foo$id5'}],
                 players: 4
@@ -178,16 +178,16 @@ describe('Tests the actions in the Root Reducer', function(){
 
         })
     });
-    describe('Tests actions related to updating characters', function(){
-        test('The `RATE_CHARACTER` action updates character row points to match user input.', function(){
+    describe('Updating characters', function(){
+        test('When RATE_CHARACTER is dispatched, a the payload characterId is matched to a character in state, rowId to a row in that character, and that row.points is set to payload.points.', function(){
             const initialState = {
                 characters: [{
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id-row-one`, points: 1},
-                        rowTwo: {rowId: `foo$id-row-two`, points: 1},
-                        rowThree: {rowId: `foo$id-row-three`, points: 1},
-                        rowFour: {rowId: `foo$id-row-four`, points: 1}
+                        rowOne: {rowId: `foo$id-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id-row-2`, points: 1},
+                        rowThree: {rowId: `foo$id-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id-row-4`, points: 1}
                     },
                     points: 0,
                     hadTurn: false,
@@ -202,10 +202,10 @@ describe('Tests the actions in the Root Reducer', function(){
             const characterCheck = {
                 imageUrl: `foo$Image`,
                 roundRatings: {
-                    rowOne: {rowId: `foo$id-row-one`, points: 1},
-                    rowTwo: {rowId: `foo$id-row-two`, points: 5},
-                    rowThree: {rowId: `foo$id-row-three`, points: 1},
-                    rowFour: {rowId: `foo$id-row-four`, points: 1}
+                    rowOne: {rowId: `foo$id-row-1`, points: 1},
+                    rowTwo: {rowId: `foo$id-row-2`, points: 5},
+                    rowThree: {rowId: `foo$id-row-3`, points: 1},
+                    rowFour: {rowId: `foo$id-row-4`, points: 1}
                 },
                 points: 0,
                 hadTurn: false,
@@ -213,7 +213,7 @@ describe('Tests the actions in the Root Reducer', function(){
                 id: 'foo$id'
             }
 
-            const mockDispatch = {type: actionTypes.RATE_CHARACTER, payload: {points: 5, rowId: 'foo$id-row-two', character: mockCharacter}};
+            const mockDispatch = {type: actionTypes.RATE_CHARACTER, payload: {points: 5, rowId: 'foo$id-row-2', character: mockCharacter}};
 
             const finalChar = rootReducer(initialState, mockDispatch).characters[0];
 
@@ -224,10 +224,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 characters: [{
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id1-row-one`, points: 5},
-                        rowTwo: {rowId: `foo$id1-row-two`, points: 4},
-                        rowThree: {rowId: `foo$id1-row-three`, points: 3},
-                        rowFour: {rowId: `foo$id1-row-four`, points: 1}
+                        rowOne: {rowId: `foo$id1-row-1`, points: 5},
+                        rowTwo: {rowId: `foo$id1-row-2`, points: 4},
+                        rowThree: {rowId: `foo$id1-row-3`, points: 3},
+                        rowFour: {rowId: `foo$id1-row-4`, points: 1}
                     },
                     points: 0,
                     hadTurn: false,
@@ -237,10 +237,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 {
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id2-row-one`, points: 1},
-                        rowTwo: {rowId: `foo$id2-row-two`, points: 1},
-                        rowThree: {rowId: `foo$id2-row-three`, points: 1},
-                        rowFour: {rowId: `foo$id2-row-four`, points: 1}
+                        rowOne: {rowId: `foo$id2-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id2-row-2`, points: 1},
+                        rowThree: {rowId: `foo$id2-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id2-row-4`, points: 1}
                     },
                     points: 0,
                     hadTurn: false,
@@ -250,10 +250,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 {
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id3-row-one`, points: 2},
-                        rowTwo: {rowId: `foo$id3-row-two`, points: 4},
-                        rowThree: {rowId: `foo$id3-row-three`, points: 3},
-                        rowFour: {rowId: `foo$id3-row-four`, points: 1}
+                        rowOne: {rowId: `foo$id3-row-1`, points: 2},
+                        rowTwo: {rowId: `foo$id3-row-2`, points: 4},
+                        rowThree: {rowId: `foo$id3-row-3`, points: 3},
+                        rowFour: {rowId: `foo$id3-row-4`, points: 1}
                     },
                     points: 0,
                     hadTurn: false,
@@ -263,10 +263,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 {
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id4-row-one`, points: 1},
-                        rowTwo: {rowId: `foo$id4-row-two`, points: 4},
-                        rowThree: {rowId: `foo$id4-row-three`, points: 3},
-                        rowFour: {rowId: `foo$id4-row-four`, points: 1}
+                        rowOne: {rowId: `foo$id4-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id4-row-2`, points: 4},
+                        rowThree: {rowId: `foo$id4-row-3`, points: 3},
+                        rowFour: {rowId: `foo$id4-row-4`, points: 1}
                     },
                     points: 0,
                     hadTurn: false,
@@ -276,10 +276,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 {
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id5-row-one`, points: 5},
-                        rowTwo: {rowId: `foo$id5-row-two`, points: 5},
-                        rowThree: {rowId: `foo$id5-row-three`, points: 4},
-                        rowFour: {rowId: `foo$id5-row-four`, points: 3}
+                        rowOne: {rowId: `foo$id5-row-1`, points: 5},
+                        rowTwo: {rowId: `foo$id5-row-2`, points: 5},
+                        rowThree: {rowId: `foo$id5-row-3`, points: 4},
+                        rowFour: {rowId: `foo$id5-row-4`, points: 3}
                     },
                     points: 0,
                     hadTurn: false,
@@ -289,10 +289,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 {
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id6-row-one`, points: 2},
-                        rowTwo: {rowId: `foo$id6-row-two`, points: 2},
-                        rowThree: {rowId: `foo$id6-row-three`, points: 1},
-                        rowFour: {rowId: `foo$id6-row-four`, points: 1}
+                        rowOne: {rowId: `foo$id6-row-1`, points: 2},
+                        rowTwo: {rowId: `foo$id6-row-2`, points: 2},
+                        rowThree: {rowId: `foo$id6-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id6-row-4`, points: 1}
                     },
                     points: 0,
                     hadTurn: false,
@@ -327,10 +327,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 characters: [{
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id1-row-one`, points: 5},
-                        rowTwo: {rowId: `foo$id1-row-two`, points: 5},
-                        rowThree: {rowId: `foo$id1-row-three`, points: 5},
-                        rowFour: {rowId: `foo$id1-row-four`, points: 5}
+                        rowOne: {rowId: `foo$id1-row-1`, points: 5},
+                        rowTwo: {rowId: `foo$id1-row-2`, points: 5},
+                        rowThree: {rowId: `foo$id1-row-3`, points: 5},
+                        rowFour: {rowId: `foo$id1-row-4`, points: 5}
                     },
                     points: 20,
                     hadTurn: false,
@@ -340,10 +340,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 {
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id2-row-one`, points: 1},
-                        rowTwo: {rowId: `foo$id2-row-two`, points: 1},
-                        rowThree: {rowId: `foo$id2-row-three`, points: 1},
-                        rowFour: {rowId: `foo$id2-row-four`, points: 1}
+                        rowOne: {rowId: `foo$id2-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id2-row-2`, points: 1},
+                        rowThree: {rowId: `foo$id2-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id2-row-4`, points: 1}
                     },
                     points: 4,
                     hadTurn: false,
@@ -353,10 +353,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 {
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id3-row-one`, points: 2},
-                        rowTwo: {rowId: `foo$id3-row-two`, points: 2},
-                        rowThree: {rowId: `foo$id3-row-three`, points: 2},
-                        rowFour: {rowId: `foo$id3-row-four`, points: 2}
+                        rowOne: {rowId: `foo$id3-row-1`, points: 2},
+                        rowTwo: {rowId: `foo$id3-row-2`, points: 2},
+                        rowThree: {rowId: `foo$id3-row-3`, points: 2},
+                        rowFour: {rowId: `foo$id3-row-4`, points: 2}
                     },
                     points: 8,
                     hadTurn: false,
@@ -388,10 +388,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 characters: [{
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id-row-one`, points: 5},
-                        rowTwo: {rowId: `foo$id-row-two`, points: 5},
-                        rowThree: {rowId: `foo$id-row-three`, points: 5},
-                        rowFour: {rowId: `foo$id-row-four`, points: 5}
+                        rowOne: {rowId: `foo$id-row-1`, points: 5},
+                        rowTwo: {rowId: `foo$id-row-2`, points: 5},
+                        rowThree: {rowId: `foo$id-row-3`, points: 5},
+                        rowFour: {rowId: `foo$id-row-4`, points: 5}
                     },
                     points: 20,
                     hadTurn: false,
@@ -401,10 +401,10 @@ describe('Tests the actions in the Root Reducer', function(){
                 {
                     imageUrl: `foo$Image`,
                     roundRatings: {
-                        rowOne: {rowId: `foo$id-row-one`, points: 2},
-                        rowTwo: {rowId: `foo$id-row-two`, points: 2},
-                        rowThree: {rowId: `foo$id-row-three`, points: 2},
-                        rowFour: {rowId: `foo$id-row-four`, points: 2}
+                        rowOne: {rowId: `foo$id-row-1`, points: 2},
+                        rowTwo: {rowId: `foo$id-row-2`, points: 2},
+                        rowThree: {rowId: `foo$id-row-3`, points: 2},
+                        rowFour: {rowId: `foo$id-row-4`, points: 2}
                     },
                     points: 8,
                     hadTurn: false,
@@ -415,10 +415,10 @@ describe('Tests the actions in the Root Reducer', function(){
             }
 
             const defaultRounds = {
-                rowOne: {rowId: `foo$id-row-one`, points: 1},
-                rowTwo: {rowId: `foo$id-row-two`, points: 1},
-                rowThree: {rowId: `foo$id-row-three`, points: 1},
-                rowFour: {rowId: `foo$id-row-four`, points: 1}
+                rowOne: {rowId: `foo$id-row-1`, points: 1},
+                rowTwo: {rowId: `foo$id-row-2`, points: 1},
+                rowThree: {rowId: `foo$id-row-3`, points: 1},
+                rowFour: {rowId: `foo$id-row-4`, points: 1}
             }
 
             const mockDispatch = {type: actionTypes.RESET_FOR_FINALS};
@@ -431,6 +431,87 @@ describe('Tests the actions in the Root Reducer', function(){
             expect(reset[1].points).toBe(0);
             expect(reset[0].isEliminated.check).toBe(false);
             expect(reset[1].isEliminated.check).toBe(true);
+        })
+        test('When CHOOSE_WINNER is dispatched, character w/ id matching that passed in payload should be eliminated.', function(){
+            const initialState = {
+                characters: [{
+                    imageUrl: `foo$Image`,
+                    roundRatings: {
+                        rowOne: {rowId: `foo$id-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id-row-2`, points: 1},
+                        rowThree: {rowId: `foo$id-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id-row-4`, points: 1}
+                    },
+                    points: 0,
+                    hadTurn: false,
+                    isEliminated: {check: false, whenEliminated: null},
+                    id: 'foo$id1'
+                },
+                {
+                    imageUrl: `foo$Image`,
+                    roundRatings: {
+                        rowOne: {rowId: `foo$id-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id-row-2`, points: 1},
+                        rowThree: {rowId: `foo$id-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id-row-4`, points: 1}
+                    },
+                    points: 0,
+                    hadTurn: false,
+                    isEliminated: {check: false, whenEliminated: 0},
+                    id: 'foo$id2'
+                }],
+                players: 4
+            }
+
+            const expectedState = {
+                characters: [{
+                    imageUrl: `foo$Image`,
+                    roundRatings: {
+                        rowOne: {rowId: `foo$id-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id-row-2`, points: 1},
+                        rowThree: {rowId: `foo$id-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id-row-4`, points: 1}
+                    },
+                    points: 0,
+                    hadTurn: false,
+                    isEliminated: {check: true, whenEliminated: 0},
+                    id: 'foo$id1'
+                },
+                {
+                    imageUrl: `foo$Image`,
+                    roundRatings: {
+                        rowOne: {rowId: `foo$id-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id-row-2`, points: 1},
+                        rowThree: {rowId: `foo$id-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id-row-4`, points: 1}
+                    },
+                    points: 0,
+                    hadTurn: false,
+                    isEliminated: {check: false, whenEliminated: 0},
+                    id: 'foo$id2'
+                }],
+                players: 4
+            }
+
+            const mockDispatch = {
+                type: actionTypes.CHOOSE_WINNER, 
+                character: {
+                    imageUrl: `foo$Image`,
+                    roundRatings: {
+                        rowOne: {rowId: `foo$id-row-1`, points: 1},
+                        rowTwo: {rowId: `foo$id-row-2`, points: 1},
+                        rowThree: {rowId: `foo$id-row-3`, points: 1},
+                        rowFour: {rowId: `foo$id-row-4`, points: 1}
+                    },
+                    points: 0,
+                    hadTurn: false,
+                    isEliminated: {check: false, whenEliminated: null},
+                    id: 'foo$id1'
+                }};
+
+            const newState = rootReducer(initialState, mockDispatch);
+
+            expect(newState).toEqual(expectedState);
         })
     })
 })

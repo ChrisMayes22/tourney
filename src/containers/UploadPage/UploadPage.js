@@ -43,8 +43,8 @@ export class UploadPage extends Component {
                             <SubmitButton 
                                 children={'Add another!'}
                                 clicked={this.modalDisplayHandler}/>
-                            <Link to={urls.ELIMINATION_PAGE}>
-                                <SubmitButton clicked={this.props.onEliminate} children={'Move on to the finals.'}/>
+                            <Link to={urls.ELIMINATION_PAGE} onClick={this.props.onEliminate}>
+                                <SubmitButton children={'Move on to the finals.'}/>
                             </Link>
                         </aside>
                     </div> : null}
@@ -95,8 +95,8 @@ export class UploadPage extends Component {
 const mapDispatchToProps = dispatch => {
     return {
         onUpload: (imageUrl, id) => dispatch(initializeCharacter(imageUrl, id)),
-        onRemove: (id) => removeCharacter(id),
-        onEliminate: () => removeLowestScore()
+        onRemove: (id) => dispatch(removeCharacter(id)),
+        onEliminate: () => dispatch(removeLowestScore())
     }
 }
 

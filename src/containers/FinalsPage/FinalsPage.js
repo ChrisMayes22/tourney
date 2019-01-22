@@ -3,9 +3,7 @@ import Character from '../../components/Character/Character';
 import classes from './FinalsPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { resetForFinals, submitCharacterRatings, removeLowestScore } from '../../constants/actions';
-import * as urls from '../../constants/urls';
+import { resetForFinals, removeLowestScore, chooseWinner } from '../../constants/actions';
 
 export class FinalsPage extends Component {
 
@@ -20,15 +18,13 @@ export class FinalsPage extends Component {
         })
     }
 
-    startVotingHandler = (playerOne, playerTwo) => {
+    startVotingHandler = () => {
         this.toggleModalHandler();
-        this.props.onClearModal(playerOne, playerTwo);
+        this.props.onClearModal();
     }
 
-    submitVotesHandler = (playerOne, playerTwo) => {
-        this.props.onSubmitRatings(playerOne, playerTwo);
-        this.props.onEliminate();
-        this.props.onClearModal();
+    submitWinnerHandler = (player) => {
+        this.props.onChooseWinner(player);
         this.toggleModalHandler();
     }
 
@@ -53,38 +49,33 @@ export class FinalsPage extends Component {
                         <br/>
                         <SubmitButton 
                             children={'Yes!'}
-                            clicked={() => this.startVotingHandler([...this.props.characters].filter(el => !el.isEliminated.check).reverse()[0], 
-                                                                        [...this.props.characters].filter(el => !el.isEliminated.check).reverse()[1])}/>      
+                            clicked={() => this.startVotingHandler()}/>      
                     </aside>
                 </div> : null}
                 <main className={classes.grid}>
                     <section className={classes.imageOne}>
                         <Character 
                             players ={this.props.players} 
-                            character={[...this.props.characters].filter(el => !el.isEliminated.check).reverse()[0]} 
+                            finals={true}
+                            character={this.props.characters.filter(el => !el.isEliminated.check)[0]} 
+                            characters={this.props.characters.filter(el => !el.isEliminated.check)} 
+                            clicked={() => this.submitWinnerHandler(this.props.characters.filter(el => !el.isEliminated.check)[1])}
                             id={'first-char'}/>
                     </section>
                     <section className={classes.imageTwo}>
                         <Character 
-                        players={this.props.players} 
-                        character={[...this.props.characters].filter(el => !el.isEliminated.check).reverse()[1]} 
-                        id={'second-char'}/>
+                            players={this.props.players} 
+                            finals={true}
+                            character={this.props.characters.filter(el => !el.isEliminated.check)[1]}
+                            characters={this.props.characters.filter(el => !el.isEliminated.check)} 
+                            clicked={() => this.submitWinnerHandler(this.props.characters.filter(el => !el.isEliminated.check)[0])}
+                            id={'second-char'}/>
                     </section>
-                    <footer>
-                        <Link 
-                            to={this.props.characters.filter(el => !el.isEliminated.check).length === 2 ? urls.WINNER_PAGE : urls.FINALS_PAGE}
-                            onClick = {() => this.submitVotesHandler(this.props.characters.filter(el => !el.isEliminated.check)[0], 
-                                                                    this.props.characters.filter(el => !el.isEliminated.check)[1])}>
-                            <SubmitButton children={"Cast your votes"}/>
-                        </Link>
-                    </footer>
                 </main>
             </React.Fragment>
         );
     }
 }
-
-    
 
 const mapStateToProps = state => {
     return {
@@ -95,8 +86,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        onChooseWinner: (character) => dispatch(chooseWinner(character)),
         onClearModal: () => dispatch(resetForFinals()),
-        onSubmitRatings: (playerOne, playerTwo) => dispatch(submitCharacterRatings([playerOne, playerTwo])),
         onEliminate: () => dispatch(removeLowestScore())
     }
 }

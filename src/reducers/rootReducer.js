@@ -14,6 +14,7 @@ export function subCharAtIndex(arrayCopy, modChar){
 
 export function rootReducer(state=initialState, action) {
 
+    console.log(action)
 
     function createReplacementCharsArray(charArray, payloadArray){
         const characters = [...state.characters];
@@ -40,10 +41,10 @@ export function rootReducer(state=initialState, action) {
                 characters: [...state.characters, {
                     imageUrl: action.payload.image,
                     roundRatings: {
-                        rowOne: {rowId: `${action.payload.id}-row-one`, points: 1},
-                        rowTwo: {rowId: `${action.payload.id}-row-two`, points: 1},
-                        rowThree: {rowId: `${action.payload.id}-row-three`, points: 1},
-                        rowFour: {rowId: `${action.payload.id}-row-four`, points: 1}
+                        rowOne: {rowId: `${action.payload.id}-row-1`, points: 1},
+                        rowTwo: {rowId: `${action.payload.id}-row-2`, points: 1},
+                        rowThree: {rowId: `${action.payload.id}-row-3`, points: 1},
+                        rowFour: {rowId: `${action.payload.id}-row-4`, points: 1}
                     },
                     points: 0,
                     hadTurn: false,
@@ -142,10 +143,10 @@ export function rootReducer(state=initialState, action) {
         const charsOfState = [...state.characters].map(char => {
             const character = {...char,
                 roundRatings: {
-                    rowOne: {rowId: `${char.id}-row-one`, points: 1},
-                    rowTwo: {rowId: `${char.id}-row-two`, points: 1},
-                    rowThree: {rowId: `${char.id}-row-three`, points: 1},
-                    rowFour: {rowId: `${char.id}-row-four`, points: 1}
+                    rowOne: {rowId: `${char.id}-row-1`, points: 1},
+                    rowTwo: {rowId: `${char.id}-row-2`, points: 1},
+                    rowThree: {rowId: `${char.id}-row-3`, points: 1},
+                    rowFour: {rowId: `${char.id}-row-4`, points: 1}
                 },
                 points: 0,
                 hadTurn: false
@@ -157,6 +158,23 @@ export function rootReducer(state=initialState, action) {
             ...state,
             characters: charsOfState
         }
+
+        case actionTypes.CHOOSE_WINNER:
+
+        const stateCharsCopy = [...state.characters];
+
+        const loser = {...stateCharsCopy.find(character => character.id === action.character.id)};
+
+        loser.isEliminated = {...loser.isEliminated, 
+                                check: true, 
+                                whenEliminated: [...state.characters].filter(char => char.isEliminated.check).length}
+
+        const newChars = subCharAtIndex([...state.characters], loser);
+
+            return {
+                ...state,
+                characters: newChars
+            };
 
         default: 
             return state;

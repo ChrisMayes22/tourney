@@ -5,12 +5,15 @@ export const RATE_CHARACTER = 'RATE_CHARACTER';
 export const SUBMIT_CHARACTER_RATINGS = 'SUBMIT_CHARACTER_RATINGS';
 export const SET_PLAYERS = 'SET_PLAYERS';
 export const RESET_FOR_FINALS = 'RESET_FOR_FINALS';
+export const CHOOSE_WINNER = 'CHOOSE_WINNER';
 
 export const initializeCharacter = function(imageUrl, id){
     return {type: INITIALIZE_CHARACTER, 
         payload: {image: imageUrl, id}}
 }
 export const removeCharacter = function(id){
+    console.log('Remove Character Dispatched')
+    console.log(REMOVE_CHARACTER)
     return {type: REMOVE_CHARACTER, id}
 }
 export const removeLowestScore = function(){
@@ -30,5 +33,8 @@ export const setPlayers = function(num){
 };
 export const resetForFinals = function(){
     return {type: RESET_FOR_FINALS}
+}
+export const chooseWinner = function(character){
+    return {type: CHOOSE_WINNER, character}
 }
 

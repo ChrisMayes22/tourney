@@ -22,7 +22,6 @@ export class Home extends Component {
                             </Link> : 
                             <h3>This game is designed for THREE or FOUR players</h3>}
                 </nav>
-                {console.log(this.props.players)}
             </div>
         )
     }

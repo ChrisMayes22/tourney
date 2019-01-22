@@ -109,52 +109,11 @@ describe('When unconnected FinalsPage first renders', function(){
         })
     })
     describe('When the .grid container is rendered', function(){
-        test('The first character rendered is the last non-eliminated character in props.characters', function(){
-            expect(wrapper.find('#first-char').prop('character')).toEqual(props.characters[2]);
+        test('The first character rendered is the first non-eliminated character in props.characters', function(){
+            expect(wrapper.find('#first-char').prop('character')).toEqual(props.characters[0]);
         })
-        test('The second character rendered is the second to last non-eliminated character in props.characters', function(){
+        test('The second character rendered is the second non-eliminated character in props.characters', function(){
             expect(wrapper.find('#second-char').prop('character')).toEqual(props.characters[1]);
-        })
-    })
-    describe('When Links are rendered', function(){
-        test('Given that there are more than two non-eliminated characters, to attribute is urls.FINALS_PAGE', function(){
-            expect(wrapper.exists(`[to="${urls.FINALS_PAGE}"]`)).toBe(true);
-            expect(wrapper.exists(`[to="${urls.WINNERS_PAGE}"]`)).toBe(false);
-        })
-        test('Given that there are exactly two non-eliminated characters, to attribute is urls.WINNER_PAGE', function(){
-            props =  {characters: [{
-                imageUrl: `foo$Image1`,
-                roundRatings: {
-                    rowOne: {rowId: `foo$id1-row-one`, points: 5},
-                    rowTwo: {rowId: `foo$id1-row-two`, points: 5},
-                    rowThree: {rowId: `foo$id1-row-three`, points: 5},
-                    rowFour: {rowId: `foo$id1-row-four`, points: 5}
-                },
-                points: 20,
-                hadTurn: false,
-                isEliminated: {check: false, whenEliminated: null},
-                id: 'foo$id1'
-            },
-            {
-                imageUrl: `foo$Image2`,
-                roundRatings: {
-                    rowOne: {rowId: `foo$id2-row-one`, points: 1},
-                    rowTwo: {rowId: `foo$id2-row-two`, points: 1},
-                    rowThree: {rowId: `foo$id2-row-three`, points: 1},
-                    rowFour: {rowId: `foo$id2-row-four`, points: 1}
-                },
-                points: 4,
-                hadTurn: false,
-                isEliminated: {check: false, whenEliminated: null},
-                id: 'foo$id2'
-            }],
-            players: 3
-        };
-        wrapper = shallow(<FinalsPage {...props}/>)
-
-        expect(wrapper.exists(`[to="${urls.WINNER_PAGE}"]`)).toBe(true);
-        expect(wrapper.exists(`[to="${urls.FINALS_PAGE}"]`)).toBe(false);
-
         })
     })
 })

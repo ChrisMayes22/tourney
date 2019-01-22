@@ -4,8 +4,7 @@
     grid-template-rows: 90vh 5vh;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    grid-template-areas:    "imageOne imageTwo"
-                            "footer footer";
+    grid-template-areas:    "imageOne imageTwo";
     justify-content: center;
     align-items: center;
     background-color: #a63939;
@@ -26,11 +25,6 @@
     grid-area: imageTwo;
     border-radius: 8px;
     background-color: rgb(44, 9, 9);
-}
-
-footer{
-    grid-area: footer;
-    text-align: center;
 }
 
 .modalBackground {
