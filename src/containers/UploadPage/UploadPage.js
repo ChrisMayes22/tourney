@@ -48,11 +48,11 @@ export class UploadPage extends Component {
                             </Link>
                         </aside>
                     </div> : null}
-                    
+
                 <div className={classes.flexContainer__col}>
                     <section className={classes.inputContent}>
-                        <h3>Upload three images that will be competing, (using a url)...<br/>
-                        ...Or begin the game.</h3>
+                        <h3>{`Upload ${this.props.players} images that will be competing, (using a url)...<br/>
+                        ...Or begin the game.`}</h3>
                         <input 
                             type="text"
                             onChange={this.imageUrlHandler}
