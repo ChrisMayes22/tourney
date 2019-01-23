@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic render tests for component App renders as expected 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <characterRedirect />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <nav>
+        <h3>
+          Each players should upload exactly one character per round.
+        </h3>
+        <Link
+          replace={false}
+          to="/upload"
+        >
+          <submitButton>
+            OK
+          </submitButton>
+        </Link>
+      </nav>,
+      "className": undefined,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Each players should upload exactly one character per round.
+          </h3>,
+          <Link
+            replace={false}
+            to="/upload"
+          >
+            <submitButton>
+              OK
+            </submitButton>
+          </Link>,
+        ],
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Each players should upload exactly one character per round.",
+          },
+          "ref": null,
+          "rendered": "Each players should upload exactly one character per round.",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <submitButton>
+              OK
+            </submitButton>,
+            "replace": false,
+            "to": "/upload",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "OK",
+            },
+            "ref": null,
+            "rendered": "OK",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "nav",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <nav>
+          <h3>
+            Each players should upload exactly one character per round.
+          </h3>
+          <Link
+            replace={false}
+            to="/upload"
+          >
+            <submitButton>
+              OK
+            </submitButton>
+          </Link>
+        </nav>,
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              Each players should upload exactly one character per round.
+            </h3>,
+            <Link
+              replace={false}
+              to="/upload"
+            >
+              <submitButton>
+                OK
+              </submitButton>
+            </Link>,
+          ],
+          "className": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Each players should upload exactly one character per round.",
+            },
+            "ref": null,
+            "rendered": "Each players should upload exactly one character per round.",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <submitButton>
+                OK
+              </submitButton>,
+              "replace": false,
+              "to": "/upload",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "OK",
+              },
+              "ref": null,
+              "rendered": "OK",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "nav",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

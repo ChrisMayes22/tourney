@@ -1,0 +1,25 @@
+.flexContainer__col{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px;
+    background-image: linear-gradient(to left, #f9c1ce, #cc8293, #f9c1ce);
+}
+
+.characterPortrait{
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    max-height: 60vh;
+    max-width: 22vw;
+    min-width: 20vw;
+    background-image: radial-gradient(#b36174, rgb(243, 164, 182));
+    margin: 5px;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+
