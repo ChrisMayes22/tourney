@@ -1,14 +1,14 @@
 {
-  "main.css": "/tourney/static/css/main.4f6140ab.chunk.css",
-  "main.js": "/tourney/static/js/main.64532f3a.chunk.js",
-  "main.js.map": "/tourney/static/js/main.64532f3a.chunk.js.map",
+  "main.css": "/tourney/static/css/main.1c666968.chunk.css",
+  "main.js": "/tourney/static/js/main.1d288d0f.chunk.js",
+  "main.js.map": "/tourney/static/js/main.1d288d0f.chunk.js.map",
   "static/js/1.0baec427.chunk.js": "/tourney/static/js/1.0baec427.chunk.js",
   "static/js/1.0baec427.chunk.js.map": "/tourney/static/js/1.0baec427.chunk.js.map",
   "runtime~main.js": "/tourney/static/js/runtime~main.5223f567.js",
   "runtime~main.js.map": "/tourney/static/js/runtime~main.5223f567.js.map",
   "static/media/index.css": "/tourney/static/media/background__rose-pattern.74225c1b.jpg",
-  "static/css/main.4f6140ab.chunk.css.map": "/tourney/static/css/main.4f6140ab.chunk.css.map",
+  "static/css/main.1c666968.chunk.css.map": "/tourney/static/css/main.1c666968.chunk.css.map",
   "index.html": "/tourney/index.html",
-  "precache-manifest.3d7f8e2e6f4a973f76ca744054f7b13a.js": "/tourney/precache-manifest.3d7f8e2e6f4a973f76ca744054f7b13a.js",
+  "precache-manifest.591261d8d34bdb950761a48bf4e16c50.js": "/tourney/precache-manifest.591261d8d34bdb950761a48bf4e16c50.js",
   "service-worker.js": "/tourney/service-worker.js"
 }
