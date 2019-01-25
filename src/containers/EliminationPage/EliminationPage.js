@@ -5,6 +5,7 @@ import {removeLowestScore } from '../../constants/actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as urls from '../../constants/urls';
+import Loser from '../../components/Loser/Loser';
 
 export class EliminationPage extends Component{
 
@@ -43,7 +44,7 @@ export class EliminationPage extends Component{
                                 return accumulator;
                             }
                         })).id).map(function(char){
-                                return (<img src={char.imageUrl} key={char.id} className={classes.refImg} alt="a losing competitor"/>)
+                                return (<Loser imageUrl={char.imageUrl} key={char.id} />)
                         }) : null}
                 </section>
             </React.Fragment>
