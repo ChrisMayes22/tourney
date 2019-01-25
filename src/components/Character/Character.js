@@ -17,18 +17,19 @@ export const Character = (props) => {
                     alt="One of the images chosen for competition"
                 />
                 {props.finals ? <Link 
-                                    to= {props.characters.length === 2 ? urls.WINNER_PAGE : urls.FINALS_PAGE}
+                                    to= {props.characters.length === 2 ? urls.WINNER_PAGE : urls.VOTING_PAGE}
                                     onClick={props.clicked}>
                                     <SubmitButton>
                                         Winner!
                                     </SubmitButton>
-                                </Link> : arr.map((number) => {
-                    return<RatingRow 
-                            character={props.character}
-                            rowId={`${props.character.id}-row-${number+1}`}
-                            key={`key:${props.character.id}-row-${number+1}`}
-                            id={`id:${props.character.id}-row-${number+1}`}
-                            clicked={props.clicked}/>
+                                </Link> : 
+                            arr.map((number) => {
+                            return<RatingRow 
+                                character={props.character}
+                                rowId={`${props.character.id}-row-${number+1}`}
+                                key={`key:${props.character.id}-row-${number+1}`}
+                                id={`id:${props.character.id}-row-${number+1}`}
+                                clicked={props.clicked}/>
                 })}           
             </section> 
     );

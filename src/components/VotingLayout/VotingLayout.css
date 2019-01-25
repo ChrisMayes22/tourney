@@ -1,0 +1,44 @@
+.twoPlayerGrid{
+    display: grid;
+    grid-template-columns: 47vw 47vw;
+    grid-template-rows: 90vh;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-areas:    "imageOne imageTwo";
+    justify-content: center;
+    align-items: center;
+    background-color: #a63939;
+    height: 90vh;
+    width: 100vw;
+}
+
+.threePlayerGrid{
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 90vh;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #a63939;
+    height: 90vh;
+    width: 100vw;
+    background-repeat: none;
+    background-size: cover;
+}
+
+
+.fourPlayerGrid{
+    display: grid;
+    grid-template-columns: 24vw 24vw 24vw 24vw;
+    grid-template-rows: 90vh;
+    grid-column-gap: 3px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #a63939;
+    height: 90vh;
+    width: 100vw;
+    background-repeat: none;
+    background-size: cover;
+}

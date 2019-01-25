@@ -6,6 +6,7 @@ export const SUBMIT_CHARACTER_RATINGS = 'SUBMIT_CHARACTER_RATINGS';
 export const SET_PLAYERS = 'SET_PLAYERS';
 export const RESET_FOR_FINALS = 'RESET_FOR_FINALS';
 export const CHOOSE_WINNER = 'CHOOSE_WINNER';
+export const BEGIN_FINALS = 'BEGIN_FINALS';
 
 export const initializeCharacter = function(imageUrl, id){
     return {type: INITIALIZE_CHARACTER, 
@@ -37,4 +38,8 @@ export const resetForFinals = function(){
 export const chooseWinner = function(character){
     return {type: CHOOSE_WINNER, character}
 }
+export const beginFinals = function(){
+    return {type: BEGIN_FINALS}
+}
+
 

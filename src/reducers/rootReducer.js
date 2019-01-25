@@ -1,8 +1,11 @@
 import * as actionTypes from '../constants/actions';
 
+///TODO: Break this reducer into pieces
+
 const initialState = {
     characters: [],
-    players: 3
+    players: 3, 
+    finals: false
 }
 
 export function subCharAtIndex(arrayCopy, modChar){
@@ -171,7 +174,13 @@ export function rootReducer(state=initialState, action) {
                 ...state,
                 characters: newChars
             };
+            
+        case actionTypes.BEGIN_FINALS:
 
+        return{
+            ...state,
+            finals: true
+        }
         default: 
             return state;
     }

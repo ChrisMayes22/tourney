@@ -40,16 +40,6 @@ h1, h5{
     filter: grayscale(100%);
 }
 
-.refImg{
-    height: auto;
-    max-height: 28vh;
-    max-width: 18vw;
-    border-radius: 15px;
-    box-shadow: 5px 4px 3px rgba(0, 0, 0, 0.7);
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-
 .otherLosersHeader{
     grid-area: header;
     font-size: 2rem;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from './EliminationPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
-import {removeLowestScore } from '../../constants/actions';
+import {removeLowestScore, beginFinals } from '../../constants/actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as urls from '../../constants/urls';
@@ -26,8 +26,10 @@ export class EliminationPage extends Component{
                                 return(<img src={char.imageUrl} id={char.id} key={`${char.id}-key`} alt="The most recent losing competitor"/>);
                             })}
                     </div>
-                    <Link  to={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? urls.FINALS_PAGE : urls.ELIMINATION_PAGE}
-                        onClick={this.props.characters.filter(char => !char.isEliminated.check).length > 6 ? this.props.onEliminate : null}>
+                    <Link   to={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? urls.VOTING_PAGE : urls.ELIMINATION_PAGE}
+                            onClick={this.props.characters.filter(char => !char.isEliminated.check).length > 6 ? 
+                                                                                    this.props.onEliminate :   
+                                                                                    this.props.onFinals}>
                         <SubmitButton 
                             id={'EliminationPage__continueButton'}
                             children={this.props.characters.filter(char => !char.isEliminated.check).length < 7 ? 
@@ -54,7 +56,8 @@ export class EliminationPage extends Component{
 
 const mapDispatchToProps = dispatch => {
     return {
-        onEliminate: () => dispatch(removeLowestScore())
+        onEliminate: () => dispatch(removeLowestScore()),
+        onFinals: () => dispatch(beginFinals())
     }
 }
 

@@ -1,0 +1,11 @@
+.imageOne{
+    grid-area: imageOne;
+    border-radius: 8px;
+    background-color: rgb(44, 9, 9);
+}
+
+.imageTwo{
+    grid-area: imageTwo;
+    border-radius: 8px;
+    background-color: rgb(44, 9, 9);
+}

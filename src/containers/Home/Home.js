@@ -8,6 +8,8 @@ import * as urls from '../../constants/urls';
 
 export class Home extends Component {
 
+    //TODO: Fix bug where blank input defaults to 0, which is then appended each subsequent entry
+
     render(){
         return(
             <div className={classes.background}>
@@ -17,11 +19,11 @@ export class Home extends Component {
                         type="number"
                         value={this.props.players}
                         onChange={(event) => this.props.onSetPlayers(Number(event.target.value))}></input>
-                        {(this.props.players === 3 || this.props.players === 4)  ? 
+                        {(this.props.players >= 2 && this.props.players <= 4 )  ? 
                             <Link to={urls.UPLOAD_PAGE} id='uploadLink'>
                                 <SubmitButton children={"Let's begin!"} id="beginButton"/>
                             </Link> : 
-                            <h3>This game is designed for THREE or FOUR players</h3>}
+                            <h3>This game is designed for TWO to FOUR players</h3>}
                 </nav>
             </div>
         )
