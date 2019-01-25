@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {initializeCharacter, removeCharacter, removeLowestScore} from '../../constants/actions'
 import * as urls from '../../constants/urls';
+import Modal from '../../components/Modal/Modal';
 
 export class UploadPage extends Component {
 
@@ -33,21 +34,20 @@ export class UploadPage extends Component {
 
         return(
             <React.Fragment>
-                {(this.modalDisplay * this.state.modalDisplayToggle)? <div className={classes.modalBackground} id='modal'>
-                        <aside className={classes.modal} >
-                        <h5 className= {classes.modalHeader}>
-                            DO YOU WANT TO ADD ANOTHER ROUND OF CHARACTERS... <br/>
-                            ...OR MOVE ON TO THE SORTING?
-                        </h5>
-                            <br/>
-                            <SubmitButton 
-                                children={'Add another!'}
-                                clicked={this.modalDisplayHandler}/>
-                            <Link to={urls.ELIMINATION_PAGE} onClick={this.props.onEliminate}>
-                                <SubmitButton children={'Move on to the finals.'}/>
-                            </Link>
-                        </aside>
-                    </div> : null}
+                {(this.modalDisplay * this.state.modalDisplayToggle) ? 
+                        <Modal id='modal' sizing={classes.modalSizing}>
+                            <h5 className= {classes.modalHeader}>
+                                DO YOU WANT TO ADD ANOTHER ROUND OF CHARACTERS... <br/>
+                                ...OR MOVE ON TO THE SORTING?
+                            </h5>
+                                <br/>
+                                <SubmitButton 
+                                    children={'Add another!'}
+                                    clicked={this.modalDisplayHandler}/>
+                                <Link to={urls.ELIMINATION_PAGE} onClick={this.props.onEliminate}>
+                                    <SubmitButton children={'Move on to the finals.'}/>
+                                </Link>
+                        </Modal> : null}
 
                 <div className={classes.flexContainer__col}>
                     <section className={classes.inputContent}>

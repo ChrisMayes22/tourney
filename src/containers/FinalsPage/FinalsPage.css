@@ -27,33 +27,11 @@
     background-color: rgb(44, 9, 9);
 }
 
-.modalBackground {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: 99;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.modal {
-    display: block;
-    justify-content: space-around;
-    position: fixed;
-    top: 12vh;
-    left: 2.5vw;
-    height: 70vh;
-    width: 95vw;
-    z-index: 100;
-    background-color: #a63939;
-    color:  rgb(255, 239, 254);
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 20px;
-}
-
-h1{
-    margin: 1rem;
+.modalSizing{
+    top: 14vh;
+    left: 10vw;
+    height: 60vh;
+    width: 80vw;
 }
 
 .modalFlexContainer{

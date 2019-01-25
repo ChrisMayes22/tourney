@@ -4,6 +4,7 @@ import classes from './FinalsPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { connect } from 'react-redux';
 import { resetForFinals, removeLowestScore, chooseWinner } from '../../constants/actions';
+import Modal from '../../components/Modal/Modal'
 
 export class FinalsPage extends Component {
 
@@ -32,8 +33,7 @@ export class FinalsPage extends Component {
 
         return(
             <React.Fragment>
-                {this.state.modal ? <div className={classes.modalBackground}>
-                    <aside className={classes.modal}>
+                {this.state.modal ? <Modal sizing={classes.modalSizing}>
                         <h1>Only these few remain!</h1>
                         <h5>From now on, matches will be single elimination.</h5>
                         <div className={classes.modalFlexContainer}>
@@ -50,8 +50,7 @@ export class FinalsPage extends Component {
                         <SubmitButton 
                             children={'Yes!'}
                             clicked={() => this.startVotingHandler()}/>      
-                    </aside>
-                </div> : null}
+                    </Modal> : null}
                 <main className={classes.grid}>
                     <section className={classes.imageOne}>
                         <Character 
