@@ -25,7 +25,7 @@ ShallowWrapper {
         <div>
           <section>
             <h3>
-              Upload three images that will be competing, (using a url)...
+              Upload 4 images that will be competing, (using a url)...
               <br />
               ...Or begin the game.
             </h3>
@@ -76,7 +76,7 @@ ShallowWrapper {
           "children": Array [
             <section>
               <h3>
-                Upload three images that will be competing, (using a url)...
+                Upload 4 images that will be competing, (using a url)...
                 <br />
                 ...Or begin the game.
               </h3>
@@ -125,7 +125,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h3>
-                  Upload three images that will be competing, (using a url)...
+                  Upload 4 images that will be competing, (using a url)...
                   <br />
                   ...Or begin the game.
                 </h3>,
@@ -160,14 +160,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "Upload three images that will be competing, (using a url)...",
+                    "Upload 4 images that will be competing, (using a url)...",
                     <br />,
                     "...Or begin the game.",
                   ],
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Upload three images that will be competing, (using a url)...",
+                  "Upload 4 images that will be competing, (using a url)...",
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -319,7 +319,7 @@ ShallowWrapper {
           <div>
             <section>
               <h3>
-                Upload three images that will be competing, (using a url)...
+                Upload 4 images that will be competing, (using a url)...
                 <br />
                 ...Or begin the game.
               </h3>
@@ -370,7 +370,7 @@ ShallowWrapper {
             "children": Array [
               <section>
                 <h3>
-                  Upload three images that will be competing, (using a url)...
+                  Upload 4 images that will be competing, (using a url)...
                   <br />
                   ...Or begin the game.
                 </h3>
@@ -419,7 +419,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h3>
-                    Upload three images that will be competing, (using a url)...
+                    Upload 4 images that will be competing, (using a url)...
                     <br />
                     ...Or begin the game.
                   </h3>,
@@ -454,14 +454,14 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      "Upload three images that will be competing, (using a url)...",
+                      "Upload 4 images that will be competing, (using a url)...",
                       <br />,
                       "...Or begin the game.",
                     ],
                   },
                   "ref": null,
                   "rendered": Array [
-                    "Upload three images that will be competing, (using a url)...",
+                    "Upload 4 images that will be competing, (using a url)...",
                     Object {
                       "instance": null,
                       "key": undefined,

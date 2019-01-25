@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import RatingButton from '../../components/RatingButton/RatingButton';
 import classes from './RatingRow.css';
-import { connect } from 'react-redux';
-import { rateCharacter } from '../../constants/actions';
 
 export class RatingRow extends Component {
     state = {
@@ -14,24 +12,30 @@ export class RatingRow extends Component {
     }
 
     ratingChoiceHandler = (id) =>{
-        const qualityArray = JSON.parse(JSON.stringify(this.state.qualityArray));
+        const qualityArrCopy = [{...this.state.qualityArray[0]},
+            {...this.state.qualityArray[1]},
+            {...this.state.qualityArray[2]},
+            {...this.state.qualityArray[3]},
+            {...this.state.qualityArray[4]}];
         
-        qualityArray.forEach(el => {
-            const i = qualityArray.indexOf(el);
+        const transformedCopy = qualityArrCopy.map((el, i) => {
             if(i <= id){
                 el.active = true;
+                return el;
             } else {
                 el.active = false;
+                return el;
             }
         })
+
         this.setState({
-            qualityArray: qualityArray
+            qualityArray: transformedCopy
         })
     }
 
     ratingRowManager = (id, points, rowId, character) =>{
         this.ratingChoiceHandler(id);
-        this.props.onRate(points, rowId, character);
+        this.props.clicked(points, rowId, character);
     }
 
     render(){
@@ -39,9 +43,8 @@ export class RatingRow extends Component {
             <div id={this.props.id}
                 className={this.props.players === 3 ? classes.flexContainer__row3Players : classes.flexContainer__row4Players}>
                     {this.state.qualityArray.map((el, i) => {
-                        const qualityArray = [...this.state.qualityArray]
                         let isChosen = '';
-                        if(qualityArray[i].active){
+                        if(this.state.qualityArray[i].active){
                             isChosen = 'active';
                         }
                         return(
@@ -58,16 +61,6 @@ export class RatingRow extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        players: state.players
-    }
-};
 
-const mapDispatchToProps = dispatch => {
-    return {
-        onRate: (points, rowId, character) => dispatch(rateCharacter(points, rowId, character))
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(RatingRow);
+export default RatingRow;

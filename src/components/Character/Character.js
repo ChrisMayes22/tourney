@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Character.css';
-import RatingRow from '../../containers/RatingRow/RatingRow';
+import RatingRow from '../RatingRow/RatingRow';
 import SubmitButton from '../SubmitButton/SubmitButton';
 import * as urls from '../../constants/urls';
 import { Link } from 'react-router-dom';
@@ -27,7 +27,8 @@ export const Character = (props) => {
                             character={props.character}
                             rowId={`${props.character.id}-row-${number+1}`}
                             key={`key:${props.character.id}-row-${number+1}`}
-                            id={`id:${props.character.id}-row-${number+1}`}/>
+                            id={`id:${props.character.id}-row-${number+1}`}
+                            clicked={props.clicked}/>
                 })}           
             </section> 
     );

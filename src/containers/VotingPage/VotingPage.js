@@ -4,7 +4,7 @@ import classes from './VotingPage.css';
 import SubmitButton from '../../components/SubmitButton/SubmitButton';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { submitCharacterRatings } from '../../constants/actions';
+import { submitCharacterRatings, rateCharacter } from '../../constants/actions';
 import * as urls from '../../constants/urls';
 
 export class VotingPage extends Component {
@@ -20,7 +20,10 @@ export class VotingPage extends Component {
                     {this.props.characters.filter(char => !char.hadTurn).map(char => {
                             return (
                                 <section className={classes.competitorImage} key={`${char.id}-section`}>
-                                    <Character players={this.props.players} character={char}/>
+                                    <Character 
+                                        players={this.props.players} 
+                                        character={char}
+                                        clicked={this.props.onRate}/>
                                 </section>
                             );
                     })}
@@ -37,7 +40,6 @@ export class VotingPage extends Component {
     }
 }
 
-    
 
 const mapStateToProps = state => {
     return {
@@ -48,7 +50,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onSubmitRatings: (playersArray) => dispatch(submitCharacterRatings(playersArray))
+        onSubmitRatings: (playersArray) => dispatch(submitCharacterRatings(playersArray)),
+        onRate: (points, rowId, character) => dispatch(rateCharacter(points, rowId, character))
     }
 }
 
