@@ -18,22 +18,22 @@ describe('When unconnected component first renders', function(){
     
       expect(wrapper).toMatchSnapshot();
     })
-    describe('Characters map renders properly', function(){
-      test('when characters map renders, only characters for which hadTurn:true render', function(){
-          let props = {characters: [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'},
-                                    {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image'},
-                                    {hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'},
-                                    {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image'},
-                                    {hadTurn: true, id: 'foo$id', imageUrl: 'foo$image'},
-                                    {hadTurn: true, id: 'foo$id1', imageUrl: 'foo$image'},
-                                    {hadTurn: true, id: 'foo$id', imageUrl: 'foo$image'},
-                                    {hadTurn: true, id: 'foo$id1', imageUrl: 'foo$image'}], 
-                        players: 4}
-          const wrapper = shallow(<VotingPage {...props}/>);
+    // describe('Characters map renders properly', function(){
+    //   test('when characters map renders, only characters for which hadTurn:true render', function(){
+    //       let props = {characters: [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'},
+    //                                 {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image'},
+    //                                 {hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'},
+    //                                 {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image'},
+    //                                 {hadTurn: true, id: 'foo$id', imageUrl: 'foo$image'},
+    //                                 {hadTurn: true, id: 'foo$id1', imageUrl: 'foo$image'},
+    //                                 {hadTurn: true, id: 'foo$id', imageUrl: 'foo$image'},
+    //                                 {hadTurn: true, id: 'foo$id1', imageUrl: 'foo$image'}], 
+    //                     players: 4}
+    //       const wrapper = shallow(<VotingPage {...props}/>);
 
-          expect(wrapper.find('[character]')).toHaveLength(4);
-      })
-    })
+    //       expect(wrapper.find('[character]')).toHaveLength(4);
+    //   })
+    // })
 })
 
 //TODO: Combine testing for what used to be FinalsPage w/ new VotingPage

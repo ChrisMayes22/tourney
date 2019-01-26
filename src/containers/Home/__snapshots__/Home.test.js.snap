@@ -26,7 +26,7 @@ ShallowWrapper {
           type="number"
         />
         <h3>
-          This game is designed for THREE or FOUR players
+          This game is designed for TWO to FOUR players
         </h3>
       </nav>,
       "className": undefined,
@@ -46,7 +46,7 @@ ShallowWrapper {
             type="number"
           />,
           <h3>
-            This game is designed for THREE or FOUR players
+            This game is designed for TWO to FOUR players
           </h3>,
         ],
         "className": undefined,
@@ -82,10 +82,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "This game is designed for THREE or FOUR players",
+            "children": "This game is designed for TWO to FOUR players",
           },
           "ref": null,
-          "rendered": "This game is designed for THREE or FOUR players",
+          "rendered": "This game is designed for TWO to FOUR players",
           "type": "h3",
         },
       ],
@@ -108,7 +108,7 @@ ShallowWrapper {
             type="number"
           />
           <h3>
-            This game is designed for THREE or FOUR players
+            This game is designed for TWO to FOUR players
           </h3>
         </nav>,
         "className": undefined,
@@ -128,7 +128,7 @@ ShallowWrapper {
               type="number"
             />,
             <h3>
-              This game is designed for THREE or FOUR players
+              This game is designed for TWO to FOUR players
             </h3>,
           ],
           "className": undefined,
@@ -164,10 +164,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "This game is designed for THREE or FOUR players",
+              "children": "This game is designed for TWO to FOUR players",
             },
             "ref": null,
-            "rendered": "This game is designed for THREE or FOUR players",
+            "rendered": "This game is designed for TWO to FOUR players",
             "type": "h3",
           },
         ],

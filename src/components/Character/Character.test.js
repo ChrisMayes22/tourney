@@ -74,10 +74,10 @@ describe('When Character first renders', function(){
             expect(wrapper.find('Link')).toHaveLength(0);
         })
         test('Given a Link renders and props.characters.length === 2, to === urls.WINNER_PAGE', function(){
-            expect(wrapper.exists(`[to="${urls.FINALS_PAGE}"]`)).toBe(false);
+            expect(wrapper.exists(`[to="${urls.VOTING_PAGE}"]`)).toBe(false);
             expect(wrapper.exists(`[to="${urls.WINNER_PAGE}"]`)).toBe(true);
         })
-        test('Given a Link renders and props.characters.length > 2, to === urls.FINALS_PAGE', function(){
+        test('Given a Link renders and props.characters.length > 2, to === urls.VOTING_PAGE', function(){
             props={ ...props,
                 characters: [{
                     imageUrl: `foo$Image1`,
@@ -122,7 +122,7 @@ describe('When Character first renders', function(){
 
                   wrapper = shallow(<Character {...props}/>)
 
-            expect(wrapper.exists(`[to="${urls.FINALS_PAGE}"]`)).toBe(true);
+            expect(wrapper.exists(`[to="${urls.VOTING_PAGE}"]`)).toBe(true);
             expect(wrapper.exists(`[to="${urls.WINNER_PAGE}"]`)).toBe(false);
         })
     })

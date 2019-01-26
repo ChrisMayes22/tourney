@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import {initializeCharacter, removeCharacter, removeLowestScore} from '../../constants/actions'
 import * as urls from '../../constants/urls';
 import Modal from '../../components/Modal/Modal';
+import CharacterArray from '../../components/CharacterArray/CharacterArray';
 
 export class UploadPage extends Component {
 
@@ -75,17 +76,7 @@ export class UploadPage extends Component {
                             <h1>Uploaded Images</h1>
                             <h5>Click Image to Remove</h5>
                         </header>
-                        {this.props.characters.map(el =>{
-                            return (
-                                <div className={classes.imageContainer} key={el.id}>
-                                    <img 
-                                        className={classes.refImg} 
-                                        src={el.imageUrl} 
-                                        onClick={() => this.props.onRemove(el.id)}
-                                        alt={"One of the competing items"}/>
-                                </div>
-                            )
-                        })}
+                        <CharacterArray characters={this.props.characters} loserSettings={null} imageClass={classes.refImg}/>
                     </section>
                 </div>
             </React.Fragment>

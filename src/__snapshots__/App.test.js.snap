@@ -36,11 +36,6 @@ ShallowWrapper {
         <Route
           component={[Function]}
           exact={true}
-          path="/finals"
-        />,
-        <Route
-          component={[Function]}
-          exact={true}
           path="/upload"
         />,
         <Route
@@ -94,19 +89,6 @@ ShallowWrapper {
           "component": [Function],
           "exact": true,
           "path": "/not-enough-characters",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": [Function],
-          "exact": true,
-          "path": "/finals",
         },
         "ref": null,
         "rendered": null,
@@ -190,11 +172,6 @@ ShallowWrapper {
           <Route
             component={[Function]}
             exact={true}
-            path="/finals"
-          />,
-          <Route
-            component={[Function]}
-            exact={true}
             path="/upload"
           />,
           <Route
@@ -248,19 +225,6 @@ ShallowWrapper {
             "component": [Function],
             "exact": true,
             "path": "/not-enough-characters",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/finals",
           },
           "ref": null,
           "rendered": null,

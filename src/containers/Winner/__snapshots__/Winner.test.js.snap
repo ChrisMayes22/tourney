@@ -112,24 +112,192 @@ ShallowWrapper {
           <h1>
             WINNER!!
           </h1>
-          <div>
-            <img
-              alt="the winner!"
-              src="foo$Image"
-            />
-          </div>
+          <CharacterArray
+            characters={
+              Array [
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id1",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": false,
+                    "whenEliminated": null,
+                  },
+                  "points": 20,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-two",
+                    },
+                  },
+                },
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id2",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": true,
+                    "whenEliminated": 0,
+                  },
+                  "points": 4,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-two",
+                    },
+                  },
+                },
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id3",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": true,
+                    "whenEliminated": 1,
+                  },
+                  "points": 8,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-two",
+                    },
+                  },
+                },
+              ]
+            }
+            loserSettings={null}
+          />
         </main>,
         <section>
           <h5>
             ~ The Losers ~
           </h5>
-          <img
-            alt="a losing competitor"
-            src="foo$Image"
-          />
-          <img
-            alt="a losing competitor"
-            src="foo$Image"
+          <CharacterArray
+            characters={
+              Array [
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id1",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": false,
+                    "whenEliminated": null,
+                  },
+                  "points": 20,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-two",
+                    },
+                  },
+                },
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id2",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": true,
+                    "whenEliminated": 0,
+                  },
+                  "points": 4,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-two",
+                    },
+                  },
+                },
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id3",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": true,
+                    "whenEliminated": 1,
+                  },
+                  "points": 8,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-two",
+                    },
+                  },
+                },
+              ]
+            }
+            loserSettings="DISPLAY_ALL_LOSERS"
           />
         </section>,
       ],
@@ -145,12 +313,97 @@ ShallowWrapper {
             <h1>
               WINNER!!
             </h1>,
-            <div>
-              <img
-                alt="the winner!"
-                src="foo$Image"
-              />
-            </div>,
+            <CharacterArray
+              characters={
+                Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 0,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 1,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
+                ]
+              }
+              loserSettings={null}
+            />,
           ],
           "className": undefined,
         },
@@ -171,33 +424,100 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": Array [
-                <img
-                  alt="the winner!"
-                  src="foo$Image"
-                />,
+              "characters": Array [
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id1",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": false,
+                    "whenEliminated": null,
+                  },
+                  "points": 20,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-two",
+                    },
+                  },
+                },
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id2",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": true,
+                    "whenEliminated": 0,
+                  },
+                  "points": 4,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-two",
+                    },
+                  },
+                },
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id3",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": true,
+                    "whenEliminated": 1,
+                  },
+                  "points": 8,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-two",
+                    },
+                  },
+                },
               ],
-              "className": undefined,
+              "imageClass": undefined,
+              "loserSettings": null,
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": "foo$id1",
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "the winner!",
-                  "className": undefined,
-                  "src": "foo$Image",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-            ],
-            "type": "div",
+            "rendered": null,
+            "type": [Function],
           },
         ],
         "type": "main",
@@ -211,16 +531,97 @@ ShallowWrapper {
             <h5>
               ~ The Losers ~
             </h5>,
-            Array [
-              <img
-                alt="a losing competitor"
-                src="foo$Image"
-              />,
-              <img
-                alt="a losing competitor"
-                src="foo$Image"
-              />,
-            ],
+            <CharacterArray
+              characters={
+                Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 0,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 1,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
+                ]
+              }
+              loserSettings="DISPLAY_ALL_LOSERS"
+            />,
           ],
           "className": undefined,
         },
@@ -240,29 +641,100 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "foo$id2",
-            "nodeType": "host",
+            "key": undefined,
+            "nodeType": "function",
             "props": Object {
-              "alt": "a losing competitor",
-              "className": undefined,
-              "src": "foo$Image",
+              "characters": Array [
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id1",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": false,
+                    "whenEliminated": null,
+                  },
+                  "points": 20,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 5,
+                      "rowId": "foo$id1-row-two",
+                    },
+                  },
+                },
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id2",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": true,
+                    "whenEliminated": 0,
+                  },
+                  "points": 4,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 1,
+                      "rowId": "foo$id2-row-two",
+                    },
+                  },
+                },
+                Object {
+                  "hadTurn": false,
+                  "id": "foo$id3",
+                  "imageUrl": "foo$Image",
+                  "isEliminated": Object {
+                    "check": true,
+                    "whenEliminated": 1,
+                  },
+                  "points": 8,
+                  "roundRatings": Object {
+                    "rowFour": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-four",
+                    },
+                    "rowOne": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-one",
+                    },
+                    "rowThree": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-three",
+                    },
+                    "rowTwo": Object {
+                      "points": 2,
+                      "rowId": "foo$id3-row-two",
+                    },
+                  },
+                },
+              ],
+              "loserSettings": "DISPLAY_ALL_LOSERS",
             },
             "ref": null,
             "rendered": null,
-            "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": "foo$id3",
-            "nodeType": "host",
-            "props": Object {
-              "alt": "a losing competitor",
-              "className": undefined,
-              "src": "foo$Image",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
+            "type": [Function],
           },
         ],
         "type": "section",
@@ -281,24 +753,192 @@ ShallowWrapper {
             <h1>
               WINNER!!
             </h1>
-            <div>
-              <img
-                alt="the winner!"
-                src="foo$Image"
-              />
-            </div>
+            <CharacterArray
+              characters={
+                Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 0,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 1,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
+                ]
+              }
+              loserSettings={null}
+            />
           </main>,
           <section>
             <h5>
               ~ The Losers ~
             </h5>
-            <img
-              alt="a losing competitor"
-              src="foo$Image"
-            />
-            <img
-              alt="a losing competitor"
-              src="foo$Image"
+            <CharacterArray
+              characters={
+                Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 0,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 1,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
+                ]
+              }
+              loserSettings="DISPLAY_ALL_LOSERS"
             />
           </section>,
         ],
@@ -314,12 +954,97 @@ ShallowWrapper {
               <h1>
                 WINNER!!
               </h1>,
-              <div>
-                <img
-                  alt="the winner!"
-                  src="foo$Image"
-                />
-              </div>,
+              <CharacterArray
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image",
+                      "isEliminated": Object {
+                        "check": true,
+                        "whenEliminated": 0,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image",
+                      "isEliminated": Object {
+                        "check": true,
+                        "whenEliminated": 1,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ]
+                }
+                loserSettings={null}
+              />,
             ],
             "className": undefined,
           },
@@ -340,33 +1065,100 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": Array [
-                  <img
-                    alt="the winner!"
-                    src="foo$Image"
-                  />,
+                "characters": Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 0,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 1,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
                 ],
-                "className": undefined,
+                "imageClass": undefined,
+                "loserSettings": null,
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": "foo$id1",
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "the winner!",
-                    "className": undefined,
-                    "src": "foo$Image",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-              ],
-              "type": "div",
+              "rendered": null,
+              "type": [Function],
             },
           ],
           "type": "main",
@@ -380,16 +1172,97 @@ ShallowWrapper {
               <h5>
                 ~ The Losers ~
               </h5>,
-              Array [
-                <img
-                  alt="a losing competitor"
-                  src="foo$Image"
-                />,
-                <img
-                  alt="a losing competitor"
-                  src="foo$Image"
-                />,
-              ],
+              <CharacterArray
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                      "imageUrl": "foo$Image",
+                      "isEliminated": Object {
+                        "check": false,
+                        "whenEliminated": null,
+                      },
+                      "points": 20,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 5,
+                          "rowId": "foo$id1-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                      "imageUrl": "foo$Image",
+                      "isEliminated": Object {
+                        "check": true,
+                        "whenEliminated": 0,
+                      },
+                      "points": 4,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 1,
+                          "rowId": "foo$id2-row-two",
+                        },
+                      },
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                      "imageUrl": "foo$Image",
+                      "isEliminated": Object {
+                        "check": true,
+                        "whenEliminated": 1,
+                      },
+                      "points": 8,
+                      "roundRatings": Object {
+                        "rowFour": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-four",
+                        },
+                        "rowOne": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-one",
+                        },
+                        "rowThree": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-three",
+                        },
+                        "rowTwo": Object {
+                          "points": 2,
+                          "rowId": "foo$id3-row-two",
+                        },
+                      },
+                    },
+                  ]
+                }
+                loserSettings="DISPLAY_ALL_LOSERS"
+              />,
             ],
             "className": undefined,
           },
@@ -409,29 +1282,100 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "foo$id2",
-              "nodeType": "host",
+              "key": undefined,
+              "nodeType": "function",
               "props": Object {
-                "alt": "a losing competitor",
-                "className": undefined,
-                "src": "foo$Image",
+                "characters": Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": false,
+                      "whenEliminated": null,
+                    },
+                    "points": 20,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 5,
+                        "rowId": "foo$id1-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 0,
+                    },
+                    "points": 4,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 1,
+                        "rowId": "foo$id2-row-two",
+                      },
+                    },
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                    "imageUrl": "foo$Image",
+                    "isEliminated": Object {
+                      "check": true,
+                      "whenEliminated": 1,
+                    },
+                    "points": 8,
+                    "roundRatings": Object {
+                      "rowFour": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-four",
+                      },
+                      "rowOne": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-one",
+                      },
+                      "rowThree": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-three",
+                      },
+                      "rowTwo": Object {
+                        "points": 2,
+                        "rowId": "foo$id3-row-two",
+                      },
+                    },
+                  },
+                ],
+                "loserSettings": "DISPLAY_ALL_LOSERS",
               },
               "ref": null,
               "rendered": null,
-              "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": "foo$id3",
-              "nodeType": "host",
-              "props": Object {
-                "alt": "a losing competitor",
-                "className": undefined,
-                "src": "foo$Image",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
+              "type": [Function],
             },
           ],
           "type": "section",

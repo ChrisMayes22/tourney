@@ -8,6 +8,7 @@ import VotingLayout from '../../components/VotingLayout/VotingLayout';
 import PrelimVotingContent from '../../components/PrelimVotingContent/PrelimVotingContent';
 import FinalsVotingContent from '../../components/FinalsVotingContent/FinalsVotingContent';
 import Modal from '../../components/Modal/Modal';
+import CharacterArray from '../../components/CharacterArray/CharacterArray';
 import * as urls from '../../constants/urls';
 
 export class VotingPage extends Component {
@@ -43,15 +44,7 @@ export class VotingPage extends Component {
                     <Modal sizing={classes.modalSizing}>
                         <h1>Only these few remain!</h1>
                         <h5>From now on, matches will be single elimination.</h5>
-                        <div className={classes.modalFlexContainer}>
-                            {this.props.characters.filter(el => !el.isEliminated.check).map(char => {
-                                return <img 
-                                    src={char.imageUrl} 
-                                    key={`charImage:${char.id}`} 
-                                    alt={'competitor'} 
-                                    className={classes.modalImage}/>
-                            })}
-                        </div>
+                        <CharacterArray characters={this.props.characters} loserSettings={null} imageClass={classes.modalImage}/>
                         <h5>Are you ready to begin?</h5>
                         <br/>
                         <SubmitButton 

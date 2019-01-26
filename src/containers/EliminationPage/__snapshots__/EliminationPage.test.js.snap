@@ -7,120 +7,47 @@ ShallowWrapper {
     characters={
       Array [
         Object {
-          "hadTurn": false,
-          "id": "foo$id1",
-          "imageUrl": "foo$Image",
+          "isEliminated": Object {
+            "check": true,
+          },
+        },
+        Object {
           "isEliminated": Object {
             "check": false,
-            "whenEliminated": null,
-          },
-          "points": 20,
-          "roundRatings": Object {
-            "rowFour": Object {
-              "points": 5,
-              "rowId": "foo$id1-row-four",
-            },
-            "rowOne": Object {
-              "points": 5,
-              "rowId": "foo$id1-row-one",
-            },
-            "rowThree": Object {
-              "points": 5,
-              "rowId": "foo$id1-row-three",
-            },
-            "rowTwo": Object {
-              "points": 5,
-              "rowId": "foo$id1-row-two",
-            },
           },
         },
         Object {
-          "hadTurn": false,
-          "id": "foo$id2",
-          "imageUrl": "foo$Image",
           "isEliminated": Object {
-            "check": true,
-            "whenEliminated": 0,
-          },
-          "points": 4,
-          "roundRatings": Object {
-            "rowFour": Object {
-              "points": 1,
-              "rowId": "foo$id2-row-four",
-            },
-            "rowOne": Object {
-              "points": 1,
-              "rowId": "foo$id2-row-one",
-            },
-            "rowThree": Object {
-              "points": 1,
-              "rowId": "foo$id2-row-three",
-            },
-            "rowTwo": Object {
-              "points": 1,
-              "rowId": "foo$id2-row-two",
-            },
+            "check": false,
           },
         },
         Object {
-          "hadTurn": false,
-          "id": "foo$id3",
-          "imageUrl": "foo$Image",
           "isEliminated": Object {
-            "check": true,
-            "whenEliminated": 1,
-          },
-          "points": 8,
-          "roundRatings": Object {
-            "rowFour": Object {
-              "points": 2,
-              "rowId": "foo$id3-row-four",
-            },
-            "rowOne": Object {
-              "points": 2,
-              "rowId": "foo$id3-row-one",
-            },
-            "rowThree": Object {
-              "points": 2,
-              "rowId": "foo$id3-row-three",
-            },
-            "rowTwo": Object {
-              "points": 2,
-              "rowId": "foo$id3-row-two",
-            },
+            "check": false,
           },
         },
         Object {
-          "hadTurn": false,
-          "id": "foo$id4",
-          "imageUrl": "foo$Image",
           "isEliminated": Object {
-            "check": true,
-            "whenEliminated": 2,
+            "check": false,
           },
-          "points": 13,
-          "roundRatings": Object {
-            "rowFour": Object {
-              "points": 3,
-              "rowId": "foo$id3-row-four",
-            },
-            "rowOne": Object {
-              "points": 3,
-              "rowId": "foo$id3-row-one",
-            },
-            "rowThree": Object {
-              "points": 3,
-              "rowId": "foo$id3-row-three",
-            },
-            "rowTwo": Object {
-              "points": 4,
-              "rowId": "foo$id3-row-two",
-            },
+        },
+        Object {
+          "isEliminated": Object {
+            "check": false,
+          },
+        },
+        Object {
+          "isEliminated": Object {
+            "check": false,
+          },
+        },
+        Object {
+          "isEliminated": Object {
+            "check": false,
           },
         },
       ]
     }
-    players={3}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -141,21 +68,62 @@ ShallowWrapper {
             ELIMINATED!!
           </h1>
           <div>
-            <img
-              alt="The most recent losing competitor"
-              id="foo$id4"
-              src="foo$Image"
+            <CharacterArray
+              characters={
+                Array [
+                  Object {
+                    "isEliminated": Object {
+                      "check": true,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                ]
+              }
+              loserSettings="ISOLATE_MOST_RECENT_LOSER"
             />
           </div>
           <Link
-            onClick={null}
             replace={false}
-            to="/finals"
+            to="/elimination"
           >
             <submitButton
               id="EliminationPage__continueButton"
             >
-              On to the finals!
+              Eliminate another!
             </submitButton>
           </Link>
         </main>,
@@ -163,14 +131,6 @@ ShallowWrapper {
           <h5>
             ~ The Other Losers ~
           </h5>
-          <img
-            alt="a losing competitor"
-            src="foo$Image"
-          />
-          <img
-            alt="a losing competitor"
-            src="foo$Image"
-          />
         </section>,
       ],
     },
@@ -186,21 +146,62 @@ ShallowWrapper {
               ELIMINATED!!
             </h1>,
             <div>
-              <img
-                alt="The most recent losing competitor"
-                id="foo$id4"
-                src="foo$Image"
+              <CharacterArray
+                characters={
+                  Array [
+                    Object {
+                      "isEliminated": Object {
+                        "check": true,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                  ]
+                }
+                loserSettings="ISOLATE_MOST_RECENT_LOSER"
               />
             </div>,
             <Link
-              onClick={null}
               replace={false}
-              to="/finals"
+              to="/elimination"
             >
               <submitButton
                 id="EliminationPage__continueButton"
               >
-                On to the finals!
+                Eliminate another!
               </submitButton>
             </Link>,
           ],
@@ -225,31 +226,109 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <img
-                  alt="The most recent losing competitor"
-                  id="foo$id4"
-                  src="foo$Image"
-                />,
-              ],
+              "children": <CharacterArray
+                characters={
+                  Array [
+                    Object {
+                      "isEliminated": Object {
+                        "check": true,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                  ]
+                }
+                loserSettings="ISOLATE_MOST_RECENT_LOSER"
+              />,
               "className": undefined,
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": "foo$id4-key",
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "The most recent losing competitor",
-                  "id": "foo$id4",
-                  "src": "foo$Image",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "characters": Array [
+                  Object {
+                    "isEliminated": Object {
+                      "check": true,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                  Object {
+                    "isEliminated": Object {
+                      "check": false,
+                    },
+                  },
+                ],
+                "loserSettings": "ISOLATE_MOST_RECENT_LOSER",
               },
-            ],
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": "div",
           },
           Object {
@@ -260,11 +339,11 @@ ShallowWrapper {
               "children": <submitButton
                 id="EliminationPage__continueButton"
               >
-                On to the finals!
+                Eliminate another!
               </submitButton>,
-              "onClick": null,
+              "onClick": undefined,
               "replace": false,
-              "to": "/finals",
+              "to": "/elimination",
             },
             "ref": null,
             "rendered": Object {
@@ -272,11 +351,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": "On to the finals!",
+                "children": "Eliminate another!",
                 "id": "EliminationPage__continueButton",
               },
               "ref": null,
-              "rendered": "On to the finals!",
+              "rendered": "Eliminate another!",
               "type": [Function],
             },
             "type": [Function],
@@ -293,16 +372,7 @@ ShallowWrapper {
             <h5>
               ~ The Other Losers ~
             </h5>,
-            Array [
-              <img
-                alt="a losing competitor"
-                src="foo$Image"
-              />,
-              <img
-                alt="a losing competitor"
-                src="foo$Image"
-              />,
-            ],
+            null,
           ],
           "className": undefined,
         },
@@ -320,32 +390,7 @@ ShallowWrapper {
             "rendered": "~ The Other Losers ~",
             "type": "h5",
           },
-          Object {
-            "instance": null,
-            "key": "foo$id2",
-            "nodeType": "host",
-            "props": Object {
-              "alt": "a losing competitor",
-              "className": undefined,
-              "src": "foo$Image",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": "foo$id3",
-            "nodeType": "host",
-            "props": Object {
-              "alt": "a losing competitor",
-              "className": undefined,
-              "src": "foo$Image",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
+          null,
         ],
         "type": "section",
       },
@@ -364,21 +409,62 @@ ShallowWrapper {
               ELIMINATED!!
             </h1>
             <div>
-              <img
-                alt="The most recent losing competitor"
-                id="foo$id4"
-                src="foo$Image"
+              <CharacterArray
+                characters={
+                  Array [
+                    Object {
+                      "isEliminated": Object {
+                        "check": true,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                  ]
+                }
+                loserSettings="ISOLATE_MOST_RECENT_LOSER"
               />
             </div>
             <Link
-              onClick={null}
               replace={false}
-              to="/finals"
+              to="/elimination"
             >
               <submitButton
                 id="EliminationPage__continueButton"
               >
-                On to the finals!
+                Eliminate another!
               </submitButton>
             </Link>
           </main>,
@@ -386,14 +472,6 @@ ShallowWrapper {
             <h5>
               ~ The Other Losers ~
             </h5>
-            <img
-              alt="a losing competitor"
-              src="foo$Image"
-            />
-            <img
-              alt="a losing competitor"
-              src="foo$Image"
-            />
           </section>,
         ],
       },
@@ -409,21 +487,62 @@ ShallowWrapper {
                 ELIMINATED!!
               </h1>,
               <div>
-                <img
-                  alt="The most recent losing competitor"
-                  id="foo$id4"
-                  src="foo$Image"
+                <CharacterArray
+                  characters={
+                    Array [
+                      Object {
+                        "isEliminated": Object {
+                          "check": true,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                    ]
+                  }
+                  loserSettings="ISOLATE_MOST_RECENT_LOSER"
                 />
               </div>,
               <Link
-                onClick={null}
                 replace={false}
-                to="/finals"
+                to="/elimination"
               >
                 <submitButton
                   id="EliminationPage__continueButton"
                 >
-                  On to the finals!
+                  Eliminate another!
                 </submitButton>
               </Link>,
             ],
@@ -448,31 +567,109 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <img
-                    alt="The most recent losing competitor"
-                    id="foo$id4"
-                    src="foo$Image"
-                  />,
-                ],
+                "children": <CharacterArray
+                  characters={
+                    Array [
+                      Object {
+                        "isEliminated": Object {
+                          "check": true,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                      Object {
+                        "isEliminated": Object {
+                          "check": false,
+                        },
+                      },
+                    ]
+                  }
+                  loserSettings="ISOLATE_MOST_RECENT_LOSER"
+                />,
                 "className": undefined,
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": "foo$id4-key",
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "The most recent losing competitor",
-                    "id": "foo$id4",
-                    "src": "foo$Image",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "characters": Array [
+                    Object {
+                      "isEliminated": Object {
+                        "check": true,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                    Object {
+                      "isEliminated": Object {
+                        "check": false,
+                      },
+                    },
+                  ],
+                  "loserSettings": "ISOLATE_MOST_RECENT_LOSER",
                 },
-              ],
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
               "type": "div",
             },
             Object {
@@ -483,11 +680,11 @@ ShallowWrapper {
                 "children": <submitButton
                   id="EliminationPage__continueButton"
                 >
-                  On to the finals!
+                  Eliminate another!
                 </submitButton>,
-                "onClick": null,
+                "onClick": undefined,
                 "replace": false,
-                "to": "/finals",
+                "to": "/elimination",
               },
               "ref": null,
               "rendered": Object {
@@ -495,11 +692,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": "On to the finals!",
+                  "children": "Eliminate another!",
                   "id": "EliminationPage__continueButton",
                 },
                 "ref": null,
-                "rendered": "On to the finals!",
+                "rendered": "Eliminate another!",
                 "type": [Function],
               },
               "type": [Function],
@@ -516,16 +713,7 @@ ShallowWrapper {
               <h5>
                 ~ The Other Losers ~
               </h5>,
-              Array [
-                <img
-                  alt="a losing competitor"
-                  src="foo$Image"
-                />,
-                <img
-                  alt="a losing competitor"
-                  src="foo$Image"
-                />,
-              ],
+              null,
             ],
             "className": undefined,
           },
@@ -543,32 +731,7 @@ ShallowWrapper {
               "rendered": "~ The Other Losers ~",
               "type": "h5",
             },
-            Object {
-              "instance": null,
-              "key": "foo$id2",
-              "nodeType": "host",
-              "props": Object {
-                "alt": "a losing competitor",
-                "className": undefined,
-                "src": "foo$Image",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": "foo$id3",
-              "nodeType": "host",
-              "props": Object {
-                "alt": "a losing competitor",
-                "className": undefined,
-                "src": "foo$Image",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
+            null,
           ],
           "type": "section",
         },

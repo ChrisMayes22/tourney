@@ -7,8 +7,12 @@ import { shallow } from 'enzyme';
 
 import { Winner } from './Winner';
 
+let props;
+let wrapper;
+
 describe('When unconnected component first renders', function(){
-    let props = {characters: [{
+  beforeEach(function(){
+    props = {characters: [{
       imageUrl: `foo$Image`,
       roundRatings: {
           rowOne: {rowId: `foo$id1-row-one`, points: 5},
@@ -48,29 +52,12 @@ describe('When unconnected component first renders', function(){
       id: 'foo$id3'
     }],
     players: 3}
+    
+    wrapper = shallow(<Winner {...props}/>)
+  })
+    
 
     test('Winner renders as expected', () => {
-      
-      const wrapper = shallow(<Winner {...props}/>)
-    
       expect(wrapper).toMatchSnapshot();
     })
-    describe('Characters render as expected', function(){
-      test('Exactly one winner character renders', function(){
-        const wrapper = shallow(<Winner {...props}/>)
-
-        expect(wrapper.find('[alt="the winner!"]')).toHaveLength(1);
-      })
-      test('The number of losers === this.props.characters.length-1', function(){
-        const wrapper = shallow(<Winner {...props}/>)
-
-        expect(wrapper.find('[alt="a losing competitor"]')).toHaveLength(2);
-      })
-      test('The number of rendered characters === props.characters.length', function(){
-        const wrapper = shallow(<Winner {...props}/>)
-
-        expect(wrapper.find('img')).toHaveLength(3);
-      })
-    })
 })
-  

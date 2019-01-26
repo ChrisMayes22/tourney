@@ -8,13 +8,22 @@ import { shallow } from 'enzyme';
 import { UploadPage } from './UploadPage';
 import * as urls from '../../constants/urls';
 
-var wrapper = null;
+var wrapper;
+var props;
+var component;
 
 describe('When unconnected component first renders', function(){
+    beforeEach(function(){
+        props = {
+                    characters: [{hadTurn: false, id: 'foo$id'},{hadTurn: false, id: 'foo$id1'},
+                                {hadTurn: false, id: 'foo$id2'},{hadTurn: false, id: 'foo$id3'}], 
+                    players: 4
+                };
+        wrapper = shallow(<UploadPage {...props}/>);
+        component = wrapper.instance();
+    })
     let props = {characters: [], players: 4}
     wrapper = shallow(<UploadPage {...props}/>)
-    let component = wrapper.instance();
-
     test('UploadPagerenders as expected', () => {
         expect(wrapper).toMatchSnapshot();
     })
@@ -29,32 +38,30 @@ describe('When unconnected component first renders', function(){
     describe('conditionally rendered elements behave as expected', function(){
         describe('modal behaves as exepected', function(){
             test('modal does not render if the characters array is empty.', function(){
+                props = {...props, characters: []}
+                wrapper = shallow(<UploadPage {...props}/>);
+        
                 expect(wrapper.exists('#modal')).toBe(false);
             })
             test('modal does not render if the characters array contains at least one character but its hadTurn property is false.', function(){
-                props = {characters: [{hadTurn: false, id: 'foo$id'}], players: 4}
-                wrapper = shallow(<UploadPage {...props}/>);
-        
                 expect(wrapper.exists('#modal')).toBe(false);
             })
             test('modal DOES render if the characters array contains at least one character and its hadTurn property is true.', function(){
-                props = {characters: [{hadTurn: true, id: 'foo$id'}], players: 4}
+                props = {...props, characters: [{hadTurn: true, id: 'foo$id'}]}
                 wrapper = shallow(<UploadPage {...props}/>);
-        
                 expect(wrapper.exists('#modal')).toBe(true);
             })
         })
         describe('`to attribute` of `#beginGameButton` renders as expected', function(){
             test('Given that there are fewer characters than players, the Begin Game to attribute will be urls.NOT_ENOUGH_CHARACTERS.', function(){
-                let props = {characters: [], players: 4}
+                props = {characters: [], players: 4}
                 wrapper = shallow(<UploadPage {...props}/>);
         
                 expect(wrapper.exists(`[to="${urls.NOT_ENOUGH_CHARACTERS}"]`)).toBe(true);
                 expect(wrapper.exists(`[to="${urls.VOTING_PAGE}"]`)).not.toBe(true);
             })
             test('Given that there are more characters w/ hadTurn:false than players, the Begin Game to attribute will be urls.NOT_ENOUGH_CHARACTERS.', function(){
-                let props = {characters: [{hadTurn: false, id: 'foo$id'},{hadTurn: false, id: 'foo$id1'},
-                            {hadTurn: false, id: 'foo$id2'},{hadTurn: false, id: 'foo$id3'}], players: 3}
+                props = {...props, players: 3}
                 wrapper = shallow(<UploadPage {...props}/>);
         
                 expect(wrapper.exists(`[to="${urls.NOT_ENOUGH_CHARACTERS}"]`)).toBe(true);
@@ -62,32 +69,18 @@ describe('When unconnected component first renders', function(){
             })
             describe('Given that the number of characters w/ hadTurn:false === players, the Begin Game to attribute will be urls.VOTING_PAGE.', function(){
                 test('when number of characters === players, and all characters have hadTurn:false', function(){
-                    let props = {characters: [{hadTurn: false, id: 'foo$id'},{hadTurn: false, id: 'foo$id1'},
-                                            {hadTurn: false, id: 'foo$id2'},{hadTurn: false, id: 'foo$id3'}], 
-                                players: 4};
-                    wrapper = shallow(<UploadPage {...props}/>);
-        
                     expect(wrapper.exists(`[to="${urls.NOT_ENOUGH_CHARACTERS}"]`)).not.toBe(true);
                     expect(wrapper.exists(`[to="${urls.VOTING_PAGE}"]`)).toBe(true);
                 })
                 test('when number of characters !== players, but number w/ hadTurn:false === players', function(){
-                    let props = {characters: [{hadTurn: false, id: 'foo$id'},{hadTurn: false, id: 'foo$id1'},{hadTurn: false, id: 'foo$id2'},
-                                            {hadTurn: false, id: 'foo$id3'},{hadTurn: true, id: 'foo$id4'}], 
-                                players: 4};
+                    props = {...props, characters: [{hadTurn: false, id: 'foo$id'},{hadTurn: false, id: 'foo$id1'},
+                                                        {hadTurn: false, id: 'foo$id2'},{hadTurn: false, id: 'foo$id3'},
+                                                        {hadTurn: true, id: 'foo$id4'}]};
                     wrapper = shallow(<UploadPage {...props}/>);
         
                     expect(wrapper.exists(`[to="${urls.NOT_ENOUGH_CHARACTERS}"]`)).not.toBe(true);
                     expect(wrapper.exists(`[to="${urls.VOTING_PAGE}"]`)).toBe(true);
                 })
-            })
-        })
-        describe('Characters map renders properly', function(){
-            test('when characters map renders, the number of images === characters.length', function(){
-                let props = {characters: [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'},
-                                            {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image'}], players: 4}
-                wrapper = shallow(<UploadPage {...props}/>);
-
-                expect(wrapper.find('[alt="One of the competing items"]')).toHaveLength(2);
             })
         })
     })
@@ -107,37 +100,6 @@ describe('When unconnected component props or state update', function(){
             component.modalDisplayHandler()
             expect(wrapper.exists('#modal')).toBe(true);
         })
-    })
-    describe('When props.characters recieves changes.', function(){
-        describe('When a new character is added', function(){
-            test('The new character image is rendered', function(){
-                let props = {characters: [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image1'}], players: 4}
-                wrapper = shallow(<UploadPage {...props}/>);
-
-                expect(wrapper.exists('[src="foo$image1"]')).toBe(true);
-                expect(wrapper.exists('[src="foo$image2"]')).toBe(false);
-    
-                wrapper.setProps({characters:   [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image1'}, 
-                                                {hadTurn: false, id: 'foo$id1', imageUrl: 'foo$image2'}], 
-                                players: 4});
-                                
-                expect(wrapper.exists('[src="foo$image1"]')).toBe(true);
-                expect(wrapper.exists('[src="foo$image2"]')).toBe(true);
-            })
-        })
-        describe('When a character is removed from props', function(){
-            test('The removed character is not longer rendered', function(){
-                let props = {characters: [{hadTurn: false, id: 'foo$id', imageUrl: 'foo$image'}], players: 4}
-                wrapper = shallow(<UploadPage {...props}/>);
-
-                expect(wrapper.exists('[src="foo$image"]')).toBe(true);
-                
-                wrapper.setProps({characters: [], players: 4});
-                
-                expect(wrapper.exists('[src="foo$image"]')).toBe(false);
-            })
-        })
-        
     })
 })
 

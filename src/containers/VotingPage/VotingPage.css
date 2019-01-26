@@ -22,14 +22,15 @@ footer{
 .modalSizing{
     top: 14vh;
     left: 10vw;
-    height: 60vh;
+    height: 80vh;
     width: 80vw;
 }
 
 .modalImage{
     border-radius: 8px;
     background-color: rgb(44, 9, 9);
+    margin: 2px 5px;
     max-height: 20vh;
-    max-width: 30vw;
+    max-width: 20vw;
     box-shadow: 2px 2px 10px rgb(0, 0, 0);
 }

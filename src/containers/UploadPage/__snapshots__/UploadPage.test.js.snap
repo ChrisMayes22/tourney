@@ -4,7 +4,26 @@ exports[`When unconnected component first renders UploadPagerenders as expected 
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <UploadPage
-    characters={Array []}
+    characters={
+      Array [
+        Object {
+          "hadTurn": false,
+          "id": "foo$id",
+        },
+        Object {
+          "hadTurn": false,
+          "id": "foo$id1",
+        },
+        Object {
+          "hadTurn": false,
+          "id": "foo$id2",
+        },
+        Object {
+          "hadTurn": false,
+          "id": "foo$id3",
+        },
+      ]
+    }
     players={4}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -43,7 +62,7 @@ ShallowWrapper {
             <Link
               id="beginGameButton"
               replace={false}
-              to="/not-enough-characters"
+              to="/voting"
             >
               <submitButton>
                 Begin Game
@@ -61,6 +80,29 @@ ShallowWrapper {
                 Click Image to Remove
               </h5>
             </header>
+            <CharacterArray
+              characters={
+                Array [
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id",
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id1",
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id2",
+                  },
+                  Object {
+                    "hadTurn": false,
+                    "id": "foo$id3",
+                  },
+                ]
+              }
+              loserSettings={null}
+            />
           </section>
         </div>,
       ],
@@ -94,7 +136,7 @@ ShallowWrapper {
               <Link
                 id="beginGameButton"
                 replace={false}
-                to="/not-enough-characters"
+                to="/voting"
               >
                 <submitButton>
                   Begin Game
@@ -112,6 +154,29 @@ ShallowWrapper {
                   Click Image to Remove
                 </h5>
               </header>
+              <CharacterArray
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id",
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                    },
+                  ]
+                }
+                loserSettings={null}
+              />
             </section>,
           ],
           "className": undefined,
@@ -143,7 +208,7 @@ ShallowWrapper {
                 <Link
                   id="beginGameButton"
                   replace={false}
-                  to="/not-enough-characters"
+                  to="/voting"
                 >
                   <submitButton>
                     Begin Game
@@ -217,7 +282,7 @@ ShallowWrapper {
                   </submitButton>,
                   "id": "beginGameButton",
                   "replace": false,
-                  "to": "/not-enough-characters",
+                  "to": "/voting",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -250,7 +315,29 @@ ShallowWrapper {
                     Click Image to Remove
                   </h5>
                 </header>,
-                Array [],
+                <CharacterArray
+                  characters={
+                    Array [
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id",
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id1",
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id2",
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id3",
+                      },
+                    ]
+                  }
+                  loserSettings={null}
+                />,
               ],
               "className": undefined,
               "id": "grid",
@@ -299,6 +386,36 @@ ShallowWrapper {
                 ],
                 "type": "header",
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "characters": Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id",
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                    },
+                  ],
+                  "imageClass": undefined,
+                  "loserSettings": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
             ],
             "type": "section",
           },
@@ -337,7 +454,7 @@ ShallowWrapper {
               <Link
                 id="beginGameButton"
                 replace={false}
-                to="/not-enough-characters"
+                to="/voting"
               >
                 <submitButton>
                   Begin Game
@@ -355,6 +472,29 @@ ShallowWrapper {
                   Click Image to Remove
                 </h5>
               </header>
+              <CharacterArray
+                characters={
+                  Array [
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id",
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id1",
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id2",
+                    },
+                    Object {
+                      "hadTurn": false,
+                      "id": "foo$id3",
+                    },
+                  ]
+                }
+                loserSettings={null}
+              />
             </section>
           </div>,
         ],
@@ -388,7 +528,7 @@ ShallowWrapper {
                 <Link
                   id="beginGameButton"
                   replace={false}
-                  to="/not-enough-characters"
+                  to="/voting"
                 >
                   <submitButton>
                     Begin Game
@@ -406,6 +546,29 @@ ShallowWrapper {
                     Click Image to Remove
                   </h5>
                 </header>
+                <CharacterArray
+                  characters={
+                    Array [
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id",
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id1",
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id2",
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id3",
+                      },
+                    ]
+                  }
+                  loserSettings={null}
+                />
               </section>,
             ],
             "className": undefined,
@@ -437,7 +600,7 @@ ShallowWrapper {
                   <Link
                     id="beginGameButton"
                     replace={false}
-                    to="/not-enough-characters"
+                    to="/voting"
                   >
                     <submitButton>
                       Begin Game
@@ -511,7 +674,7 @@ ShallowWrapper {
                     </submitButton>,
                     "id": "beginGameButton",
                     "replace": false,
-                    "to": "/not-enough-characters",
+                    "to": "/voting",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -544,7 +707,29 @@ ShallowWrapper {
                       Click Image to Remove
                     </h5>
                   </header>,
-                  Array [],
+                  <CharacterArray
+                    characters={
+                      Array [
+                        Object {
+                          "hadTurn": false,
+                          "id": "foo$id",
+                        },
+                        Object {
+                          "hadTurn": false,
+                          "id": "foo$id1",
+                        },
+                        Object {
+                          "hadTurn": false,
+                          "id": "foo$id2",
+                        },
+                        Object {
+                          "hadTurn": false,
+                          "id": "foo$id3",
+                        },
+                      ]
+                    }
+                    loserSettings={null}
+                  />,
                 ],
                 "className": undefined,
                 "id": "grid",
@@ -592,6 +777,36 @@ ShallowWrapper {
                     },
                   ],
                   "type": "header",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "characters": Array [
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id",
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id1",
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id2",
+                      },
+                      Object {
+                        "hadTurn": false,
+                        "id": "foo$id3",
+                      },
+                    ],
+                    "imageClass": undefined,
+                    "loserSettings": null,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
                 },
               ],
               "type": "section",
